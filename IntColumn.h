@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Cell.h"
 #include "ColumnInterface.h"
 
 class IntColumn : public ColumnInterface
