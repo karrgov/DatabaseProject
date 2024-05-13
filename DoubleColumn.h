@@ -2,13 +2,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Cell.h"
+#include "CellInterface.h"
 #include "ColumnInterface.h"
 
 class DoubleColumn : public ColumnInterface
 {
     private:
-    std::vector<std::pair<double, bool>> data;
+    std::vector<CellInterface<double>*> data;
 
     public:
     DoubleColumn(const std::string& name);

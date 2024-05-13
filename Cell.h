@@ -18,12 +18,12 @@ class Cell : public CellInterface<T>
         this->flag = otherVal;
     }
 
-    T first() const
+    T first() const override
     {
         return value;
     }
 
-    bool second() const
+    bool second() const override
     {
         return flag;
     }

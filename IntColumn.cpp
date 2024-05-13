@@ -15,11 +15,11 @@ std::string IntColumn::getColumnType() const
 
 std::string IntColumn::valueAt(const unsigned int& index) const
 {
-    if(data[index].second == false)
+    if(data[index].second() == false)
     {
         return "NULL";
     }
-    return std::to_string(data[index].first);
+    return std::to_string(data[index].first());
 }
 
 std::vector<unsigned int> IntColumn::getIndexesOfRowsWithValues(const std::string& value) const

@@ -10,5 +10,5 @@ class CellInterface
     virtual ~CellInterface();
 
     virtual T first() const = 0;
-    virtual bool seocnd() const = 0;
+    virtual bool second() const = 0;
 };
