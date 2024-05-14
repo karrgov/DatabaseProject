@@ -58,7 +58,9 @@
         {
             result = result * 1;
         }
-        
+
+        delete wrong;
+
         return new Cell<int>(result, true);
     }
 
