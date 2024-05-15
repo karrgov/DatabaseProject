@@ -12,6 +12,7 @@ class IntColumn : public ColumnInterface
 
     public:
     IntColumn(const std::string& name);
+    ~IntColumn();
 
     virtual std::string getColumnType() const override;
     virtual std::string valueAt(const unsigned int& index) const override;
