@@ -35,14 +35,7 @@ class Table
     void insert(const std::vector<std::string>& values);
     void rename(const std::string& name);
     unsigned int count(const unsigned int& index, const std::string& searchValue);
-    
+
     double aggregate(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName);
-
-
-
-
-
-
-
 
 };

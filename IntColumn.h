@@ -14,6 +14,9 @@ class IntColumn : public ColumnInterface
     IntColumn(const std::string& name);
     ~IntColumn();
 
+    IntColumn(const IntColumn& other) = delete;
+    IntColumn& operator=(const IntColumn& other) = delete;
+
     virtual std::string getColumnType() const override;
     virtual std::string valueAt(const unsigned int& index) const override;
 

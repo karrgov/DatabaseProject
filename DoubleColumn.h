@@ -14,6 +14,9 @@ class DoubleColumn : public ColumnInterface
     DoubleColumn(const std::string& name);
     ~DoubleColumn();
 
+    DoubleColumn(const DoubleColumn& other) = delete;
+    DoubleColumn& operator=(const DoubleColumn& other) = delete;
+
     virtual std::string getColumnType() const override;
     virtual std::string valueAt(const unsigned int& index) const override;
 
