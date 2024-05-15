@@ -72,7 +72,7 @@ void IntColumn::updateRowByIndex(const unsigned int& index, const std::string& v
 
 void IntColumn::deleteRowByIndex(const unsigned int& index)
 {
-    for(int i = 0; i < this->data.size(); ++i)
+    for(int i = index + 1; i < this->data.size(); ++i)
     {
         this->data[i - 1] = this->data[i];
     }
