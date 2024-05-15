@@ -27,4 +27,9 @@ class Cell : public CellInterface<T>
     {
         return flag;
     }
+
+    void setSecond(bool value)
+    {
+        this->flag = value;
+    }
 };

@@ -61,7 +61,8 @@
 
         delete wrong;
 
-        return new Cell<int>(result, true);
+        CellInterface<int>* final = new Cell<int>(result, true);
+        return final;
     }
 
     CellInterface<double>* Converter::toDouble(const std::string& value)
@@ -145,7 +146,8 @@
 
         delete wrong;
 
-        return new Cell<double>(result, true);
+        CellInterface<double>* final = new Cell<double>(result, true);
+        return final;
     }
      
 

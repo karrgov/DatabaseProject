@@ -14,6 +14,15 @@ DoubleColumn::DoubleColumn(const std::string& name) : ColumnInterface(name)
 
 }
 
+DoubleColumn::~DoubleColumn()
+{
+    for(auto i : this->data)
+    {
+        delete i;
+    }
+    this->data.clear();
+}
+
 std::string DoubleColumn::getColumnType() const
 {
     return "double";

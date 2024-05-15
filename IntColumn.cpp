@@ -11,6 +11,15 @@ IntColumn::IntColumn(const std::string& name) : ColumnInterface(name)
 
 }
 
+IntColumn::~IntColumn()
+{
+    for(auto i : this->data)
+    {
+        delete i;
+    }
+    this->data.clear();
+}
+
 std::string IntColumn::getColumnType() const
 {
     return "int";
