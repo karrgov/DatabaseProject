@@ -151,15 +151,74 @@
 
     bool Converter::isString(const std::string& value)
     {
-
+        if(value.size() >= 2 & value[0] == '"' && value[value.size() - 1] == '"')
+        {
+            return true;
+        }
+        return false;
     }
 
     bool Converter::isNull(const std::string& value)
     {
-
+        if(value == "NULL")
+        {
+            return true;
+        }
+        return false;
     }
 
     void Converter::parseLineToParam(const std::string& line, std::vector<std::string>& parameters)
     {
+        parameters.clear();
+        std::string currentParameter;
 
+        bool startedString = false;
+
+        for(int i = 0; i < line.size(); i++)
+        {
+            if(line[i] == ' ')
+            {
+                if(startedString == true)
+                {
+                    currentParameter = currentParameter + line[i];
+                }
+                else
+                {
+                    if(currentParameter.size() > 0)
+                    {
+                        parameters.push_back(currentParameter);
+                    }
+                    currentParameter = "";
+                }
+            }
+            else if(line[i] == '"')
+            {
+                if(i > 0 && line[i - 1] == '\\') 
+                {
+                    currentParameter.pop_back();
+                    currentParameter += line[i];
+                } 
+                else if(startedString == true) 
+                {
+                    startedString = false;
+
+                    currentParameter += line[i];
+                    parameters.push_back(currentParameter);
+                    currentParameter = "";
+                }
+                else 
+                {
+                    startedString = true;
+                    currentParameter = currentParameter + line[i];
+                }
+            }
+            else
+            {
+                currentParameter = currentParameter + line[i];
+            }
+        }
+        if(currentParameter.size() > 0)
+        {
+            parameters.push_back(currentParameter);
+        }
     }

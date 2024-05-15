@@ -8,7 +8,7 @@
 class IntColumn : public ColumnInterface
 {
     private:
-    std::vector<CellInterface<int>> data;
+    std::vector<CellInterface<int>*> data;
 
     public:
     IntColumn(const std::string& name);
@@ -17,7 +17,7 @@ class IntColumn : public ColumnInterface
     virtual std::string valueAt(const unsigned int& index) const override;
 
     virtual std::vector<unsigned int> getIndexesOfRowsWithValues(const std::string& value) const override;
-    virtual void updateRowByIndex(const unsigned int& index, const std::string& newValue) override;
+    virtual void updateRowByIndex(const unsigned int& index, const std::string& value) override;
     virtual void deleteRowByIndex(const unsigned int& index) override;
     virtual void insertNewRowWith(const std::string& value) override;
 

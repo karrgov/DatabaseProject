@@ -6,6 +6,7 @@
 
 class Converter
 {
+    public:
     static CellInterface<int>* toInt(const std::string& value);
     static CellInterface<double>* toDouble(const std::string& value);
     static bool isString(const std::string& value);
