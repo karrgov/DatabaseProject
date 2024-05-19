@@ -7,7 +7,51 @@
 
 Table::Table(const std::string& name, const std::string filename)
 {
+    this->name = name;
+    this->filename = filename;
 
+    std::ifstream input(filename, std::ios::in);
+
+    if(!input)
+    {
+        std::cerr << "Invalid file!" << std::endl;
+        input.close();
+        return;
+    }
+
+    int columns;
+    int rows;
+    input >> columns >> rows;
+
+    this->countRows = rows;
+    this->columns.resize(columns, nullptr);
+
+    for(int currentCol = 0; currentCol < columns; currentCol++)
+    {
+        std::string columnName;
+        std::string columnType;
+
+        input >> columnName >> columnType;
+        input.ignore(1024, '\n');
+
+        ColumnInterface* facCol = ColumnFactory::createColumn(columnName, columnType);
+
+        if(!facCol)
+        {
+            std::cerr << "Invalid column type!" << std::endl;
+            input.close();
+            return;
+        }
+
+        this->columns[currentCol] = facCol;
+
+        for(int currentRow = 0; currentRow < rows; currentRow++)
+        {
+            
+        }
+
+
+    }
 }
 
 Table::~Table()
@@ -87,5 +131,5 @@ unsigned int count(const unsigned int& index, const std::string& searchValue)
 
 double Table::aggregate(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName)
 {
-    
+
 }
