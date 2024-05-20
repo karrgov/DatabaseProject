@@ -47,16 +47,17 @@ Table::Table(const std::string& name, const std::string filename)
 
         for(int currentRow = 0; currentRow < rows; currentRow++)
         {
-            
+            std::string value;
+            std::getline(input, value);
+            this->columns[currentCol]->insertNewRowWith(value);
         }
-
-
     }
+    input.close();
 }
 
 Table::~Table()
 {
-
+    
 }
 
 std::string Table::getName() const
