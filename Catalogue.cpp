@@ -14,12 +14,32 @@ Catalogue::~Catalogue()
     
 }
 
-void importTableFromFile(const std::string& tableName, const std::string& filename);
-void exportTableToFile(const std::string& tablename, const std::string& filename);
+void Catalogue::importTableFromFile(const std::string& tableName, const std::string& filename)
+{
 
-void saveCatalogueToDefaultFile(const std::string& name);
-void saveCatalogueToDifferentFile(const std::string& name);
+}
 
-void showAllTables() const;
+void Catalogue::exportTableToFile(const std::string& tablename, const std::string& filename)
+{
 
-void innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex);
+}
+
+void Catalogue::saveCatalogueToDefaultFile(const std::string& name)
+{
+    
+}
+
+void Catalogue::saveCatalogueToDifferentFile(const std::string& name)
+{
+
+}
+
+void Catalogue::showAllTables() const
+{
+
+}
+
+void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex)
+{
+    
+}
