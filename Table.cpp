@@ -57,52 +57,116 @@ Table::Table(const std::string& name, const std::string filename)
 
 Table::~Table()
 {
-    
+    this->name.clear();
+    this->filename.clear();
+
+    for(ColumnInterface* element : this->columns)
+    {
+        delete element;
+    }
+    this->columns.clear();
 }
 
 std::string Table::getName() const
 {
-
+    return this->name;
 }
 
 std::string Table::getFilename() const
 {
-
+    return this->filename;
 }
 
 unsigned int Table::getCountOfRows() const
 {
-
+    return this->countRows;
 }
 
 const ColumnInterface* Table::columnAt(const unsigned int& index) const
 {
-
+    if(index >= this->columns.size())
+    {
+        std::cerr << "Invalid column index" << std::endl;
+        return nullptr;
+    }
+    return this->columns[index];
 }
 
 void Table::print() const
 {
+    std::cout << "Content of table" << this->name << ":" << std::endl;
+    for(ColumnInterface* element : this->columns)
+    {
+        std::cout << element->getName() << " ";
+    }
+    std::cout << std::endl;
 
+    for(int i = 0; i < this->countRows; i++)
+    {
+        for(ColumnInterface* element : this->columns)
+        {
+            std::cout << element->valueAt(i) << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
 void Table::describe() const
 {
-
+    for(ColumnInterface* element : this->columns)
+    {
+        std::cout << element->getColumnType() << " ";
+    }
+    std::cout << std::endl;
 }
 
 void Table::saveToFile(const std::string& filename) const
 {
+    std::ofstream output(filename, std::ios::out | std::ios::trunc);
 
+    if(!output)
+    {
+        std::cerr << "Invalid file!" << std::endl;
+        output.close();
+        return;
+    }
+
+    output << this->columns.size() << this->countRows << std::endl;
+
+    for(ColumnInterface* element : this->columns)
+    {
+        output << element->getName() << " " << element->getColumnType() << std::endl;
+        for(int i = 0; i < countRows; i++)
+        {
+            output << element->valueAt(i) << std::endl;
+        }
+    }
+    output.close();
 }
 
 void Table::select(const unsigned int& index, const std::string& value) const
 {
+    if(index >= this->columns.size())
+    {
+        std::cerr << "Invalid column index!" << std::endl;
+        return;
+    }
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(value);
 
+    for(unsigned int number : indexes)
+    {
+        for(ColumnInterface* element : this->columns)
+        {
+            std::cout << element->valueAt(number) << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 void Table::addColumn(const std::string& tableName, const std::string& tableType)
 {
-
+    
 }
 
 void Table::update(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue)
