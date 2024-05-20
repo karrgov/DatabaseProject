@@ -30,6 +30,12 @@ std::string DoubleColumn::getColumnType() const
 
 std::string DoubleColumn::valueAt(const unsigned int& index) const
 {
+    if(index >= this->data.size())
+    {
+        std::cerr << "Invalid cell index!" << std::endl;
+        return;
+    }
+
     if(data[index]->second() == false)
     {
         return "NULL";
@@ -77,6 +83,12 @@ std::vector<unsigned int> DoubleColumn::getIndexesOfRowsWithValues(const std::st
 
 void DoubleColumn::updateRowByIndex(const unsigned int& index, const std::string& value)
 {
+    if(index >= this->data.size())
+    {
+        std::cerr << "Invalid cell index!" << std::endl;
+        return;
+    }
+
     CellInterface<double>* converted = Converter::toDouble(value);
     this->data[index] = converted;
     delete converted;
@@ -84,6 +96,12 @@ void DoubleColumn::updateRowByIndex(const unsigned int& index, const std::string
 
 void DoubleColumn::deleteRowByIndex(const unsigned int& index)
 {
+    if(index >= this->data.size())
+    {
+        std::cerr << "Invalid cell index!" << std::endl;
+        return;
+    }
+    
     for(int i = index + 1; i < this->data.size(); ++i)
     {
         this->data[i - 1] = this->data[i];
