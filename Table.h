@@ -27,7 +27,7 @@ class Table
     void describe() const;
     void saveToFile(const std::string& filename) const;
     void select(const unsigned int& index, const std::string& value) const;
-    void addColumn(const std::string& tableName, const std::string& tableType);
+    void addColumn(const std::string& columnName, const std::string& columnType);
 
     void update(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue);
 

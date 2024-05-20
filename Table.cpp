@@ -164,24 +164,67 @@ void Table::select(const unsigned int& index, const std::string& value) const
     }
 }
 
-void Table::addColumn(const std::string& tableName, const std::string& tableType)
+void Table::addColumn(const std::string& columnName, const std::string& columnType)
 {
-    
+    ColumnInterface* newColumn = ColumnFactory::createColumn(columnName, columnType);
+
+    if(newColumn == nullptr)
+    {
+        std::cerr << "Invalid type for column" << std::endl;
+        return;
+    }
+
+    this->columns.push_back(newColumn);
+    for(int i = 0; i < this->countRows; i++)
+    {
+        newColumn->insertNewRowWith("NULL");
+    }
 }
 
 void Table::update(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue)
 {
+    if(index >= this->columns.size() || targetIndex >= this->columns.size())
+    {
+        std::cerr << "Invalid column index!" << std::endl;
+        return;
+    }
 
+    std::vector<unsigned int> indexesToBeUpdated = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+
+    for(unsigned int number : indexesToBeUpdated)
+    {
+        this->columns[targetIndex]->updateRowByIndex(number, targetValue);
+    }
 }
 
 void Table::deleteFunc(const unsigned int& index, const std::string& searchValue)
 {
+    if(index >= this->columns.size())
+    {
+        std::cerr << "Invalid column index" << std::endl;
+        return;
+    }
 
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+
+    unsigned int compennsationForDeletion = 0;
+
+    for(unsigned int number : indexes)
+    {
+        number = number - compennsationForDeletion;
+
+        for(ColumnInterface* element : this->columns)
+        {
+            element->deleteRowByIndex(number);
+        }
+        compennsationForDeletion++;
+    }
+    this->countRows = this->countRows - indexes.size();
 }
 
 void Table::insert(const std::vector<std::string>& values)
 {
-
+    
 }
 
 void Table::rename(const std::string& name)
