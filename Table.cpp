@@ -224,20 +224,143 @@ void Table::deleteFunc(const unsigned int& index, const std::string& searchValue
 
 void Table::insert(const std::vector<std::string>& values)
 {
-    
+    if(values.size() != this->columns.size())
+    {
+        std::cerr << "Inserted row does not match the number of elements!" << std::endl;
+        return;
+    }
+
+    unsigned int index = 0;
+    bool isTypeTheSame = true;
+
+    for(ColumnInterface* element : this->columns)
+    {
+        std::string currentType = element->getColumnType();
+
+        if(currentType == "string")
+        {
+            if(Converter::isString(values[index]) == false && Converter::isNull(values[index]) == false)
+            {
+                isTypeTheSame = false;
+                break;
+            }
+        }
+        else if(currentType == "int")
+        {
+            if(Converter::toInt(values[index])->second() == false && Converter::isNull(values[index]) == false)
+            {
+                isTypeTheSame = false;
+                break;
+            }
+        }
+        else if(currentType == "double")
+        {
+            if(Converter::toDouble(values[index])->second() == false && Converter::isNull(values[index]) == false)
+            {
+                isTypeTheSame = false;
+                break;
+            } 
+        }
+        else
+        {
+            isTypeTheSame = false;
+            break;
+        }
+        index++;
+    }
+
+    if(isTypeTheSame == false)
+    {
+        std::cerr << "Invalid type!" << std::endl;
+        return;
+    }
+
+    index = 0;
+    this->countRows++;
+
+    for(ColumnInterface* element : this->columns)
+    {
+        element->insertNewRowWith(values[index]);
+        index++;
+    }
 }
 
 void Table::rename(const std::string& name)
 {
-
+    this->name = name;
 }
 
-unsigned int count(const unsigned int& index, const std::string& searchValue)
+unsigned int Table::count(const unsigned int& index, const std::string& searchValue)
 {
-
+    if(index >= this->columns.size())
+    {
+        std::cerr << "Invalid column index!" << std::endl;
+        return 0;
+    }
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    return indexes.size();
 }
 
 double Table::aggregate(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName)
 {
+    if(index >= this->columns.size() || targetIndex >= this->columns.size())
+    {
+        std::cerr << "Invalid column index!" << std::endl;
+        return 0;
+    }
 
+    std::string typeOfColumnTarget = this->columns[targetIndex]->getColumnType();
+
+    if(typeOfColumnTarget != "int" || typeOfColumnTarget != "double")
+    {
+        std::cerr << "Target column is not int or double!" << std::endl;
+        return 0;
+    }
+
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    std::vector<double> temporary;
+
+    for(unsigned int number : indexes)
+    {
+        double current = Converter::toDouble(this->columns[targetIndex]->valueAt(number))->first();
+        temporary.push_back(current);
+    }
+
+    double result = 0;
+    if(operationName == "sum")
+    {
+        result = 0;
+        for(double element : temporary)
+        {
+            result = result + element;
+        }
+    }
+    else if(operationName == "product")
+    {
+        result = 1;
+        for(double element : temporary)
+        {
+            result = result * element;
+        }
+    }
+    else if(operationName == "maximum")
+    {
+        for(double element : temporary)
+        {
+            result = std::max(element, result);
+        }
+    }
+    else if(operationName == "minimum")
+    {
+        for(double element : temporary)
+        {
+            result = std::max(element, result);
+        }
+    }
+    else
+    {
+        std::cerr << "Invalid operation!" << std::endl;
+    }
+
+    return result;
 }
