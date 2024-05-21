@@ -65,27 +65,74 @@ void Catalogue::importTableFromFile(const std::string& tableName, const std::str
     this->tables.push_back(newTable);
 }
 
-void Catalogue::exportTableToFile(const std::string& tablename, const std::string& filename)
+void Catalogue::exportTableToFile(const std::string& tableName, const std::string& filename)
 {
-    
+    if(findTableIndexByName(this->tables, tableName) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    int indexOfTable = findTableIndexByName(this->tables, tableName);
+    this->tables[indexOfTable]->saveToFile(filename);
 }
 
-void Catalogue::saveCatalogueToDefaultFile(const std::string& name)
+void Catalogue::saveCatalogueToDefaultFile()
 {
-    
+    std::ofstream outputFile(this->filename, std::ios::out | std::ios::trunc);
+
+    outputFile << this->tables.size() << std::endl;
+
+    for(unsigned int i = 0; i < this->tables.size(); i++)
+    {
+        outputFile << this->tables[i]->getName() << " ";
+        outputFile << this->tables[i]->getFilename() << std::endl;
+    }
+
+    outputFile.close();
+
+    for(Table* element : this->tables)
+    {
+        element->saveToFile(element->getFilename());
+    }
 }
 
-void Catalogue::saveCatalogueToDifferentFile(const std::string& name)
+void Catalogue::saveCatalogueToDifferentFile(const std::string& filename)
 {
+    std::ofstream outputFile(this->filename, std::ios::out | std::ios::trunc);
 
+    if(!outputFile)
+    {
+        std::cerr << "Invalid file!" << std::endl;
+        return;
+    }
+
+    outputFile << this->tables.size() << std::endl;
+
+    for(unsigned int i = 0; i < this->tables.size(); i++)
+    {
+        outputFile << this->tables[i]->getName() << " ";
+        outputFile << this->tables[i]->getFilename() << std::endl;
+    }
+
+    outputFile.close();
+
+    for(Table* element : this->tables)
+    {
+        element->saveToFile(element->getFilename());
+    }
 }
 
 void Catalogue::showAllTables() const
 {
-
+    for(Table* element : this->tables)
+    {
+        std::cout << element->getName() << " ";
+    }
+    std::cout << std::endl;
 }
 
 void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex)
 {
-    
+
 }

@@ -21,10 +21,10 @@ class Catalogue
     int findTableIndexByName(const std::vector<Table*>& tables, const std::string& searchName);
 
     void importTableFromFile(const std::string& tableName, const std::string& filename);
-    void exportTableToFile(const std::string& tablename, const std::string& filename);
+    void exportTableToFile(const std::string& tableName, const std::string& filename);
 
-    void saveCatalogueToDefaultFile(const std::string& name);
-    void saveCatalogueToDifferentFile(const std::string& name);
+    void saveCatalogueToDefaultFile();
+    void saveCatalogueToDifferentFile(const std::string& filename);
 
     void showAllTables() const;
 
