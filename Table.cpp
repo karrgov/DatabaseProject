@@ -82,6 +82,11 @@ unsigned int Table::getCountOfRows() const
     return this->countRows;
 }
 
+unsigned int Table::getNumberOfColumns() const
+{
+    return this->columns.size();
+}
+
 const ColumnInterface* Table::columnAt(const unsigned int& index) const
 {
     if(index >= this->columns.size())

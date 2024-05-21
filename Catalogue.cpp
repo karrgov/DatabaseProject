@@ -134,5 +134,32 @@ void Catalogue::showAllTables() const
 
 void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex)
 {
+    if(findTableIndexByName(this->tables, firstTableName) == -1 || findTableIndexByName(this->tables, secondTableName) == -1)
+    {
+        std::cerr << "Missing table/s! Can not perform innerjoin!" << std::endl;
+        return;
+    }
 
+    int indexOfFirstTable = findTableIndexByName(this->tables, firstTableName);
+    int indexOfSecondTable = findTableIndexByName(this->tables, secondTableName);
+
+    const ColumnInterface* columnOfFirstTable = this->tables[indexOfFirstTable]->columnAt(firstColumnIndex);
+    const ColumnInterface* columnOfSecondTable = this->tables[indexOfSecondTable]->columnAt(secondColumnIndex);
+
+
+    if(columnOfFirstTable->getColumnType() != columnOfSecondTable->getColumnType())
+    {
+        std::cerr << "Column types does not match!" << std::endl;
+        return;
+    }
+
+    if(firstColumnIndex >= this->tables[indexOfFirstTable]->getNumberOfColumns() || secondColumnIndex >= this->tables[indexOfSecondTable]->getNumberOfColumns())
+    {
+        std::cerr << "Invalid column index" << std::endl;
+        return;
+    }
+
+    
+
+    
 }

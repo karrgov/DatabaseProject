@@ -22,6 +22,7 @@ class Table
     std::string getName() const;
     std::string getFilename() const;
     unsigned int getCountOfRows() const;
+    unsigned int getNumberOfColumns() const;
     const ColumnInterface* columnAt(const unsigned int& index) const;
     void print() const;
     void describe() const;
