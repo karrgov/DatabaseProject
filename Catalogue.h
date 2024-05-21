@@ -18,6 +18,8 @@ class Catalogue
     Catalogue(const Catalogue& other) = delete;
     Catalogue& operator=(const Catalogue& other) = delete;
 
+    int findTableIndexByName(const std::vector<Table*>& tables, const std::string& searchName);
+
     void importTableFromFile(const std::string& tableName, const std::string& filename);
     void exportTableToFile(const std::string& tablename, const std::string& filename);
 
