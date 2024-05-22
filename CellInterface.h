@@ -7,7 +7,10 @@ template<typename T>
 class CellInterface
 {
     public:
-    virtual ~CellInterface();
+    virtual ~CellInterface()
+    {
+        
+    }
 
     virtual T first() const = 0;
     virtual bool second() const = 0;

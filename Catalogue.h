@@ -30,4 +30,6 @@ class Catalogue
 
     void innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex);
 
+    
+
 };
