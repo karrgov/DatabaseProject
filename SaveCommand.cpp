@@ -15,6 +15,7 @@ void SaveCommand::applyCommand(const std::string& parameters, Catalogue*& databa
     if(database == nullptr)
     {
         std::cerr << "Error while saving the database!" << std::endl;
+        return;
     }
 
     database->saveCatalogueToDefaultFile();
