@@ -40,7 +40,7 @@ Catalogue::~Catalogue()
     this->tables.clear();
 }
 
-int Catalogue::findTableIndexByName(const std::vector<Table*>& tables, const std::string& searchName)
+int Catalogue::findTableIndexByName(const std::vector<Table*>& tables, const std::string& searchName) const
 {
     for(int i = 0; i < tables.size(); i++)
     {
@@ -162,4 +162,16 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
     
 
     
+}
+
+void Catalogue::describeTable(const std::string& name) const
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    int index = findTableIndexByName(this->tables, name);
+    this->tables[index]->describe();
 }
