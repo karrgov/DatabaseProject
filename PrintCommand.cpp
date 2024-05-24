@@ -14,7 +14,7 @@ void PrintCommand::applyCommand(const std::string& parameters, Catalogue*& datab
 {
     if(database == nullptr)
     {
-        std::cerr << "Error while showing the tables from the database!" << std::endl;
+        std::cerr << "Error while printing the table!" << std::endl;
         return;
     }
 
