@@ -5,6 +5,7 @@
 
 class HelpCommand : public CommandInterface
 {
+    public:
     HelpCommand(const std::string& name);
     ~HelpCommand();
 

@@ -30,7 +30,7 @@ bool CommandController::isCommandAvailable(Catalogue*& database)
     std::string commandParameters;
 
     int i = 0;
-    for(i; i < line.size(); i++)
+    for(; i < line.size(); i++)
     {
         if(line[i] == ' ')
         {
@@ -52,7 +52,7 @@ bool CommandController::isCommandAvailable(Catalogue*& database)
         return false;
     }
 
-    for(i; i < line.size(); i++)
+    for(; i < line.size(); i++)
     {
         commandParameters = commandParameters + line[i];
     }

@@ -1,3 +1,4 @@
+#pragma once
 #include "CommandInterface.h"
 
 class CommandController

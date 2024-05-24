@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <CellInterface.h>
+#include "CellInterface.h"
 
 class Converter
 {

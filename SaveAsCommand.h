@@ -5,6 +5,7 @@
 
 class SaveAsCommand : public CommandInterface
 {
+    public:
     SaveAsCommand(const std::string& name);
     ~SaveAsCommand();
 

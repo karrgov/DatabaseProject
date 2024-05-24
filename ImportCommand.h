@@ -5,6 +5,7 @@
 
 class ImportCommand : public CommandInterface
 {
+    public:
     ImportCommand(const std::string& name);
     ~ImportCommand();
 

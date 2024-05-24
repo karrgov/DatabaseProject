@@ -30,7 +30,7 @@ std::string StringColumn::valueAt(const unsigned int& index) const
     if(index >= this->data.size())
     {
         std::cerr << "Invalid cell index!" << std::endl;
-        return;
+        return "";
     }
 
     if(data[index]->second() == false)

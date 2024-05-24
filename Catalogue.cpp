@@ -196,6 +196,6 @@ void Catalogue::selectFromTable(const std::string& name, const unsigned int& ind
         return;
     }
 
-    int index = findTableIndexByName(this->tables, name);
-    this->tables[index]->select(index, value);
+    const unsigned int& indexFound = findTableIndexByName(this->tables, name);
+    this->tables[indexFound]->select(index, value);
 }

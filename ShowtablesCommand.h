@@ -5,6 +5,7 @@
 
 class ShowtablesCommand : public CommandInterface
 {
+    public:
     ShowtablesCommand(const std::string& name);
     ~ShowtablesCommand();
 

@@ -5,6 +5,7 @@
 
 class PrintCommand : public CommandInterface
 {
+    public:
     PrintCommand(const std::string& name);
     ~PrintCommand();
 

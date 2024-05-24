@@ -5,6 +5,7 @@
 
 class CloseCommand : public CommandInterface
 {
+    public:
     CloseCommand(const std::string& name);
     ~CloseCommand();
 

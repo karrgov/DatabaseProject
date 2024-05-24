@@ -5,6 +5,7 @@
 
 class DescribeCommand : public CommandInterface
 {
+    public:
     DescribeCommand(const std::string& name);
     ~DescribeCommand();
 

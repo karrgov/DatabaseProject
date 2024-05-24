@@ -5,6 +5,7 @@
 
 class ExportCommand : public CommandInterface
 {
+    public:
     ExportCommand(const std::string& name);
     ~ExportCommand();
 
