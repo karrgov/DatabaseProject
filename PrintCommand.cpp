@@ -1,0 +1,22 @@
+#include "PrintCommand.h"
+
+PrintCommand::PrintCommand(const std::string& name) : CommandInterface(name)
+{
+
+}
+
+PrintCommand::~PrintCommand()
+{
+
+}
+
+void PrintCommand::applyCommand(const std::string& parameters, Catalogue*& database)
+{
+    if(database == nullptr)
+    {
+        std::cerr << "Error while showing the tables from the database!" << std::endl;
+        return;
+    }
+
+    database->printTable(parameters);
+}

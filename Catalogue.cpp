@@ -175,3 +175,15 @@ void Catalogue::describeTable(const std::string& name) const
     int index = findTableIndexByName(this->tables, name);
     this->tables[index]->describe();
 }
+
+void Catalogue::printTable(const std::string& name) const
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    int index = findTableIndexByName(this->tables, name);
+    this->tables[index]->print();
+}

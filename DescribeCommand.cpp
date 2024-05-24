@@ -1,5 +1,4 @@
 #include "DescribeCommand.h"
-#include "Converter.h"
 
 DescribeCommand::DescribeCommand(const std::string& name) : CommandInterface(name)
 {
