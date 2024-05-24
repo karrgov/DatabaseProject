@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-template<typename T>
+template<class T>
 class CellInterface
 {
     public:
@@ -13,6 +13,7 @@ class CellInterface
     }
 
     virtual const T& first() const = 0;
+    virtual void setFirst(const T& value) = 0;
     virtual bool second() const = 0;
     virtual void setSecond(bool value) = 0;
 };

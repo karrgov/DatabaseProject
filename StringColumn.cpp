@@ -84,7 +84,7 @@ void StringColumn::updateRowByIndex(const unsigned int& index, const std::string
 
     if(Converter::isString(value) == true) 
     {
-        this->data[index]->first() = value;
+        this->data[index]->setFirst(value);
         this->data[index]->setSecond(true);
     } 
     else if(Converter::isNull(value) == true) 

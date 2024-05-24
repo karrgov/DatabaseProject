@@ -4,7 +4,7 @@
 #include <string>
 #include "CellInterface.h"
 
-template<typename T>
+template<class T>
 class Cell : public CellInterface<T>
 {
     private:
@@ -21,6 +21,11 @@ class Cell : public CellInterface<T>
     const T& first() const override
     {
         return value;
+    }
+
+    void setFirst(const T& value) override
+    {
+        this->value = value;
     }
 
     bool second() const override
