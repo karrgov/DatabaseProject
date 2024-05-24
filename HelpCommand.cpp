@@ -56,7 +56,7 @@ void HelpCommand::applyCommand(const std::string& parameters, Catalogue*& databa
     std::cout << "---Exports the provided table to a specific file." << std::endl;
     std::cout << std::endl;
 
-    std::cout << "Select <columnIndex> <value> <tablename>" << std::endl;
+    std::cout << "select <columnIndex> <value> <tablename>" << std::endl;
     std::cout << "---Prints all rows, which match the provided value." << std::endl;
     std::cout << std::endl;
 

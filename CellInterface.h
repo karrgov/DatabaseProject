@@ -12,7 +12,7 @@ class CellInterface
         
     }
 
-    virtual T first() const = 0;
+    virtual T& first() const = 0;
     virtual bool second() const = 0;
     virtual void setSecond(bool value) = 0;
 };

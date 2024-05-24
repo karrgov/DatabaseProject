@@ -32,6 +32,7 @@ class Catalogue
 
     void describeTable(const std::string& name) const;
     void printTable(const std::string& name) const;
+    void selectFromTable(const std::string& name, const unsigned int& index, const std::string& value) const;
 
     
 

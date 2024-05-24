@@ -18,7 +18,7 @@ class Cell : public CellInterface<T>
         this->flag = otherVal;
     }
 
-    T first() const override
+    T& first() const override
     {
         return value;
     }
@@ -28,7 +28,7 @@ class Cell : public CellInterface<T>
         return flag;
     }
 
-    void setSecond(bool value)
+    void setSecond(bool value) override
     {
         this->flag = value;
     }
