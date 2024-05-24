@@ -12,5 +12,5 @@ class Converter
     static bool isString(const std::string& value);
     static bool isNull(const std::string& value);
 
-    static void parseLineToParam(const std::string& line, std::vector<std::string>& parameters);
+    static void convertLineToParametersList(const std::string& line, std::vector<std::string>& parameters);
 };

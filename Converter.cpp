@@ -169,7 +169,7 @@ bool Converter::isNull(const std::string& value)
     return false;
 }
 
-void Converter::parseLineToParam(const std::string& line, std::vector<std::string>& parameters)
+void Converter::convertLineToParametersList(const std::string& line, std::vector<std::string>& parameters)
 {
     parameters.clear();
     std::string currentParameter;
