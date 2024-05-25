@@ -247,3 +247,15 @@ void Catalogue::insertInTable(const std::string& name, const std::vector<std::st
     const unsigned int& indexFound = findTableIndexByName(this->tables, name);
     this->tables[indexFound]->insert(values);
 }
+
+void Catalogue::renameTable(const std::string& tablename, const std::string& name)
+{
+    if(findTableIndexByName(this->tables, tablename) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, tablename);
+    this->tables[indexFound]->rename(name);
+}

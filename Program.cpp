@@ -15,6 +15,7 @@
 #include "DeleteCommand.h"
 #include "InsertCommand.h"
 #include "InnerjoinCommand.h"
+#include "RenameCommand.h"
 
 Program* Program::singletonProgram = nullptr;
 
@@ -36,7 +37,8 @@ Program::Program() : database(nullptr)
         new UpdateCommand("update"),
         new DeleteCommand("delete"),
         new InsertCommand("insert"),
-        new InnerjoinCommand("innerjoin")
+        new InnerjoinCommand("innerjoin"),
+        new RenameCommand("rename")
     });
 }
 
