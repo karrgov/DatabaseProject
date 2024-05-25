@@ -10,6 +10,8 @@
 #include "PrintCommand.h"
 #include "ExportCommand.h"
 #include "SelectCommand.h"
+#include "AddcolumnCommand.h"
+#include "UpdateCommand.h"
 
 Program* Program::singletonProgram = nullptr;
 
@@ -26,7 +28,9 @@ Program::Program() : database(nullptr)
         new DescribeCommand("describe"),
         new PrintCommand("print"),
         new ExportCommand("export"),
-        new SelectCommand("select")
+        new SelectCommand("select"),
+        new AddcolumnCommand("addcolumn"),
+        new UpdateCommand("update")
     });
 }
 
@@ -53,7 +57,7 @@ void Program::execute()
 {
     while(this->controller->isCommandAvailable(this->database))
     {
-        
+
     }
 }
 

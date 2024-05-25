@@ -199,3 +199,27 @@ void Catalogue::selectFromTable(const std::string& name, const unsigned int& ind
     const unsigned int& indexFound = findTableIndexByName(this->tables, name);
     this->tables[indexFound]->select(index, value);
 }
+
+void Catalogue::addColumnToTable(const std::string& name, const std::string& columnName, const std::string& columnType)
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, name);
+    this->tables[indexFound]->addColumn(columnName, columnType);
+}
+
+void Catalogue::updateTable(const std::string& name, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue)
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, name);
+    this->tables[indexFound]->update(index, searchValue, targetIndex, targetValue);
+}
