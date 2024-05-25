@@ -235,3 +235,15 @@ void Catalogue::deleteFuncTable(const std::string& name, const unsigned int& ind
     const unsigned int& indexFound = findTableIndexByName(this->tables, name);
     this->tables[indexFound]->deleteFunc(index, searchValue);
 }
+
+void Catalogue::insertInTable(const std::string& name, const std::vector<std::string>& values)
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, name);
+    this->tables[indexFound]->insert(values);
+}
