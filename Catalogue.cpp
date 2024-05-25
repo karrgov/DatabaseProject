@@ -223,3 +223,15 @@ void Catalogue::updateTable(const std::string& name, const unsigned int& index, 
     const unsigned int& indexFound = findTableIndexByName(this->tables, name);
     this->tables[indexFound]->update(index, searchValue, targetIndex, targetValue);
 }
+
+void Catalogue::deleteFuncTable(const std::string& name, const unsigned int& index, const std::string& searchValue)
+{
+    if(findTableIndexByName(this->tables, name) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, name);
+    this->tables[indexFound]->deleteFunc(index, searchValue);
+}

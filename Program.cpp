@@ -12,6 +12,7 @@
 #include "SelectCommand.h"
 #include "AddcolumnCommand.h"
 #include "UpdateCommand.h"
+#include "DeleteCommand.h"
 
 Program* Program::singletonProgram = nullptr;
 
@@ -30,7 +31,8 @@ Program::Program() : database(nullptr)
         new ExportCommand("export"),
         new SelectCommand("select"),
         new AddcolumnCommand("addcolumn"),
-        new UpdateCommand("update")
+        new UpdateCommand("update"),
+        new DeleteCommand("delete")
     });
 }
 

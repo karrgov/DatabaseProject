@@ -35,6 +35,7 @@ class Catalogue
     void selectFromTable(const std::string& name, const unsigned int& index, const std::string& value) const;
     void addColumnToTable(const std::string& name, const std::string& columnName, const std::string& columnType);
     void updateTable(const std::string& name, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue);
+    void deleteFuncTable(const std::string& name, const unsigned int& index, const std::string& searchValue);
 
     
 
