@@ -271,3 +271,15 @@ unsigned int Catalogue::countInTable(const std::string& tablename, const unsigne
     const unsigned int& indexFound = findTableIndexByName(this->tables, tablename);
     return this->tables[indexFound]->count(index, searchValue);
 }
+
+double Catalogue::aggregate(const std::string& tablename, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName)
+{
+    if(findTableIndexByName(this->tables, tablename) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return 0;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, tablename);
+    return this->tables[indexFound]->aggregate(index, searchValue, targetIndex, operationName);
+}

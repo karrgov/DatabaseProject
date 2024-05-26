@@ -17,6 +17,7 @@
 #include "InnerjoinCommand.h"
 #include "RenameCommand.h"
 #include "CountCommand.h"
+#include "AggregateCommand.h"
 
 Program* Program::singletonProgram = nullptr;
 
@@ -40,7 +41,8 @@ Program::Program() : database(nullptr)
         new InsertCommand("insert"),
         new InnerjoinCommand("innerjoin"),
         new RenameCommand("rename"),
-        new CountCommand("count")
+        new CountCommand("count"),
+        new AggregateCommand("aggregate")
     });
 }
 

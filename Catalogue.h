@@ -39,6 +39,7 @@ class Catalogue
     void insertInTable(const std::string& name, const std::vector<std::string>& values);
     void renameTable(const std::string& tablename, const std::string& name);
     unsigned int countInTable(const std::string& tablename, const unsigned int& index, const std::string& searchValue);
+    double aggregate(const std::string& tablename, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName);
 
     
 
