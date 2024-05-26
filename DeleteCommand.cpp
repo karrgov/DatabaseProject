@@ -18,6 +18,7 @@ void DeleteCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while deleting from the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void DeleteCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(parametersConverted.size() != 3)
     {
         std::cerr << "Invalid number of arguments for delete command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -35,10 +37,13 @@ void DeleteCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(converted->second() == false || converted->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
     database->deleteFuncTable(parametersConverted[0], converted->first(), parametersConverted[2]);
 
     delete converted;
+    std::cout << "Deleting finished!" << std::endl;
+    std::cout << std::endl;
 }

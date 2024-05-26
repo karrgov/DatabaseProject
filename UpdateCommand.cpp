@@ -18,6 +18,7 @@ void UpdateCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while updating the specific table in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void UpdateCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(parametersConverted.size() != 3)
     {
         std::cerr << "Invalid number of arguments for update command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -37,6 +39,7 @@ void UpdateCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(converted1->second() == false || converted1->first() < 0 || converted2->second() == false || converted2->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
@@ -44,4 +47,7 @@ void UpdateCommand::applyCommand(const std::string& parameters, Catalogue*& data
 
     delete converted1;
     delete converted2;
+
+    std::cout << "Updating completed!" << std::endl;
+    std::cout << std::endl;
 }

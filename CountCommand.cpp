@@ -18,6 +18,7 @@ void CountCommand::applyCommand(const std::string& parameters, Catalogue*& datab
     if(database == nullptr)
     {
         std::cerr << "Error while counting in the specific table in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void CountCommand::applyCommand(const std::string& parameters, Catalogue*& datab
     if(parametersConverted.size() != 3)
     {
         std::cerr << "Invalid number of arguments for count command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -35,11 +37,13 @@ void CountCommand::applyCommand(const std::string& parameters, Catalogue*& datab
     if(converted1->second() == false || converted1->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
     unsigned int countResult = database->countInTable(parametersConverted[0], converted1->first(), parametersConverted[2]);
     std::cout << "Count is: " << countResult << std::endl;
+    std::cout << std::endl;
 
     delete converted1;
 }

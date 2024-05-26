@@ -19,4 +19,6 @@ void OpenCommand::applyCommand(const std::string& parameters, Catalogue*& databa
     }
 
     database = new Catalogue(parameters);
+    std::cout << "Database successfuly opened!" << std::endl;
+    std::cout << std::endl;
 }

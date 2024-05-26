@@ -16,6 +16,7 @@ void ExportCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while exporting from the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -25,8 +26,11 @@ void ExportCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(parametersConverted.size() != 2)
     {
         std::cerr << "Invalid number of arguments for export command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
     database->exportTableToFile(parametersConverted[0], parametersConverted[1]);
+    std::cout << "Table exported!" << std::endl;
+    std::cout << std::endl;
 }

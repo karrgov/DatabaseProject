@@ -16,6 +16,7 @@ void ShowtablesCommand::applyCommand(const std::string& parameters, Catalogue*& 
     if(database == nullptr)
     {
         std::cerr << "Error while showing the tables from the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 

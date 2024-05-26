@@ -15,9 +15,12 @@ void CloseCommand::applyCommand(const std::string& parameters, Catalogue*& datab
     if(database == nullptr)
     {
         std::cerr << "Error while closing the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
     delete database;
     database = nullptr;
+    std::cout << "Database closed!" << std::endl;
+    std::cout << std::endl;
 }

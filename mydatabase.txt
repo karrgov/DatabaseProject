@@ -1,0 +1,4 @@
+3
+cars /Users/krasimirkargov/Documents/DatabaseProject/CarModels.txt
+people /Users/krasimirkargov/Documents/DatabaseProject/PeopleInfo.txt
+subjects /Users/krasimirkargov/Documents/DatabaseProject/Subjects.txt

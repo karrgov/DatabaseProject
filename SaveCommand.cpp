@@ -19,4 +19,6 @@ void SaveCommand::applyCommand(const std::string& parameters, Catalogue*& databa
     }
 
     database->saveCatalogueToDefaultFile();
+    std::cout << "Saving completed!" << std::endl;
+    std::cout << std::endl;
 }

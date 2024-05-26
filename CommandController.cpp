@@ -17,6 +17,7 @@ CommandController::~CommandController()
 bool CommandController::isCommandAvailable(Catalogue*& database)
 {
     std::cout << "Waiting for command:" << std::endl;
+    std::cout << std::endl;
 
     std::string line;
     std::getline(std::cin, line);
@@ -72,6 +73,7 @@ bool CommandController::isCommandAvailable(Catalogue*& database)
     if(isAvailable == false)
     {
         std::cerr << "Invalid command!" << std::endl;
+        std::cout << std::endl;
     }
     return true;
 

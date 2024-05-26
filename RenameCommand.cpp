@@ -18,6 +18,7 @@ void RenameCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while renaming the specific table in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,8 +28,11 @@ void RenameCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(parametersConverted.size() != 2)
     {
         std::cerr << "Invalid number of arguments for rename command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
     database->renameTable(parametersConverted[0], parametersConverted[1]);
+    std::cout << "Renaming completed!" << std::endl;
+    std::cout << std::endl;
 }

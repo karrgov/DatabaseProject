@@ -6,12 +6,52 @@
 #include "Table.h"
 
 Catalogue::Catalogue(const std::string& filename)
-{
+{    // std::ifstream inputFile(filename, std::ios::in);
+
+    // if(!inputFile)
+    // {
+    //     std::cerr << "Invalid file!" << std::endl;
+    //     return;
+    // }
+
     std::ifstream inputFile(filename, std::ios::in);
 
-    if(!inputFile)
+    if (!inputFile) 
     {
+        std::cout << "The file you have provided does not exist and it will be created just now!" << std::endl;
+        std::cout << std::endl;
+        std::ofstream outputFile(filename);
+        if (!outputFile) {
+            std::cerr << "Failed to create file!" << std::endl;
+            std::cout << std::endl;
+            return;
+        }
+
+        unsigned int numOfTables;
+        std::cout << "Enter the number of tables: ";
+        std::cin >> numOfTables;
+
+        outputFile << numOfTables << std::endl;
+
+        for (unsigned int i = 0; i < numOfTables; i++) 
+        {
+            std::string tableName;
+            std::string tableFilename;
+            std::cout << "Enter table name for table " << i << ": ";
+            std::cin >> tableName;
+            std::cout << "Enter table filename for table " << i << ": ";
+            std::cin >> tableFilename;
+
+            outputFile << tableName << " " << tableFilename << std::endl;
+        }
+
+        outputFile.close();
+        inputFile.open(filename);
+    }
+
+    if (!inputFile) {
         std::cerr << "Invalid file!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -57,6 +97,7 @@ void Catalogue::importTableFromFile(const std::string& tableName, const std::str
     if(findTableIndexByName(this->tables, tableName) != -1)
     {
         std::cerr << "Table already exists!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -70,6 +111,7 @@ void Catalogue::exportTableToFile(const std::string& tableName, const std::strin
     if(findTableIndexByName(this->tables, tableName) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -104,6 +146,7 @@ void Catalogue::saveCatalogueToDifferentFile(const std::string& filename)
     if(!outputFile)
     {
         std::cerr << "Invalid file!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -137,6 +180,7 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
     if(findTableIndexByName(this->tables, firstTableName) == -1 || findTableIndexByName(this->tables, secondTableName) == -1)
     {
         std::cerr << "Missing table/s! Can not perform innerjoin!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -149,13 +193,15 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
 
     if(columnOfFirstTable->getColumnType() != columnOfSecondTable->getColumnType())
     {
-        std::cerr << "Column types does not match!" << std::endl;
+        std::cerr << "Column types do not match!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
     if(firstColumnIndex >= this->tables[indexOfFirstTable]->getNumberOfColumns() || secondColumnIndex >= this->tables[indexOfSecondTable]->getNumberOfColumns())
     {
-        std::cerr << "Invalid column index" << std::endl;
+        std::cerr << "Invalid column index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -169,6 +215,7 @@ void Catalogue::describeTable(const std::string& name) const
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -181,6 +228,7 @@ void Catalogue::printTable(const std::string& name) const
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -193,6 +241,7 @@ void Catalogue::selectFromTable(const std::string& name, const unsigned int& ind
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -205,6 +254,7 @@ void Catalogue::addColumnToTable(const std::string& name, const std::string& col
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -217,6 +267,7 @@ void Catalogue::updateTable(const std::string& name, const unsigned int& index, 
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -229,6 +280,7 @@ void Catalogue::deleteFuncTable(const std::string& name, const unsigned int& ind
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -241,6 +293,7 @@ void Catalogue::insertInTable(const std::string& name, const std::vector<std::st
     if(findTableIndexByName(this->tables, name) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -253,6 +306,7 @@ void Catalogue::renameTable(const std::string& tablename, const std::string& nam
     if(findTableIndexByName(this->tables, tablename) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -265,6 +319,7 @@ unsigned int Catalogue::countInTable(const std::string& tablename, const unsigne
     if(findTableIndexByName(this->tables, tablename) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return 0;
     }
 
@@ -277,6 +332,7 @@ double Catalogue::aggregate(const std::string& tablename, const unsigned int& in
     if(findTableIndexByName(this->tables, tablename) == -1)
     {
         std::cerr << "Table does not exist!" << std::endl;
+        std::cout << std::endl;
         return 0;
     }
 

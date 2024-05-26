@@ -7,6 +7,7 @@
 
 Table::Table(const std::string& name, const std::string filename)
 {
+    // std::cout << "Constructor called!" << std::endl;
     this->name = name;
     this->filename = filename;
 
@@ -15,6 +16,7 @@ Table::Table(const std::string& name, const std::string filename)
     if(!input)
     {
         std::cerr << "Invalid file!" << std::endl;
+        std::cout << std::endl;
         input.close();
         return;
     }
@@ -39,6 +41,7 @@ Table::Table(const std::string& name, const std::string filename)
         if(!facCol)
         {
             std::cerr << "Invalid column type!" << std::endl;
+            std::cout << std::endl;
             input.close();
             return;
         }
@@ -92,6 +95,7 @@ const ColumnInterface* Table::columnAt(const unsigned int& index) const
     if(index >= this->columns.size())
     {
         std::cerr << "Invalid column index" << std::endl;
+        std::cout << std::endl;
         return nullptr;
     }
     return this->columns[index];
@@ -99,7 +103,7 @@ const ColumnInterface* Table::columnAt(const unsigned int& index) const
 
 void Table::print() const
 {
-    std::cout << "Content of table" << this->name << ":" << std::endl;
+    std::cout << "Content of table " << this->name << ":" << std::endl;
     for(ColumnInterface* element : this->columns)
     {
         std::cout << element->getName() << " ";
@@ -133,6 +137,7 @@ void Table::saveToFile(const std::string& filename) const
     if(!output)
     {
         std::cerr << "Invalid file!" << std::endl;
+        std::cout << std::endl;
         output.close();
         return;
     }
@@ -155,6 +160,7 @@ void Table::select(const unsigned int& index, const std::string& value) const
     if(index >= this->columns.size())
     {
         std::cerr << "Invalid column index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(value);
@@ -167,6 +173,7 @@ void Table::select(const unsigned int& index, const std::string& value) const
         }
         std::cout << std::endl;
     }
+    std::cout << std::endl;
 }
 
 void Table::addColumn(const std::string& columnName, const std::string& columnType)
@@ -176,6 +183,7 @@ void Table::addColumn(const std::string& columnName, const std::string& columnTy
     if(newColumn == nullptr)
     {
         std::cerr << "Invalid type for column" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -191,6 +199,7 @@ void Table::update(const unsigned int& index, const std::string& searchValue, co
     if(index >= this->columns.size() || targetIndex >= this->columns.size())
     {
         std::cerr << "Invalid column index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -207,6 +216,7 @@ void Table::deleteFunc(const unsigned int& index, const std::string& searchValue
     if(index >= this->columns.size())
     {
         std::cerr << "Invalid column index" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -232,6 +242,7 @@ void Table::insert(const std::vector<std::string>& values)
     if(values.size() != this->columns.size())
     {
         std::cerr << "Inserted row does not match the number of elements!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -277,6 +288,7 @@ void Table::insert(const std::vector<std::string>& values)
     if(isTypeTheSame == false)
     {
         std::cerr << "Invalid type!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -300,6 +312,7 @@ unsigned int Table::count(const unsigned int& index, const std::string& searchVa
     if(index >= this->columns.size())
     {
         std::cerr << "Invalid column index!" << std::endl;
+        std::cout << std::endl;
         return 0;
     }
     std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
@@ -311,6 +324,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
     if(index >= this->columns.size() || targetIndex >= this->columns.size())
     {
         std::cerr << "Invalid column index!" << std::endl;
+        std::cout << std::endl;
         return 0;
     }
 
@@ -319,6 +333,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
     if(typeOfColumnTarget != "int" || typeOfColumnTarget != "double")
     {
         std::cerr << "Target column is not int or double!" << std::endl;
+        std::cout << std::endl;
         return 0;
     }
 
@@ -365,6 +380,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
     else
     {
         std::cerr << "Invalid operation!" << std::endl;
+        std::cout << std::endl;
     }
 
     return result;

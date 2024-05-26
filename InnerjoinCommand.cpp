@@ -18,6 +18,7 @@ void InnerjoinCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(database == nullptr)
     {
         std::cerr << "Error while innerjoining the specific tables in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void InnerjoinCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(parametersConverted.size() != 4)
     {
         std::cerr << "Invalid number of arguments for innerjoin command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -37,6 +39,7 @@ void InnerjoinCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(converted1->second() == false || converted1->first() < 0 || converted2->second() == false || converted2->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
@@ -44,4 +47,6 @@ void InnerjoinCommand::applyCommand(const std::string& parameters, Catalogue*& d
 
     delete converted1;
     delete converted2;
+    std::cout << "Innerjoin completed!" << std::endl;
+    std::cout << std::endl;
 }

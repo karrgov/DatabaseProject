@@ -18,6 +18,7 @@ void AggregateCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(database == nullptr)
     {
         std::cerr << "Error while aggregating the specific table in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void AggregateCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(parametersConverted.size() != 5)
     {
         std::cerr << "Invalid number of arguments for aggregate command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -37,12 +39,14 @@ void AggregateCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(converted1->second() == false || converted1->first() < 0 || converted2->second() == false || converted2->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
     double result = database->aggregate(parametersConverted[0], converted1->first(), parametersConverted[2], converted2->first(), parametersConverted[4]);
 
     std::cout << "Result from aggregating: " << result << std::endl;
+    std::cout << std::endl;
 
     delete converted1;
     delete converted2;

@@ -1,0 +1,21 @@
+4 4
+Imena string
+"gosho"
+"ivan"
+"mityo"
+"pesho"
+Pol string
+"muj"
+"jena"
+"jena"
+"muj"
+Cvqt string
+"zelen"
+"sin"
+"bql"
+"cheren"
+Hrana string
+"duner"
+"kartofi"
+"buhti"
+"palachinki"

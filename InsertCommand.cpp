@@ -18,6 +18,7 @@ void InsertCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while inserting into the specific table in the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -34,4 +35,6 @@ void InsertCommand::applyCommand(const std::string& parameters, Catalogue*& data
 
     
     database->insertInTable(name, parametersConverted);
+    std::cout << "Insert completed!" << std::endl;
+    std::cout << std::endl;
 }

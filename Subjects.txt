@@ -1,0 +1,9 @@
+2 3
+Predmeti string
+"matematika"
+"fizika"
+"istoriq"
+Izbiraemi string
+"matematika"
+"himiq"
+"okolnasreda"

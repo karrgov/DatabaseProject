@@ -18,6 +18,7 @@ void AddcolumnCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(database == nullptr)
     {
         std::cerr << "Error while adding a column to the table!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,8 +28,11 @@ void AddcolumnCommand::applyCommand(const std::string& parameters, Catalogue*& d
     if(parametersConverted.size() != 3)
     {
         std::cerr << "Invalid number of arguments for addcolumn command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
     database->addColumnToTable(parametersConverted[0], parametersConverted[1], parametersConverted[2]);
+    std::cout << "Column added!" << std::endl;
+    std::cout << std::endl;
 }

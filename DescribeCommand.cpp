@@ -15,6 +15,7 @@ void DescribeCommand::applyCommand(const std::string& parameters, Catalogue*& da
     if(database == nullptr)
     {
         std::cerr << "Error while showing the tables from the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 

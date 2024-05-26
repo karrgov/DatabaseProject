@@ -18,6 +18,7 @@ void SelectCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(database == nullptr)
     {
         std::cerr << "Error while selecting from the database!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -27,6 +28,7 @@ void SelectCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(parametersConverted.size() != 3)
     {
         std::cerr << "Invalid number of arguments for select command!" << std::endl;
+        std::cout << std::endl;
         return;
     }
 
@@ -35,6 +37,7 @@ void SelectCommand::applyCommand(const std::string& parameters, Catalogue*& data
     if(converted->second() == false || converted->first() < 0)
     {
         std::cerr << "Invalid index!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
