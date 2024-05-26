@@ -259,3 +259,15 @@ void Catalogue::renameTable(const std::string& tablename, const std::string& nam
     const unsigned int& indexFound = findTableIndexByName(this->tables, tablename);
     this->tables[indexFound]->rename(name);
 }
+
+unsigned int Catalogue::countInTable(const std::string& tablename, const unsigned int& index, const std::string& searchValue)
+{
+    if(findTableIndexByName(this->tables, tablename) == -1)
+    {
+        std::cerr << "Table does not exist!" << std::endl;
+        return 0;
+    }
+
+    const unsigned int& indexFound = findTableIndexByName(this->tables, tablename);
+    return this->tables[indexFound]->count(index, searchValue);
+}

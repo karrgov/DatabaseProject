@@ -38,6 +38,7 @@ class Catalogue
     void deleteFuncTable(const std::string& name, const unsigned int& index, const std::string& searchValue);
     void insertInTable(const std::string& name, const std::vector<std::string>& values);
     void renameTable(const std::string& tablename, const std::string& name);
+    unsigned int countInTable(const std::string& tablename, const unsigned int& index, const std::string& searchValue);
 
     
 
