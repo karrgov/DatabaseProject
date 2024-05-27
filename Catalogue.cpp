@@ -4,6 +4,7 @@
 #include <string>
 #include "Catalogue.h"
 #include "Table.h"
+#include "ColumnFactory.h"
 
 Catalogue::Catalogue(const std::string& filename)
 {    // std::ifstream inputFile(filename, std::ios::in);
@@ -204,6 +205,20 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
         std::cout << std::endl;
         return;
     }
+
+    std::vector<ColumnInterface*> resultTable;
+    resultTable.push_back(ColumnFactory::createColumn("key", columnOfFirstTable->getColumnType()));
+
+    for(unsigned int i = 0; i < this->tables[indexOfFirstTable]->getNumberOfColumns(); i++)
+    {
+        if(i == firstColumnIndex)
+        {
+            continue;
+        }
+        resultTable.push_back(ColumnFactory::createColumn(this->tables[indexOfFirstTable]->columnAt(i)->getName(), this->tables[indexOfFirstTable]->columnAt(i)->getColumnType()));
+    }
+
+    
 
     
 
