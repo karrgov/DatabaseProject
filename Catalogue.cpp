@@ -218,7 +218,16 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
         resultTable.push_back(ColumnFactory::createColumn(this->tables[indexOfFirstTable]->columnAt(i)->getName(), this->tables[indexOfFirstTable]->columnAt(i)->getColumnType()));
     }
 
-    
+    for(unsigned int i = 0; i < this->tables[indexOfSecondTable]->getNumberOfColumns(); i++)
+    {
+        if(i == secondColumnIndex)
+        {
+            continue;
+        }
+        resultTable.push_back(ColumnFactory::createColumn(this->tables[indexOfSecondTable]->columnAt(i)->getName(), this->tables[indexOfSecondTable]->columnAt(i)->getColumnType()));
+    }
+
+
 
     
 
