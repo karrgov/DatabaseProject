@@ -330,7 +330,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
 
     std::string typeOfColumnTarget = this->columns[targetIndex]->getColumnType();
 
-    if(typeOfColumnTarget != "int" || typeOfColumnTarget != "double")
+    if(typeOfColumnTarget != "int" && typeOfColumnTarget != "double")
     {
         std::cerr << "Target column is not int or double!" << std::endl;
         std::cout << std::endl;

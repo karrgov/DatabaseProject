@@ -1,5 +1,6 @@
-4
+5
 cars /Users/krasimirkargov/Documents/DatabaseProject/CarModels.txt
 people /Users/krasimirkargov/Documents/DatabaseProject/PeopleInfo.txt
 subjects /Users/krasimirkargov/Documents/DatabaseProject/Subjects.txt
 chisla /Users/krasimirkargov/Documents/DatabaseProject/Numbers.txt
+chisla2 /Users/krasimirkargov/Documents/DatabaseProject/Numbers2.txt
