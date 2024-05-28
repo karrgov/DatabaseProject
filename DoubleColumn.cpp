@@ -113,5 +113,5 @@ void DoubleColumn::insertNewCellWith(const std::string& value)
 {
     CellInterface<double>* converted = Converter::toDouble(value);
     this->data.push_back(converted);
-    delete converted;
+    //delete converted;
 }

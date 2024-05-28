@@ -110,5 +110,5 @@ void IntColumn::insertNewCellWith(const std::string& value)
 {
     CellInterface<int>* converted = Converter::toInt(value);
     this->data.push_back(converted);
-    delete converted;
+    //delete converted;
 }

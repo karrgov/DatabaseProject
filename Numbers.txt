@@ -1,0 +1,13 @@
+3 3
+Drobi double
+83.48
+483.3948
+43.9599
+Celi int
+-45
+3435
+3954
+Drobi double
+NULL
+NULL
+2.001
