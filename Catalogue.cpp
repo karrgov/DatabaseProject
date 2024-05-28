@@ -207,7 +207,7 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
     }
 
     std::vector<ColumnInterface*> resultTable;
-    resultTable.push_back(ColumnFactory::createColumn("key", columnOfFirstTable->getColumnType()));
+    resultTable.push_back(ColumnFactory::createColumn("keyColumn", columnOfFirstTable->getColumnType()));
 
     for(unsigned int i = 0; i < this->tables[indexOfFirstTable]->getNumberOfColumns(); i++)
     {
@@ -227,11 +227,79 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
         resultTable.push_back(ColumnFactory::createColumn(this->tables[indexOfSecondTable]->columnAt(i)->getName(), this->tables[indexOfSecondTable]->columnAt(i)->getColumnType()));
     }
 
+    bool doCellsMatch = false;
+    unsigned int resultTableRows = 0;
 
+    for(unsigned int i = 0; i < this->tables[indexOfFirstTable]->getCountOfRows(); i++)
+    {
+        std::vector<unsigned int> matchedCellsIndexes = columnOfSecondTable->getIndexesOfRowsWithValues(columnOfFirstTable->valueAt(i));
 
-    
+        if(matchedCellsIndexes.size() == 0) 
+        {
+            continue;
+        }
 
-    
+        doCellsMatch = true;
+
+        for(const unsigned int& element : matchedCellsIndexes) 
+        {
+            resultTableRows++;
+
+            std::vector<std::string> valuesToBeAdded;
+            valuesToBeAdded.push_back(columnOfFirstTable->valueAt(i));
+
+            for(unsigned int j = 0; j < this->tables[indexOfFirstTable]->getNumberOfColumns(); ++j) 
+            {
+                if(j == firstColumnIndex) 
+                {
+                    continue;
+                }
+
+                valuesToBeAdded.push_back(this->tables[indexOfFirstTable]->columnAt(j)->valueAt(i));
+            }
+
+            for(unsigned int j = 0; j < this->tables[indexOfSecondTable]->getNumberOfColumns(); ++j) 
+            {
+                if(j == secondColumnIndex) {
+                    continue;
+                }
+
+                valuesToBeAdded.push_back(this->tables[indexOfSecondTable]->columnAt(j)->valueAt(element));
+            }
+
+            for(unsigned int k = 0; k < resultTable.size(); ++k) 
+            {
+                resultTable[k]->insertNewRowWith(valuesToBeAdded[k]);
+            }
+        }  
+    }
+
+    if(doCellsMatch == false) 
+    {
+        std::cout << "There are no cells that match with one another! Innerjoin unsuccessful!" << std::endl;
+        std::cout << std::endl;
+    } 
+    else 
+    {
+        std::cout << "Innerjoin successful!" << std::endl;
+        std::cout << std::endl;
+        
+        for(unsigned int i = 0; i < resultTableRows; ++i) 
+        {
+            for(ColumnInterface* element : resultTable) 
+            {
+                std::cout << element->valueAt(i) << ' ';
+            }
+
+            std::cout << std::endl;
+        }
+    }
+
+    for(ColumnInterface* element : resultTable) 
+    {
+        delete element;
+    }
+    resultTable.clear();
 }
 
 void Catalogue::describeTable(const std::string& name) const
