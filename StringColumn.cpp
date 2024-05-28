@@ -40,7 +40,7 @@ std::string StringColumn::valueAt(const unsigned int& index) const
     return data[index]->first();
 }
 
-std::vector<unsigned int> StringColumn::getIndexesOfRowsWithValues(const std::string& value) const
+std::vector<unsigned int> StringColumn::getIndexesOfCellsWithValues(const std::string& value) const
 {
     std::vector<unsigned int> result;
 
@@ -74,7 +74,7 @@ std::vector<unsigned int> StringColumn::getIndexesOfRowsWithValues(const std::st
     return result;
 }
 
-void StringColumn::updateRowByIndex(const unsigned int& index, const std::string& value)
+void StringColumn::updateCellByIndex(const unsigned int& index, const std::string& value)
 {
     if(index >= this->data.size())
     {
@@ -93,7 +93,7 @@ void StringColumn::updateRowByIndex(const unsigned int& index, const std::string
     } 
 }
 
-void StringColumn::deleteRowByIndex(const unsigned int& index)
+void StringColumn::deleteCellByIndex(const unsigned int& index)
 {
     if(index >= this->data.size())
     {
@@ -108,7 +108,7 @@ void StringColumn::deleteRowByIndex(const unsigned int& index)
     this->data.pop_back();
 }
 
-void StringColumn::insertNewRowWith(const std::string& value)
+void StringColumn::insertNewCellWith(const std::string& value)
 {
     if(Converter::isString(value) == true) 
     {

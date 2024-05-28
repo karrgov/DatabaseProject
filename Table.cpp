@@ -52,7 +52,7 @@ Table::Table(const std::string& name, const std::string filename)
         {
             std::string value;
             std::getline(input, value);
-            this->columns[currentCol]->insertNewRowWith(value);
+            this->columns[currentCol]->insertNewCellWith(value);
         }
     }
     input.close();
@@ -163,7 +163,7 @@ void Table::select(const unsigned int& index, const std::string& value) const
         std::cout << std::endl;
         return;
     }
-    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(value);
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfCellsWithValues(value);
 
     for(unsigned int number : indexes)
     {
@@ -190,7 +190,7 @@ void Table::addColumn(const std::string& columnName, const std::string& columnTy
     this->columns.push_back(newColumn);
     for(int i = 0; i < this->countRows; i++)
     {
-        newColumn->insertNewRowWith("NULL");
+        newColumn->insertNewCellWith("NULL");
     }
 }
 
@@ -203,11 +203,11 @@ void Table::update(const unsigned int& index, const std::string& searchValue, co
         return;
     }
 
-    std::vector<unsigned int> indexesToBeUpdated = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    std::vector<unsigned int> indexesToBeUpdated = this->columns[index]->getIndexesOfCellsWithValues(searchValue);
 
     for(unsigned int number : indexesToBeUpdated)
     {
-        this->columns[targetIndex]->updateRowByIndex(number, targetValue);
+        this->columns[targetIndex]->updateCellByIndex(number, targetValue);
     }
 }
 
@@ -220,7 +220,7 @@ void Table::deleteFunc(const unsigned int& index, const std::string& searchValue
         return;
     }
 
-    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfCellsWithValues(searchValue);
 
     unsigned int compennsationForDeletion = 0;
 
@@ -230,7 +230,7 @@ void Table::deleteFunc(const unsigned int& index, const std::string& searchValue
 
         for(ColumnInterface* element : this->columns)
         {
-            element->deleteRowByIndex(number);
+            element->deleteCellByIndex(number);
         }
         compennsationForDeletion++;
     }
@@ -297,7 +297,7 @@ void Table::insert(const std::vector<std::string>& values)
 
     for(ColumnInterface* element : this->columns)
     {
-        element->insertNewRowWith(values[index]);
+        element->insertNewCellWith(values[index]);
         index++;
     }
 }
@@ -315,7 +315,7 @@ unsigned int Table::count(const unsigned int& index, const std::string& searchVa
         std::cout << std::endl;
         return 0;
     }
-    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfCellsWithValues(searchValue);
     return indexes.size();
 }
 
@@ -337,7 +337,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
         return 0;
     }
 
-    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfRowsWithValues(searchValue);
+    std::vector<unsigned int> indexes = this->columns[index]->getIndexesOfCellsWithValues(searchValue);
     std::vector<double> temporary;
 
     for(unsigned int number : indexes)

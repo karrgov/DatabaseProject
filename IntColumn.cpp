@@ -40,7 +40,7 @@ std::string IntColumn::valueAt(const unsigned int& index) const
     return std::to_string(data[index]->first());
 }
 
-std::vector<unsigned int> IntColumn::getIndexesOfRowsWithValues(const std::string& value) const
+std::vector<unsigned int> IntColumn::getIndexesOfCellsWithValues(const std::string& value) const
 {
     std::vector<unsigned int> result;
 
@@ -78,7 +78,7 @@ std::vector<unsigned int> IntColumn::getIndexesOfRowsWithValues(const std::strin
     return result;
 }
 
-void IntColumn::updateRowByIndex(const unsigned int& index, const std::string& value)
+void IntColumn::updateCellByIndex(const unsigned int& index, const std::string& value)
 {
     if(index >= this->data.size())
     {
@@ -91,7 +91,7 @@ void IntColumn::updateRowByIndex(const unsigned int& index, const std::string& v
     delete converted;
 }
 
-void IntColumn::deleteRowByIndex(const unsigned int& index)
+void IntColumn::deleteCellByIndex(const unsigned int& index)
 {
     if(index >= this->data.size())
     {
@@ -106,7 +106,7 @@ void IntColumn::deleteRowByIndex(const unsigned int& index)
     this->data.pop_back();
 }
 
-void IntColumn::insertNewRowWith(const std::string& value)
+void IntColumn::insertNewCellWith(const std::string& value)
 {
     CellInterface<int>* converted = Converter::toInt(value);
     this->data.push_back(converted);

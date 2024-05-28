@@ -43,7 +43,7 @@ std::string DoubleColumn::valueAt(const unsigned int& index) const
     return std::to_string(data[index]->first());
 }
 
-std::vector<unsigned int> DoubleColumn::getIndexesOfRowsWithValues(const std::string& value) const
+std::vector<unsigned int> DoubleColumn::getIndexesOfCellsWithValues(const std::string& value) const
 {
     std::vector<unsigned int> result;
 
@@ -81,7 +81,7 @@ std::vector<unsigned int> DoubleColumn::getIndexesOfRowsWithValues(const std::st
     return result;
 }
 
-void DoubleColumn::updateRowByIndex(const unsigned int& index, const std::string& value)
+void DoubleColumn::updateCellByIndex(const unsigned int& index, const std::string& value)
 {
     if(index >= this->data.size())
     {
@@ -94,7 +94,7 @@ void DoubleColumn::updateRowByIndex(const unsigned int& index, const std::string
     delete converted;
 }
 
-void DoubleColumn::deleteRowByIndex(const unsigned int& index)
+void DoubleColumn::deleteCellByIndex(const unsigned int& index)
 {
     if(index >= this->data.size())
     {
@@ -109,7 +109,7 @@ void DoubleColumn::deleteRowByIndex(const unsigned int& index)
     this->data.pop_back();
 }
  
-void DoubleColumn::insertNewRowWith(const std::string& value)
+void DoubleColumn::insertNewCellWith(const std::string& value)
 {
     CellInterface<double>* converted = Converter::toDouble(value);
     this->data.push_back(converted);

@@ -232,7 +232,7 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
 
     for(unsigned int i = 0; i < this->tables[indexOfFirstTable]->getCountOfRows(); i++)
     {
-        std::vector<unsigned int> matchedCellsIndexes = columnOfSecondTable->getIndexesOfRowsWithValues(columnOfFirstTable->valueAt(i));
+        std::vector<unsigned int> matchedCellsIndexes = columnOfSecondTable->getIndexesOfCellsWithValues(columnOfFirstTable->valueAt(i));
 
         if(matchedCellsIndexes.size() == 0) 
         {
@@ -269,7 +269,7 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
 
             for(unsigned int k = 0; k < resultTable.size(); ++k) 
             {
-                resultTable[k]->insertNewRowWith(valuesToBeAdded[k]);
+                resultTable[k]->insertNewCellWith(valuesToBeAdded[k]);
             }
         }  
     }
