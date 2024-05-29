@@ -142,7 +142,7 @@ void Table::saveToFile(const std::string& filename) const
         return;
     }
 
-    output << this->columns.size() << this->countRows << std::endl;
+    output << this->columns.size() << " " << this->countRows << std::endl;
 
     for(ColumnInterface* element : this->columns)
     {
