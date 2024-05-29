@@ -19,3 +19,8 @@ Hrana string
 "kartofi"
 "buhti"
 "palachinki"
+Pari string
+NULL
+NULL
+NULL
+NULL
