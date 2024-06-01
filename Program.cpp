@@ -1,3 +1,13 @@
+/**
+ * @file Program.cpp
+ * @author Krasimir
+ * @brief This class represents the whole Program, following the singleton design pattern because the program is a singular entity therefore making it impossible for two or more programs to exist at the same time
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "Program.h"
 #include "OpenCommand.h"
 #include "CloseCommand.h"
