@@ -1,3 +1,13 @@
+/**
+ * @file CommandController.cpp
+ * @author Krasimir
+ * @brief This class represents a list of all available commands in the program and is responsible for parametrizing the direct user input from the console
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "CommandController.h"
 
 CommandController::CommandController(const std::vector<CommandInterface*>& commands) : allCommands(commands)
