@@ -1,0 +1,41 @@
+\doxysection{Column\+Interface Class Reference}
+\hypertarget{class_column_interface}{}\label{class_column_interface}\index{ColumnInterface@{ColumnInterface}}
+Inheritance diagram for Column\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_column_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c}\label{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c} 
+{\bfseries Column\+Interface} (const std\+::string \&name)
+\item 
+\Hypertarget{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310}\label{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310} 
+std\+::string {\bfseries get\+Name} () const
+\item 
+\Hypertarget{class_column_interface_a4cdc3c712d8ad894e86de0b96616e3c8}\label{class_column_interface_a4cdc3c712d8ad894e86de0b96616e3c8} 
+virtual std\+::string {\bfseries get\+Column\+Type} () const =0
+\item 
+\Hypertarget{class_column_interface_ad8edee9d1b5f285acedf10c71b70da12}\label{class_column_interface_ad8edee9d1b5f285acedf10c71b70da12} 
+virtual std\+::string {\bfseries value\+At} (const unsigned int \&index) const =0
+\item 
+\Hypertarget{class_column_interface_a0175466e7a3331405d17387de380e586}\label{class_column_interface_a0175466e7a3331405d17387de380e586} 
+virtual std\+::vector$<$ unsigned int $>$ {\bfseries get\+Indexes\+Of\+Cells\+With\+Values} (const std\+::string \&value) const =0
+\item 
+\Hypertarget{class_column_interface_a2699ee8aeda52d291fac67636ce1fbee}\label{class_column_interface_a2699ee8aeda52d291fac67636ce1fbee} 
+virtual void {\bfseries update\+Cell\+By\+Index} (const unsigned int \&index, const std\+::string \&new\+Value)=0
+\item 
+\Hypertarget{class_column_interface_a89448bc0bbdcca11b50259a157dd05f4}\label{class_column_interface_a89448bc0bbdcca11b50259a157dd05f4} 
+virtual void {\bfseries delete\+Cell\+By\+Index} (const unsigned int \&index)=0
+\item 
+\Hypertarget{class_column_interface_a1869bd978fa0c7255035f500cf20cec5}\label{class_column_interface_a1869bd978fa0c7255035f500cf20cec5} 
+virtual void {\bfseries insert\+New\+Cell\+With} (const std\+::string \&value)=0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Column\+Interface.\+h\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Column\+Interface.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\doxysection{Catalogue Class Reference}
+\hypertarget{class_catalogue}{}\label{class_catalogue}\index{Catalogue@{Catalogue}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_catalogue_ae2cf79487fb1b988169c31cd355655a4}\label{class_catalogue_ae2cf79487fb1b988169c31cd355655a4} 
+{\bfseries Catalogue} (const std\+::string \&filename)
+\item 
+\Hypertarget{class_catalogue_aba01f09ca531d80c1dc7d4fc2cbe7102}\label{class_catalogue_aba01f09ca531d80c1dc7d4fc2cbe7102} 
+{\bfseries Catalogue} (const \mbox{\hyperlink{class_catalogue}{Catalogue}} \&other)=delete
+\item 
+\Hypertarget{class_catalogue_a3c8616499a837a9b2b67d4550b2a005b}\label{class_catalogue_a3c8616499a837a9b2b67d4550b2a005b} 
+\mbox{\hyperlink{class_catalogue}{Catalogue}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_catalogue}{Catalogue}} \&other)=delete
+\item 
+\Hypertarget{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7}\label{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7} 
+int {\bfseries find\+Table\+Index\+By\+Name} (const std\+::vector$<$ \mbox{\hyperlink{class_table}{Table}} \texorpdfstring{$\ast$}{*} $>$ \&tables, const std\+::string \&search\+Name) const
+\item 
+\Hypertarget{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd}\label{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd} 
+void {\bfseries import\+Table\+From\+File} (const std\+::string \&table\+Name, const std\+::string \&filename)
+\item 
+\Hypertarget{class_catalogue_a1db263537cf0babcf67d15db4f06a0db}\label{class_catalogue_a1db263537cf0babcf67d15db4f06a0db} 
+void {\bfseries export\+Table\+To\+File} (const std\+::string \&table\+Name, const std\+::string \&filename)
+\item 
+\Hypertarget{class_catalogue_aa7256a4e227763efeed4f7b9e1bfb2bb}\label{class_catalogue_aa7256a4e227763efeed4f7b9e1bfb2bb} 
+void {\bfseries save\+Catalogue\+To\+Default\+File} ()
+\item 
+\Hypertarget{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c}\label{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c} 
+void {\bfseries save\+Catalogue\+To\+Different\+File} (const std\+::string \&filename)
+\item 
+\Hypertarget{class_catalogue_abe8968f435fb75f08efb82317e43e65f}\label{class_catalogue_abe8968f435fb75f08efb82317e43e65f} 
+void {\bfseries show\+All\+Tables} () const
+\item 
+\Hypertarget{class_catalogue_ab6483f71b258884b4f051c2154df7dd4}\label{class_catalogue_ab6483f71b258884b4f051c2154df7dd4} 
+void {\bfseries inner\+Join\+Tables} (const std\+::string \&first\+Table\+Name, const unsigned int \&first\+Column\+Index, const std\+::string \&second\+Table\+Name, const unsigned int \&second\+Column\+Index)
+\item 
+\Hypertarget{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf}\label{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf} 
+void {\bfseries describe\+Table} (const std\+::string \&name) const
+\item 
+\Hypertarget{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c}\label{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c} 
+void {\bfseries print\+Table} (const std\+::string \&name) const
+\item 
+\Hypertarget{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e}\label{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e} 
+void {\bfseries select\+From\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&value) const
+\item 
+\Hypertarget{class_catalogue_a50e26b5fc6ebbf77d145a20ae292e035}\label{class_catalogue_a50e26b5fc6ebbf77d145a20ae292e035} 
+void {\bfseries add\+Column\+To\+Table} (const std\+::string \&name, const std\+::string \&column\+Name, const std\+::string \&column\+Type)
+\item 
+\Hypertarget{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a}\label{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a} 
+void {\bfseries update\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&target\+Value)
+\item 
+\Hypertarget{class_catalogue_a13e09a73e69d8d70f98e980570dab770}\label{class_catalogue_a13e09a73e69d8d70f98e980570dab770} 
+void {\bfseries delete\+Func\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value)
+\item 
+\Hypertarget{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65}\label{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65} 
+void {\bfseries insert\+In\+Table} (const std\+::string \&name, const std\+::vector$<$ std\+::string $>$ \&values)
+\item 
+\Hypertarget{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73}\label{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73} 
+void {\bfseries rename\+Table} (const std\+::string \&tablename, const std\+::string \&name)
+\item 
+\Hypertarget{class_catalogue_a5f96f2395de06a3de542b7e65560a795}\label{class_catalogue_a5f96f2395de06a3de542b7e65560a795} 
+unsigned int {\bfseries count\+In\+Table} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value)
+\item 
+\Hypertarget{class_catalogue_a65400e2129ca32f88ab0544177eee261}\label{class_catalogue_a65400e2129ca32f88ab0544177eee261} 
+double {\bfseries aggregate} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&operation\+Name)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Catalogue.\+h\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Catalogue.\+cpp\end{DoxyCompactItemize}

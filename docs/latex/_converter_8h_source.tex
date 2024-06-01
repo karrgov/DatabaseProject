@@ -1,0 +1,21 @@
+\doxysection{/\+Users/krasimirkargov/\+Documents/\+Database\+Project/\+Converter.h}
+\hypertarget{_converter_8h_source}{}\label{_converter_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CellInterface.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_converter}{Converter}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_cell_interface}{CellInterface<int>}}*\ toInt(\textcolor{keyword}{const}\ std::string\&\ value);}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_cell_interface}{CellInterface<double>}}*\ toDouble(\textcolor{keyword}{const}\ std::string\&\ value);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isString(\textcolor{keyword}{const}\ std::string\&\ value);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isNull(\textcolor{keyword}{const}\ std::string\&\ value);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ convertLineToParametersList(\textcolor{keyword}{const}\ std::string\&\ line,\ std::vector<std::string>\&\ parameters);}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

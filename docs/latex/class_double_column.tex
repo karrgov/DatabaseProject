@@ -1,0 +1,108 @@
+\doxysection{Double\+Column Class Reference}
+\hypertarget{class_double_column}{}\label{class_double_column}\index{DoubleColumn@{DoubleColumn}}
+Inheritance diagram for Double\+Column\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_double_column}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_double_column_a2bdfa955c1ce50613b92d7c2a787c922}\label{class_double_column_a2bdfa955c1ce50613b92d7c2a787c922} 
+{\bfseries Double\+Column} (const std\+::string \&name)
+\item 
+\Hypertarget{class_double_column_a9f4ff07dc5aea990ae143cf02613d1b9}\label{class_double_column_a9f4ff07dc5aea990ae143cf02613d1b9} 
+{\bfseries Double\+Column} (const \mbox{\hyperlink{class_double_column}{Double\+Column}} \&other)=delete
+\item 
+\Hypertarget{class_double_column_ab34489da87081c0bb4a8c37f6ee394ef}\label{class_double_column_ab34489da87081c0bb4a8c37f6ee394ef} 
+\mbox{\hyperlink{class_double_column}{Double\+Column}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_double_column}{Double\+Column}} \&other)=delete
+\item 
+virtual std\+::string \mbox{\hyperlink{class_double_column_a3f800a8a794c6e4c6b4516a3714e5b70}{get\+Column\+Type}} () const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_double_column_a7d1a7e2bc31fa2b7e711f6444292d4c1}{value\+At}} (const unsigned int \&index) const override
+\item 
+virtual std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_double_column_a14aed21bee86bc2598cf21feee896092}{get\+Indexes\+Of\+Cells\+With\+Values}} (const std\+::string \&value) const override
+\item 
+virtual void \mbox{\hyperlink{class_double_column_a0789af87ba6014470dd619dca7bdccba}{update\+Cell\+By\+Index}} (const unsigned int \&index, const std\+::string \&value) override
+\item 
+virtual void \mbox{\hyperlink{class_double_column_ad50f616253030f597b152cf7ad673fd0}{delete\+Cell\+By\+Index}} (const unsigned int \&index) override
+\item 
+virtual void \mbox{\hyperlink{class_double_column_a1ac5de780f7b8b7202020d4f16c642c8}{insert\+New\+Cell\+With}} (const std\+::string \&value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_column_interface}{Column\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Column\+Interface} (const std\+::string \&name)
+\item 
+std\+::string {\bfseries get\+Name} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_double_column_ad50f616253030f597b152cf7ad673fd0}\label{class_double_column_ad50f616253030f597b152cf7ad673fd0} 
+\index{DoubleColumn@{DoubleColumn}!deleteCellByIndex@{deleteCellByIndex}}
+\index{deleteCellByIndex@{deleteCellByIndex}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{deleteCellByIndex()}{deleteCellByIndex()}}
+{\footnotesize\ttfamily void Double\+Column\+::delete\+Cell\+By\+Index (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+\Hypertarget{class_double_column_a3f800a8a794c6e4c6b4516a3714e5b70}\label{class_double_column_a3f800a8a794c6e4c6b4516a3714e5b70} 
+\index{DoubleColumn@{DoubleColumn}!getColumnType@{getColumnType}}
+\index{getColumnType@{getColumnType}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{getColumnType()}{getColumnType()}}
+{\footnotesize\ttfamily std\+::string Double\+Column\+::get\+Column\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+\Hypertarget{class_double_column_a14aed21bee86bc2598cf21feee896092}\label{class_double_column_a14aed21bee86bc2598cf21feee896092} 
+\index{DoubleColumn@{DoubleColumn}!getIndexesOfCellsWithValues@{getIndexesOfCellsWithValues}}
+\index{getIndexesOfCellsWithValues@{getIndexesOfCellsWithValues}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{getIndexesOfCellsWithValues()}{getIndexesOfCellsWithValues()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ Double\+Column\+::get\+Indexes\+Of\+Cells\+With\+Values (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+\Hypertarget{class_double_column_a1ac5de780f7b8b7202020d4f16c642c8}\label{class_double_column_a1ac5de780f7b8b7202020d4f16c642c8} 
+\index{DoubleColumn@{DoubleColumn}!insertNewCellWith@{insertNewCellWith}}
+\index{insertNewCellWith@{insertNewCellWith}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{insertNewCellWith()}{insertNewCellWith()}}
+{\footnotesize\ttfamily void Double\+Column\+::insert\+New\+Cell\+With (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+\Hypertarget{class_double_column_a0789af87ba6014470dd619dca7bdccba}\label{class_double_column_a0789af87ba6014470dd619dca7bdccba} 
+\index{DoubleColumn@{DoubleColumn}!updateCellByIndex@{updateCellByIndex}}
+\index{updateCellByIndex@{updateCellByIndex}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{updateCellByIndex()}{updateCellByIndex()}}
+{\footnotesize\ttfamily void Double\+Column\+::update\+Cell\+By\+Index (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+\Hypertarget{class_double_column_a7d1a7e2bc31fa2b7e711f6444292d4c1}\label{class_double_column_a7d1a7e2bc31fa2b7e711f6444292d4c1} 
+\index{DoubleColumn@{DoubleColumn}!valueAt@{valueAt}}
+\index{valueAt@{valueAt}!DoubleColumn@{DoubleColumn}}
+\doxysubsubsection{\texorpdfstring{valueAt()}{valueAt()}}
+{\footnotesize\ttfamily std\+::string Double\+Column\+::value\+At (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_column_interface}{Column\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Double\+Column.\+h\item 
+/\+Users/krasimirkargov/\+Documents/\+Database\+Project/Double\+Column.\+cpp\end{DoxyCompactItemize}

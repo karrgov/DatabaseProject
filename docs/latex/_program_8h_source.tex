@@ -1,0 +1,27 @@
+\doxysection{/\+Users/krasimirkargov/\+Documents/\+Database\+Project/\+Program.h}
+\hypertarget{_program_8h_source}{}\label{_program_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CommandController.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Catalogue.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_program}{Program}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_program}{Program}}*\ singletonProgram;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_command_controller}{CommandController}}*\ controller;}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_catalogue}{Catalogue}}*\ database;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_program}{Program}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_program}{Program}}*\ getProgram();}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_program}{\string~Program}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_program}{Program}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_program}{Program}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_program}{Program}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_program}{Program}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ execute();}
+\DoxyCodeLine{00022\ \};}
+
+\end{DoxyCode}

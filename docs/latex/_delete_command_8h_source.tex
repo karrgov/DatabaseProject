@@ -1,0 +1,18 @@
+\doxysection{/\+Users/krasimirkargov/\+Documents/\+Database\+Project/\+Delete\+Command.h}
+\hypertarget{_delete_command_8h_source}{}\label{_delete_command_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CommandInterface.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Catalogue.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delete_command}{DeleteCommand}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_command_interface}{CommandInterface}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_delete_command}{DeleteCommand}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_delete_command}{\string~DeleteCommand}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ applyCommand(\textcolor{keyword}{const}\ std::string\&\ parameters,\ \mbox{\hyperlink{class_catalogue}{Catalogue}}*\&\ database)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \};}
+
+\end{DoxyCode}
