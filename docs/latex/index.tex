@@ -7,30 +7,24 @@
 \item Integer number\+: A sequence of digits without any other symbols between them. The number may have a \textquotesingle{}+\textquotesingle{} or \textquotesingle{}-\/\textquotesingle{} sign at the beginning.
 \item Floating-\/point number\+: A sequence of digits followed by a dot symbol and another sequence of digits. The number may have a \textquotesingle{}+\textquotesingle{} or \textquotesingle{}-\/\textquotesingle{} sign at the beginning.
 \item String\+: A sequence of arbitrary characters enclosed in quotation marks. Similar to std\+::string in C++, if you want to include a quotation mark in a string, you must escape it as "{}, and if you want to include a backslash, you must escape it as \textbackslash{}. For example\+: "{}Hello world!"{} "{}C\+:\textbackslash{}temp"{} "{}"{}This is a quotation"{}"{} In addition to specific values, a singular cell in a table can be "{}empty."{} Such cells should be specially marked and displayed as "{}\+NULL."{} Once the application opens a certain database file (catalogue), it is able to perform the following operations, in addition to common operations like close, save, save as, help, and exit\+:
-\item open $<$filename$>$ Opens a file, provided by the user.
-\item close Closes the opened file.
-\item save Saves to the opened file.
-\item saveas $<$filename$>$ Saves the already opened file to a specific one, provided by the user.
-\item help Displays all of the available commands.
-\item exit Exits the program.
-\item import $<$tablename$>$ $<$filename$>$ Imports a new table into the database by table name and file name.
-\item showtables Displays a list of all loaded tables.
-\item describe $<$tablename$>$ Shows all the types of the columns of the provided table.
-\item print $<$tablename$>$ Prints the provided table.
-\item export $<$tablename$>$ $<$filename$>$ Exports the provided table to a specific file.
-\item select $<$column\+Index$>$ 
-\end{DoxyItemize}
-
-$<$tablename$>$ Prints all rows which match the provided value.
-
-
-\begin{DoxyItemize}
-\item addcolumn $<$tablename$>$ $<$columnname$>$ $<$columntype$>$ Adds a new column to the provided table.
-\item update $<$tablename$>$ $<$search\+Column\+Index$>$ $<$search\+Value$>$ $<$target\+Column\+Index$>$ $<$target\+Value$>$ Updates the provided table.
-\item delete $<$tablename$>$ $<$search\+Column\+Index$>$ $<$search\+Value$>$ Deletes the rows matching the provided value.
-\item insert $<$tablename$>$ $<$value1$>$ $<$value2$>$ ... $<$value\+N$>$ Inserts the provided values.
-\item innerjoin $<$tablename1$>$ $<$column\+Index1$>$ $<$tablename2$>$ $<$column\+Index2$>$ Performs the inner join operation on the provided tables.
-\item rename $<$tablename$>$ $<$new\+Tablename$>$ Changes the name of the provided table.
-\item count $<$tablename$>$ $<$search\+Column\+Index$>$ $<$search\+Value$>$ Counts the rows having this specific value in the provided table.
-\item aggregate $<$tablename$>$ $<$search\+Column\+Index$>$ $<$search\+Value$>$ $<$target\+Column\+Index$>$ $<$math\+Operation$>$ Performs a given operation (sum, product, maximum, or minimum) on the values in the target column index of all rows whose columns with number search column index contain the value search value. Returns an error if the columns are not numeric. 
+\item open {\itshape filename} -\/ Opens a file, provided by the user.
+\item close -\/ Closes the opened file.
+\item save -\/ Saves to the opened file.
+\item saveas {\itshape filename} -\/ Saves the already opened file to a specific one, provided by the user.
+\item help -\/ Displays all of the available commands.
+\item exit -\/ Exits the program.
+\item import {\itshape tablename} {\itshape filename} -\/ Imports a new table into the database by table name and file name.
+\item showtables -\/ Displays a list of all loaded tables.
+\item describe {\itshape tablename} -\/ Shows all the types of the columns of the provided table.
+\item print {\itshape tablename} -\/ Prints the provided table.
+\item export {\itshape tablename} {\itshape filename} -\/ Exports the provided table to a specific file.
+\item select {\itshape column\+Index} {\itshape value} {\itshape tablename} -\/ Prints all rows which match the provided value.
+\item addcolumn {\itshape tablename} {\itshape columnname} {\itshape columntype} -\/ Adds a new column to the provided table.
+\item update {\itshape tablename} {\itshape search\+Column\+Index} {\itshape search\+Value} {\itshape target\+Column\+Index} {\itshape target\+Value} -\/ Updates the provided table.
+\item delete {\itshape tablename} {\itshape search\+Column\+Index} {\itshape search\+Value} -\/ Deletes the rows matching the provided value.
+\item insert {\itshape tablename} {\itshape value1} {\itshape value2} ... {\itshape valueN} -\/ Inserts the provided values.
+\item innerjoin {\itshape tablename1} {\itshape column\+Index1} {\itshape tablename2} {\itshape column\+Index2} -\/ Performs the inner join operation on the provided tables.
+\item rename {\itshape tablename} {\itshape new\+Tablename} -\/ Changes the name of the provided table.
+\item count {\itshape tablename} {\itshape search\+Column\+Index} {\itshape search\+Value} -\/ Counts the rows having this specific value in the provided table.
+\item aggregate {\itshape tablename} {\itshape search\+Column\+Index} {\itshape search\+Value} {\itshape target\+Column\+Index} {\itshape math\+Operation} -\/ Performs a given operation (sum, product, maximum, or minimum) on the values in the target column index of all rows whose columns with number search column index contain the value search value. Returns an error if the columns are not numeric. 
 \end{DoxyItemize}

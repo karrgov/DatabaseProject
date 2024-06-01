@@ -78,29 +78,26 @@ $(function() {
 <li>String: A sequence of arbitrary characters enclosed in quotation marks. Similar to std::string in C++, if you want to include a quotation mark in a string, you must escape it as ", and if you want to include a backslash, you must escape it as \. For example:
 "Hello world!"
 "C:\temp" ""This is a quotation"" In addition to specific values, a singular cell in a table can be "empty." Such cells should be specially marked and displayed as "NULL." Once the application opens a certain database file (catalogue), it is able to perform the following operations, in addition to common operations like close, save, save as, help, and exit:</li>
-<li>open &lt;filename&gt; Opens a file, provided by the user.</li>
-<li>close Closes the opened file.</li>
-<li>save Saves to the opened file.</li>
-<li>saveas &lt;filename&gt; Saves the already opened file to a specific one, provided by the user.</li>
-<li>help Displays all of the available commands.</li>
-<li>exit Exits the program.</li>
-<li>import &lt;tablename&gt; &lt;filename&gt; Imports a new table into the database by table name and file name.</li>
-<li>showtables Displays a list of all loaded tables.</li>
-<li>describe &lt;tablename&gt; Shows all the types of the columns of the provided table.</li>
-<li>print &lt;tablename&gt; Prints the provided table.</li>
-<li>export &lt;tablename&gt; &lt;filename&gt; Exports the provided table to a specific file.</li>
-<li>select &lt;columnIndex&gt; </li>
-</ul>
-<p>&lt;tablename&gt; Prints all rows which match the provided value.</p>
-<ul>
-<li>addcolumn &lt;tablename&gt; &lt;columnname&gt; &lt;columntype&gt; Adds a new column to the provided table.</li>
-<li>update &lt;tablename&gt; &lt;searchColumnIndex&gt; &lt;searchValue&gt; &lt;targetColumnIndex&gt; &lt;targetValue&gt; Updates the provided table.</li>
-<li>delete &lt;tablename&gt; &lt;searchColumnIndex&gt; &lt;searchValue&gt; Deletes the rows matching the provided value.</li>
-<li>insert &lt;tablename&gt; &lt;value1&gt; &lt;value2&gt; ... &lt;valueN&gt; Inserts the provided values.</li>
-<li>innerjoin &lt;tablename1&gt; &lt;columnIndex1&gt; &lt;tablename2&gt; &lt;columnIndex2&gt; Performs the inner join operation on the provided tables.</li>
-<li>rename &lt;tablename&gt; &lt;newTablename&gt; Changes the name of the provided table.</li>
-<li>count &lt;tablename&gt; &lt;searchColumnIndex&gt; &lt;searchValue&gt; Counts the rows having this specific value in the provided table.</li>
-<li>aggregate &lt;tablename&gt; &lt;searchColumnIndex&gt; &lt;searchValue&gt; &lt;targetColumnIndex&gt; &lt;mathOperation&gt; Performs a given operation (sum, product, maximum, or minimum) on the values in the target column index of all rows whose columns with number search column index contain the value search value. Returns an error if the columns are not numeric. </li>
+<li>open <em>filename</em> - Opens a file, provided by the user.</li>
+<li>close - Closes the opened file.</li>
+<li>save - Saves to the opened file.</li>
+<li>saveas <em>filename</em> - Saves the already opened file to a specific one, provided by the user.</li>
+<li>help - Displays all of the available commands.</li>
+<li>exit - Exits the program.</li>
+<li>import <em>tablename</em> <em>filename</em> - Imports a new table into the database by table name and file name.</li>
+<li>showtables - Displays a list of all loaded tables.</li>
+<li>describe <em>tablename</em> - Shows all the types of the columns of the provided table.</li>
+<li>print <em>tablename</em> - Prints the provided table.</li>
+<li>export <em>tablename</em> <em>filename</em> - Exports the provided table to a specific file.</li>
+<li>select <em>columnIndex</em> <em>value</em> <em>tablename</em> - Prints all rows which match the provided value.</li>
+<li>addcolumn <em>tablename</em> <em>columnname</em> <em>columntype</em> - Adds a new column to the provided table.</li>
+<li>update <em>tablename</em> <em>searchColumnIndex</em> <em>searchValue</em> <em>targetColumnIndex</em> <em>targetValue</em> - Updates the provided table.</li>
+<li>delete <em>tablename</em> <em>searchColumnIndex</em> <em>searchValue</em> - Deletes the rows matching the provided value.</li>
+<li>insert <em>tablename</em> <em>value1</em> <em>value2</em> ... <em>valueN</em> - Inserts the provided values.</li>
+<li>innerjoin <em>tablename1</em> <em>columnIndex1</em> <em>tablename2</em> <em>columnIndex2</em> - Performs the inner join operation on the provided tables.</li>
+<li>rename <em>tablename</em> <em>newTablename</em> - Changes the name of the provided table.</li>
+<li>count <em>tablename</em> <em>searchColumnIndex</em> <em>searchValue</em> - Counts the rows having this specific value in the provided table.</li>
+<li>aggregate <em>tablename</em> <em>searchColumnIndex</em> <em>searchValue</em> <em>targetColumnIndex</em> <em>mathOperation</em> - Performs a given operation (sum, product, maximum, or minimum) on the values in the target column index of all rows whose columns with number search column index contain the value search value. Returns an error if the columns are not numeric. </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
