@@ -1,3 +1,13 @@
+/**
+ * @file Catalogue.cpp
+ * @author Krasimir
+ * @brief This class represents a catalogue (list of tables)
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <iostream>
 #include <fstream>
 #include <vector>

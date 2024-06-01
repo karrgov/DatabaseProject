@@ -1,3 +1,13 @@
+/**
+ * @file ColumnFactory.cpp
+ * @author Krasimir
+ * @brief This class implements the factory design pattern and is responsible for creating column objects depending on the provided type
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <iostream>
 #include "ColumnFactory.h"
 #include "IntColumn.h"

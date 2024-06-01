@@ -1,3 +1,13 @@
+/**
+ * @file Cell.h
+ * @author Krasimir
+ * @brief This is a template class that inherits from the CellInterface
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 #include <iostream>
 #include <vector>

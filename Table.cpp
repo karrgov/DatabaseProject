@@ -1,3 +1,13 @@
+/**
+ * @file Table.cpp
+ * @author Krasimir
+ * @brief This class represents a singular table in the database
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <iostream>
 #include <fstream>
 #include <cassert>
