@@ -1,3 +1,13 @@
+/**
+ * @file Converter.cpp
+ * @author Krasimir
+ * @brief This class makes the conversion of std::string to the desired types possible, supported by the program. Static member functions in order to be called without an object of the class
+ * @version 0.1
+ * @date 2024-06-01
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <iostream>
 #include <vector>
 #include <string>
