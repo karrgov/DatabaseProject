@@ -3,63 +3,305 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_table_a8334b30da09ef974267be6bf6bccfb50}\label{class_table_a8334b30da09ef974267be6bf6bccfb50} 
-{\bfseries Table} (const std\+::string \&name, const std\+::string filename)
-\item 
+\mbox{\hyperlink{class_table_a8334b30da09ef974267be6bf6bccfb50}{Table}} (const std\+::string \&name, const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_table_a9a559f2e7beb37b511ee9f88873164f8}\label{class_table_a9a559f2e7beb37b511ee9f88873164f8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Table} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object. \end{DoxyCompactList}\item 
 \Hypertarget{class_table_a7c9732a20ee98f957c314f879c31c7e2}\label{class_table_a7c9732a20ee98f957c314f879c31c7e2} 
 {\bfseries Table} (const \mbox{\hyperlink{class_table}{Table}} \&other)=delete
 \item 
 \Hypertarget{class_table_a22e927ee3154a1943aca26174e50e92b}\label{class_table_a22e927ee3154a1943aca26174e50e92b} 
 \mbox{\hyperlink{class_table}{Table}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_table}{Table}} \&other)=delete
 \item 
-\Hypertarget{class_table_a9b78f709a02ba6c10aa5a9250f6209b5}\label{class_table_a9b78f709a02ba6c10aa5a9250f6209b5} 
-std\+::string {\bfseries get\+Name} () const
-\item 
-\Hypertarget{class_table_a2f458a7ce5b745b80887e1299cf09ce3}\label{class_table_a2f458a7ce5b745b80887e1299cf09ce3} 
-std\+::string {\bfseries get\+Filename} () const
-\item 
-\Hypertarget{class_table_a4b75871b1205e48c79c0d908bd73bec5}\label{class_table_a4b75871b1205e48c79c0d908bd73bec5} 
-unsigned int {\bfseries get\+Count\+Of\+Rows} () const
-\item 
-\Hypertarget{class_table_ad5bc0295aee8afa48265db50fa4cfae9}\label{class_table_ad5bc0295aee8afa48265db50fa4cfae9} 
-unsigned int {\bfseries get\+Number\+Of\+Columns} () const
-\item 
-\Hypertarget{class_table_a749961b0dbd5d81b4e82b2500a3d7f5e}\label{class_table_a749961b0dbd5d81b4e82b2500a3d7f5e} 
-const \mbox{\hyperlink{class_column_interface}{Column\+Interface}} \texorpdfstring{$\ast$}{*} {\bfseries column\+At} (const unsigned int \&index) const
-\item 
+std\+::string \mbox{\hyperlink{class_table_a9b78f709a02ba6c10aa5a9250f6209b5}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the table. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_table_a2f458a7ce5b745b80887e1299cf09ce3}{get\+Filename}} () const
+\begin{DoxyCompactList}\small\item\em Returns the filename of the table. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_table_a4b75871b1205e48c79c0d908bd73bec5}{get\+Count\+Of\+Rows}} () const
+\begin{DoxyCompactList}\small\item\em Returns the count of rows. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_table_ad5bc0295aee8afa48265db50fa4cfae9}{get\+Number\+Of\+Columns}} () const
+\begin{DoxyCompactList}\small\item\em Returns the count of columns. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_column_interface}{Column\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_table_a749961b0dbd5d81b4e82b2500a3d7f5e}{column\+At}} (const unsigned int \&index) const
+\begin{DoxyCompactList}\small\item\em Returns the specific column at the given index. \end{DoxyCompactList}\item 
 \Hypertarget{class_table_aa6531f07b1b9b1690ba81e6c27d7b47e}\label{class_table_aa6531f07b1b9b1690ba81e6c27d7b47e} 
 void {\bfseries print} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the table. \end{DoxyCompactList}\item 
 \Hypertarget{class_table_a215a8388ee7f3a738d84979c7e67f90b}\label{class_table_a215a8388ee7f3a738d84979c7e67f90b} 
 void {\bfseries describe} () const
-\item 
-\Hypertarget{class_table_ab32ebe6462f5a4e24ad1cc43a0097a9b}\label{class_table_ab32ebe6462f5a4e24ad1cc43a0097a9b} 
-void {\bfseries save\+To\+File} (const std\+::string \&filename) const
-\item 
-\Hypertarget{class_table_adc7bf56c14b9cf039c570bfe9953bbea}\label{class_table_adc7bf56c14b9cf039c570bfe9953bbea} 
-void {\bfseries select} (const unsigned int \&index, const std\+::string \&value) const
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the types of each column in the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_ab32ebe6462f5a4e24ad1cc43a0097a9b}{save\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Saves the table to a specific file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_adc7bf56c14b9cf039c570bfe9953bbea}{select}} (const unsigned int \&index, const std\+::string \&value) const
+\begin{DoxyCompactList}\small\item\em Performs select operation on the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_a421e174f49260a20e248555fe9e904b0}{add\+Column}} (const std\+::string \&column\+Name, const std\+::string \&column\+Type)
+\begin{DoxyCompactList}\small\item\em Adds a new column to the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_a6fa83eb883da43e8fce2a2407a27ff6e}{update}} (const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&target\+Value)
+\begin{DoxyCompactList}\small\item\em Updates the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_a0d702b798559958af395c1901052bbea}{delete\+Func}} (const unsigned int \&index, const std\+::string \&search\+Value)
+\begin{DoxyCompactList}\small\item\em Deletes from the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_a13e41c5462706971c4b034ab2ed2d1db}{insert}} (const std\+::vector$<$ std\+::string $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Inserts into the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_table_a754346f20f3202704589547e8a9306ef}{rename}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Renames the table. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_table_aeb26f9be8ef284776443bae4a2dff6e8}{count}} (const unsigned int \&index, const std\+::string \&search\+Value)
+\begin{DoxyCompactList}\small\item\em Counts the occurrences in a column of the table. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_table_a7fc938506c3af0cf6bc3463188c50a9f}{aggregate}} (const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&operation\+Name)
+\begin{DoxyCompactList}\small\item\em Performs aggregate to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_table_a8334b30da09ef974267be6bf6bccfb50}\label{class_table_a8334b30da09ef974267be6bf6bccfb50} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_table_a421e174f49260a20e248555fe9e904b0}\label{class_table_a421e174f49260a20e248555fe9e904b0} 
-void {\bfseries add\+Column} (const std\+::string \&column\+Name, const std\+::string \&column\+Type)
-\item 
-\Hypertarget{class_table_a6fa83eb883da43e8fce2a2407a27ff6e}\label{class_table_a6fa83eb883da43e8fce2a2407a27ff6e} 
-void {\bfseries update} (const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&target\+Value)
-\item 
-\Hypertarget{class_table_a0d702b798559958af395c1901052bbea}\label{class_table_a0d702b798559958af395c1901052bbea} 
-void {\bfseries delete\+Func} (const unsigned int \&index, const std\+::string \&search\+Value)
-\item 
-\Hypertarget{class_table_a13e41c5462706971c4b034ab2ed2d1db}\label{class_table_a13e41c5462706971c4b034ab2ed2d1db} 
-void {\bfseries insert} (const std\+::vector$<$ std\+::string $>$ \&values)
-\item 
-\Hypertarget{class_table_a754346f20f3202704589547e8a9306ef}\label{class_table_a754346f20f3202704589547e8a9306ef} 
-void {\bfseries rename} (const std\+::string \&name)
-\item 
-\Hypertarget{class_table_aeb26f9be8ef284776443bae4a2dff6e8}\label{class_table_aeb26f9be8ef284776443bae4a2dff6e8} 
-unsigned int {\bfseries count} (const unsigned int \&index, const std\+::string \&search\+Value)
-\item 
+\index{Table@{Table}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}}
+{\footnotesize\ttfamily void Table\+::add\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+Name,  }\item[{const std\+::string \&}]{column\+Type }\end{DoxyParamCaption})}
+
+
+
+Adds a new column to the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Name} & \\
+\hline
+{\em column\+Type} & \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_table_a7fc938506c3af0cf6bc3463188c50a9f}\label{class_table_a7fc938506c3af0cf6bc3463188c50a9f} 
-double {\bfseries aggregate} (const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&operation\+Name)
-\end{DoxyCompactItemize}
+\index{Table@{Table}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{aggregate()}{aggregate()}}
+{\footnotesize\ttfamily double Table\+::aggregate (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value,  }\item[{const unsigned int \&}]{target\+Index,  }\item[{const std\+::string \&}]{operation\+Name }\end{DoxyParamCaption})}
+
+
+
+Performs aggregate to the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+{\em target\+Index} & \\
+\hline
+{\em operation\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\Hypertarget{class_table_a749961b0dbd5d81b4e82b2500a3d7f5e}\label{class_table_a749961b0dbd5d81b4e82b2500a3d7f5e} 
+\index{Table@{Table}!columnAt@{columnAt}}
+\index{columnAt@{columnAt}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{columnAt()}{columnAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_column_interface}{Column\+Interface}} \texorpdfstring{$\ast$}{*} Table\+::column\+At (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the specific column at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Column\+Interface\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_table_aeb26f9be8ef284776443bae4a2dff6e8}\label{class_table_aeb26f9be8ef284776443bae4a2dff6e8} 
+\index{Table@{Table}!count@{count}}
+\index{count@{count}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily unsigned int Table\+::count (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value }\end{DoxyParamCaption})}
+
+
+
+Counts the occurrences in a column of the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\Hypertarget{class_table_a0d702b798559958af395c1901052bbea}\label{class_table_a0d702b798559958af395c1901052bbea} 
+\index{Table@{Table}!deleteFunc@{deleteFunc}}
+\index{deleteFunc@{deleteFunc}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{deleteFunc()}{deleteFunc()}}
+{\footnotesize\ttfamily void Table\+::delete\+Func (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value }\end{DoxyParamCaption})}
+
+
+
+Deletes from the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_a4b75871b1205e48c79c0d908bd73bec5}\label{class_table_a4b75871b1205e48c79c0d908bd73bec5} 
+\index{Table@{Table}!getCountOfRows@{getCountOfRows}}
+\index{getCountOfRows@{getCountOfRows}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getCountOfRows()}{getCountOfRows()}}
+{\footnotesize\ttfamily unsigned int Table\+::get\+Count\+Of\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the count of rows. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\Hypertarget{class_table_a2f458a7ce5b745b80887e1299cf09ce3}\label{class_table_a2f458a7ce5b745b80887e1299cf09ce3} 
+\index{Table@{Table}!getFilename@{getFilename}}
+\index{getFilename@{getFilename}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getFilename()}{getFilename()}}
+{\footnotesize\ttfamily std\+::string Table\+::get\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the filename of the table. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{class_table_a9b78f709a02ba6c10aa5a9250f6209b5}\label{class_table_a9b78f709a02ba6c10aa5a9250f6209b5} 
+\index{Table@{Table}!getName@{getName}}
+\index{getName@{getName}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Table\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of the table. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{class_table_ad5bc0295aee8afa48265db50fa4cfae9}\label{class_table_ad5bc0295aee8afa48265db50fa4cfae9} 
+\index{Table@{Table}!getNumberOfColumns@{getNumberOfColumns}}
+\index{getNumberOfColumns@{getNumberOfColumns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getNumberOfColumns()}{getNumberOfColumns()}}
+{\footnotesize\ttfamily unsigned int Table\+::get\+Number\+Of\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the count of columns. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\Hypertarget{class_table_a13e41c5462706971c4b034ab2ed2d1db}\label{class_table_a13e41c5462706971c4b034ab2ed2d1db} 
+\index{Table@{Table}!insert@{insert}}
+\index{insert@{insert}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Table\+::insert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Inserts into the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_a754346f20f3202704589547e8a9306ef}\label{class_table_a754346f20f3202704589547e8a9306ef} 
+\index{Table@{Table}!rename@{rename}}
+\index{rename@{rename}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily void Table\+::rename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Renames the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_ab32ebe6462f5a4e24ad1cc43a0097a9b}\label{class_table_ab32ebe6462f5a4e24ad1cc43a0097a9b} 
+\index{Table@{Table}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void Table\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Saves the table to a specific file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_adc7bf56c14b9cf039c570bfe9953bbea}\label{class_table_adc7bf56c14b9cf039c570bfe9953bbea} 
+\index{Table@{Table}!select@{select}}
+\index{select@{select}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily void Table\+::select (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Performs select operation on the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_a6fa83eb883da43e8fce2a2407a27ff6e}\label{class_table_a6fa83eb883da43e8fce2a2407a27ff6e} 
+\index{Table@{Table}!update@{update}}
+\index{update@{update}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Table\+::update (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value,  }\item[{const unsigned int \&}]{target\+Index,  }\item[{const std\+::string \&}]{target\+Value }\end{DoxyParamCaption})}
+
+
+
+Updates the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+{\em target\+Index} & \\
+\hline
+{\em target\+Value} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
