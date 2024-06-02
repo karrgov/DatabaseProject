@@ -158,7 +158,10 @@ void Catalogue::exportTableToFile(const std::string& tableName, const std::strin
     this->tables[indexOfTable]->saveToFile(filename);
 }
 
-
+/**
+ * @brief Saves all changes made to the catalogue and its tables to the default file, used to construct it in the first place
+ * 
+ */
 void Catalogue::saveCatalogueToDefaultFile()
 {
     std::ofstream outputFile(this->filename, std::ios::out | std::ios::trunc);
@@ -179,6 +182,11 @@ void Catalogue::saveCatalogueToDefaultFile()
     }
 }
 
+/**
+ * @brief Saves all changes made to the catalogue and its tables to a specific file
+ * 
+ * @param filename 
+ */
 void Catalogue::saveCatalogueToDifferentFile(const std::string& filename)
 {
     std::ofstream outputFile(this->filename, std::ios::out | std::ios::trunc);
@@ -206,6 +214,10 @@ void Catalogue::saveCatalogueToDifferentFile(const std::string& filename)
     }
 }
 
+/**
+ * @brief Prints the names of all tables in the catalogue
+ * 
+ */
 void Catalogue::showAllTables() const
 {
     for(Table* element : this->tables)
@@ -215,6 +227,14 @@ void Catalogue::showAllTables() const
     std::cout << std::endl;
 }
 
+/**
+ * @brief Performs innerjoin to two tables in the catalogue
+ * 
+ * @param firstTableName 
+ * @param firstColumnIndex 
+ * @param secondTableName 
+ * @param secondColumnIndex 
+ */
 void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigned int& firstColumnIndex, const std::string& secondTableName, const unsigned int& secondColumnIndex)
 {
     if(findTableIndexByName(this->tables, firstTableName) == -1 || findTableIndexByName(this->tables, secondTableName) == -1)
@@ -341,6 +361,11 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
     resultTable.clear();
 }
 
+/**
+ * @brief Prints the types of the columns in a specific table in the catalogue
+ * 
+ * @param name 
+ */
 void Catalogue::describeTable(const std::string& name) const
 {
     if(findTableIndexByName(this->tables, name) == -1)
