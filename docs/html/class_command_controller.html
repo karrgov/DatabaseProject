@@ -78,19 +78,80 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c0864633ae7a375cd5d5c1c36cd3a1d" id="r_a8c0864633ae7a375cd5d5c1c36cd3a1d"><td class="memItemLeft" align="right" valign="top"><a id="a8c0864633ae7a375cd5d5c1c36cd3a1d" name="a8c0864633ae7a375cd5d5c1c36cd3a1d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommandController</b> (const std::vector&lt; <a class="el" href="class_command_interface.html">CommandInterface</a> * &gt; &amp;commands)</td></tr>
+<tr class="memitem:a8c0864633ae7a375cd5d5c1c36cd3a1d" id="r_a8c0864633ae7a375cd5d5c1c36cd3a1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_controller.html#a8c0864633ae7a375cd5d5c1c36cd3a1d">CommandController</a> (const std::vector&lt; <a class="el" href="class_command_interface.html">CommandInterface</a> * &gt; &amp;commands)</td></tr>
+<tr class="memdesc:a8c0864633ae7a375cd5d5c1c36cd3a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Command Controller:: Command Controller object.  <br /></td></tr>
 <tr class="separator:a8c0864633ae7a375cd5d5c1c36cd3a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb827da2513f28be9fed0c72b517996e" id="r_acb827da2513f28be9fed0c72b517996e"><td class="memItemLeft" align="right" valign="top"><a id="acb827da2513f28be9fed0c72b517996e" name="acb827da2513f28be9fed0c72b517996e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~CommandController</b> ()</td></tr>
+<tr class="memdesc:acb827da2513f28be9fed0c72b517996e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Command Controller:: Command Controller object. <br /></td></tr>
+<tr class="separator:acb827da2513f28be9fed0c72b517996e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7250ebb2651b51ee2eac38c9b76eb8e1" id="r_a7250ebb2651b51ee2eac38c9b76eb8e1"><td class="memItemLeft" align="right" valign="top"><a id="a7250ebb2651b51ee2eac38c9b76eb8e1" name="a7250ebb2651b51ee2eac38c9b76eb8e1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CommandController</b> (const <a class="el" href="class_command_controller.html">CommandController</a> &amp;other)=delete</td></tr>
 <tr class="separator:a7250ebb2651b51ee2eac38c9b76eb8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a598703c740d5fa816ef4fea341ea8916" id="r_a598703c740d5fa816ef4fea341ea8916"><td class="memItemLeft" align="right" valign="top"><a id="a598703c740d5fa816ef4fea341ea8916" name="a598703c740d5fa816ef4fea341ea8916"></a>
 <a class="el" href="class_command_controller.html">CommandController</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_command_controller.html">CommandController</a> &amp;other)=delete</td></tr>
 <tr class="separator:a598703c740d5fa816ef4fea341ea8916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2a94bbcb4b7d61657f9b4a77ba968ef" id="r_af2a94bbcb4b7d61657f9b4a77ba968ef"><td class="memItemLeft" align="right" valign="top"><a id="af2a94bbcb4b7d61657f9b4a77ba968ef" name="af2a94bbcb4b7d61657f9b4a77ba968ef"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCommandAvailable</b> (<a class="el" href="class_catalogue.html">Catalogue</a> *&amp;database)</td></tr>
+<tr class="memitem:af2a94bbcb4b7d61657f9b4a77ba968ef" id="r_af2a94bbcb4b7d61657f9b4a77ba968ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_controller.html#af2a94bbcb4b7d61657f9b4a77ba968ef">isCommandAvailable</a> (<a class="el" href="class_catalogue.html">Catalogue</a> *&amp;database)</td></tr>
+<tr class="memdesc:af2a94bbcb4b7d61657f9b4a77ba968ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits and processes a command entered by the user, applying it to the provided database and returns false if the command is "exit", signaling the program should terminate or returns true, indicating the command processing loop should continue.  <br /></td></tr>
 <tr class="separator:af2a94bbcb4b7d61657f9b4a77ba968ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8c0864633ae7a375cd5d5c1c36cd3a1d" name="a8c0864633ae7a375cd5d5c1c36cd3a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0864633ae7a375cd5d5c1c36cd3a1d">&#9670;&#160;</a></span>CommandController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandController::CommandController </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_command_interface.html">CommandInterface</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>commands</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Command Controller:: Command Controller object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commands</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af2a94bbcb4b7d61657f9b4a77ba968ef" name="af2a94bbcb4b7d61657f9b4a77ba968ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a94bbcb4b7d61657f9b4a77ba968ef">&#9670;&#160;</a></span>isCommandAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CommandController::isCommandAvailable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_catalogue.html">Catalogue</a> *&amp;&#160;</td>
+          <td class="paramname"><em>database</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits and processes a command entered by the user, applying it to the provided database and returns false if the command is "exit", signaling the program should terminate or returns true, indicating the command processing loop should continue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_command_controller_8h_source.html">CommandController.h</a></li>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_command_controller_8cpp.html">CommandController.cpp</a></li>

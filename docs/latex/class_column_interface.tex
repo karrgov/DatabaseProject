@@ -9,12 +9,13 @@ Inheritance diagram for Column\+Interface\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c}\label{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c} 
-{\bfseries Column\+Interface} (const std\+::string \&name)
-\item 
-\Hypertarget{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310}\label{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310} 
-std\+::string {\bfseries get\+Name} () const
-\item 
+\mbox{\hyperlink{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c}{Column\+Interface}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a new Column Interface\+:\+: Column Interface object. \end{DoxyCompactList}\item 
+\Hypertarget{class_column_interface_a76797c8bc48a56ea20ad45e0eb1e07ce}\label{class_column_interface_a76797c8bc48a56ea20ad45e0eb1e07ce} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Column\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Column Interface\+:\+: Column Interface object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the column. \end{DoxyCompactList}\item 
 \Hypertarget{class_column_interface_a4cdc3c712d8ad894e86de0b96616e3c8}\label{class_column_interface_a4cdc3c712d8ad894e86de0b96616e3c8} 
 virtual std\+::string {\bfseries get\+Column\+Type} () const =0
 \item 
@@ -33,6 +34,40 @@ virtual void {\bfseries delete\+Cell\+By\+Index} (const unsigned int \&index)=0
 \Hypertarget{class_column_interface_a1869bd978fa0c7255035f500cf20cec5}\label{class_column_interface_a1869bd978fa0c7255035f500cf20cec5} 
 virtual void {\bfseries insert\+New\+Cell\+With} (const std\+::string \&value)=0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c}\label{class_column_interface_a2f9fe8bc522a881bd714fa5c0f883e9c} 
+\index{ColumnInterface@{ColumnInterface}!ColumnInterface@{ColumnInterface}}
+\index{ColumnInterface@{ColumnInterface}!ColumnInterface@{ColumnInterface}}
+\doxysubsubsection{\texorpdfstring{ColumnInterface()}{ColumnInterface()}}
+{\footnotesize\ttfamily Column\+Interface\+::\+Column\+Interface (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a new Column Interface\+:\+: Column Interface object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310}\label{class_column_interface_acb9707f9cfa9e3f8b0f721696ff87310} 
+\index{ColumnInterface@{ColumnInterface}!getName@{getName}}
+\index{getName@{getName}!ColumnInterface@{ColumnInterface}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Column\+Interface\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of the column. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

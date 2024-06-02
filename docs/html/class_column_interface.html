@@ -89,11 +89,15 @@ Inheritance diagram for ColumnInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f9fe8bc522a881bd714fa5c0f883e9c" id="r_a2f9fe8bc522a881bd714fa5c0f883e9c"><td class="memItemLeft" align="right" valign="top"><a id="a2f9fe8bc522a881bd714fa5c0f883e9c" name="a2f9fe8bc522a881bd714fa5c0f883e9c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ColumnInterface</b> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a2f9fe8bc522a881bd714fa5c0f883e9c" id="r_a2f9fe8bc522a881bd714fa5c0f883e9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_interface.html#a2f9fe8bc522a881bd714fa5c0f883e9c">ColumnInterface</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a2f9fe8bc522a881bd714fa5c0f883e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Column Interface:: Column Interface object.  <br /></td></tr>
 <tr class="separator:a2f9fe8bc522a881bd714fa5c0f883e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb9707f9cfa9e3f8b0f721696ff87310" id="r_acb9707f9cfa9e3f8b0f721696ff87310"><td class="memItemLeft" align="right" valign="top"><a id="acb9707f9cfa9e3f8b0f721696ff87310" name="acb9707f9cfa9e3f8b0f721696ff87310"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
+<tr class="memitem:a76797c8bc48a56ea20ad45e0eb1e07ce" id="r_a76797c8bc48a56ea20ad45e0eb1e07ce"><td class="memItemLeft" align="right" valign="top"><a id="a76797c8bc48a56ea20ad45e0eb1e07ce" name="a76797c8bc48a56ea20ad45e0eb1e07ce"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ColumnInterface</b> ()</td></tr>
+<tr class="memdesc:a76797c8bc48a56ea20ad45e0eb1e07ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Column Interface:: Column Interface object. <br /></td></tr>
+<tr class="separator:a76797c8bc48a56ea20ad45e0eb1e07ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9707f9cfa9e3f8b0f721696ff87310" id="r_acb9707f9cfa9e3f8b0f721696ff87310"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_interface.html#acb9707f9cfa9e3f8b0f721696ff87310">getName</a> () const</td></tr>
+<tr class="memdesc:acb9707f9cfa9e3f8b0f721696ff87310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the column.  <br /></td></tr>
 <tr class="separator:acb9707f9cfa9e3f8b0f721696ff87310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cdc3c712d8ad894e86de0b96616e3c8" id="r_a4cdc3c712d8ad894e86de0b96616e3c8"><td class="memItemLeft" align="right" valign="top"><a id="a4cdc3c712d8ad894e86de0b96616e3c8" name="a4cdc3c712d8ad894e86de0b96616e3c8"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getColumnType</b> () const =0</td></tr>
@@ -114,6 +118,54 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteCellByI
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>insertNewCellWith</b> (const std::string &amp;value)=0</td></tr>
 <tr class="separator:a1869bd978fa0c7255035f500cf20cec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2f9fe8bc522a881bd714fa5c0f883e9c" name="a2f9fe8bc522a881bd714fa5c0f883e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9fe8bc522a881bd714fa5c0f883e9c">&#9670;&#160;</a></span>ColumnInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColumnInterface::ColumnInterface </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Column Interface:: Column Interface object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acb9707f9cfa9e3f8b0f721696ff87310" name="acb9707f9cfa9e3f8b0f721696ff87310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9707f9cfa9e3f8b0f721696ff87310">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ColumnInterface::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the name of the column. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_column_interface_8h_source.html">ColumnInterface.h</a></li>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_column_interface_8cpp.html">ColumnInterface.cpp</a></li>

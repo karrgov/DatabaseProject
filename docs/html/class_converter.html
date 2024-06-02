@@ -78,22 +78,212 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a663b5eea9623d35c6c107af0f29be5f5" id="r_a663b5eea9623d35c6c107af0f29be5f5"><td class="memItemLeft" align="right" valign="top"><a id="a663b5eea9623d35c6c107af0f29be5f5" name="a663b5eea9623d35c6c107af0f29be5f5"></a>
-static <a class="el" href="class_cell_interface.html">CellInterface</a>&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>toInt</b> (const std::string &amp;value)</td></tr>
+<tr class="memitem:a663b5eea9623d35c6c107af0f29be5f5" id="r_a663b5eea9623d35c6c107af0f29be5f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cell_interface.html">CellInterface</a>&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_converter.html#a663b5eea9623d35c6c107af0f29be5f5">toInt</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a663b5eea9623d35c6c107af0f29be5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number in std::string to int type and returns a pointer to an int cell.  <br /></td></tr>
 <tr class="separator:a663b5eea9623d35c6c107af0f29be5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab97875cacf59666f5cc1b76f70217fcc" id="r_ab97875cacf59666f5cc1b76f70217fcc"><td class="memItemLeft" align="right" valign="top"><a id="ab97875cacf59666f5cc1b76f70217fcc" name="ab97875cacf59666f5cc1b76f70217fcc"></a>
-static <a class="el" href="class_cell_interface.html">CellInterface</a>&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>toDouble</b> (const std::string &amp;value)</td></tr>
+<tr class="memitem:ab97875cacf59666f5cc1b76f70217fcc" id="r_ab97875cacf59666f5cc1b76f70217fcc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cell_interface.html">CellInterface</a>&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_converter.html#ab97875cacf59666f5cc1b76f70217fcc">toDouble</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:ab97875cacf59666f5cc1b76f70217fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number in std::string to double type and returns a pointer to a double cell.  <br /></td></tr>
 <tr class="separator:ab97875cacf59666f5cc1b76f70217fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11637a33178a49b04e19224ec0f799f4" id="r_a11637a33178a49b04e19224ec0f799f4"><td class="memItemLeft" align="right" valign="top"><a id="a11637a33178a49b04e19224ec0f799f4" name="a11637a33178a49b04e19224ec0f799f4"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isString</b> (const std::string &amp;value)</td></tr>
+<tr class="memitem:a11637a33178a49b04e19224ec0f799f4" id="r_a11637a33178a49b04e19224ec0f799f4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_converter.html#a11637a33178a49b04e19224ec0f799f4">isString</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a11637a33178a49b04e19224ec0f799f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the value is considered a string for the project.  <br /></td></tr>
 <tr class="separator:a11637a33178a49b04e19224ec0f799f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c7a3c4142315e9c1d6eaf51277ed733" id="r_a3c7a3c4142315e9c1d6eaf51277ed733"><td class="memItemLeft" align="right" valign="top"><a id="a3c7a3c4142315e9c1d6eaf51277ed733" name="a3c7a3c4142315e9c1d6eaf51277ed733"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNull</b> (const std::string &amp;value)</td></tr>
+<tr class="memitem:a3c7a3c4142315e9c1d6eaf51277ed733" id="r_a3c7a3c4142315e9c1d6eaf51277ed733"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_converter.html#a3c7a3c4142315e9c1d6eaf51277ed733">isNull</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a3c7a3c4142315e9c1d6eaf51277ed733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the value is NULL.  <br /></td></tr>
 <tr class="separator:a3c7a3c4142315e9c1d6eaf51277ed733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada63a0cd16dcadff9d416799f1604eea" id="r_ada63a0cd16dcadff9d416799f1604eea"><td class="memItemLeft" align="right" valign="top"><a id="ada63a0cd16dcadff9d416799f1604eea" name="ada63a0cd16dcadff9d416799f1604eea"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>convertLineToParametersList</b> (const std::string &amp;line, std::vector&lt; std::string &gt; &amp;parameters)</td></tr>
+<tr class="memitem:ada63a0cd16dcadff9d416799f1604eea" id="r_ada63a0cd16dcadff9d416799f1604eea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_converter.html#ada63a0cd16dcadff9d416799f1604eea">convertLineToParametersList</a> (const std::string &amp;line, std::vector&lt; std::string &gt; &amp;parameters)</td></tr>
+<tr class="memdesc:ada63a0cd16dcadff9d416799f1604eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a std::string line to separate usable std::string parameters in a vector.  <br /></td></tr>
 <tr class="separator:ada63a0cd16dcadff9d416799f1604eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ada63a0cd16dcadff9d416799f1604eea" name="ada63a0cd16dcadff9d416799f1604eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada63a0cd16dcadff9d416799f1604eea">&#9670;&#160;</a></span>convertLineToParametersList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Converter::convertLineToParametersList </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a std::string line to separate usable std::string parameters in a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td></td></tr>
+    <tr><td class="paramname">parameters</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c7a3c4142315e9c1d6eaf51277ed733" name="a3c7a3c4142315e9c1d6eaf51277ed733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7a3c4142315e9c1d6eaf51277ed733">&#9670;&#160;</a></span>isNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Converter::isNull </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines if the value is NULL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a11637a33178a49b04e19224ec0f799f4" name="a11637a33178a49b04e19224ec0f799f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11637a33178a49b04e19224ec0f799f4">&#9670;&#160;</a></span>isString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Converter::isString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines if the value is considered a string for the project. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="ab97875cacf59666f5cc1b76f70217fcc" name="ab97875cacf59666f5cc1b76f70217fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97875cacf59666f5cc1b76f70217fcc">&#9670;&#160;</a></span>toDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cell_interface.html">CellInterface</a>&lt; double &gt; * Converter::toDouble </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a number in std::string to double type and returns a pointer to a double cell. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CellInterface&lt;double&gt;* </dd></dl>
+
+</div>
+</div>
+<a id="a663b5eea9623d35c6c107af0f29be5f5" name="a663b5eea9623d35c6c107af0f29be5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663b5eea9623d35c6c107af0f29be5f5">&#9670;&#160;</a></span>toInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cell_interface.html">CellInterface</a>&lt; int &gt; * Converter::toInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a number in std::string to int type and returns a pointer to an int cell. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CellInterface&lt;int&gt;* </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_converter_8h_source.html">Converter.h</a></li>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_converter_8cpp.html">Converter.cpp</a></li>

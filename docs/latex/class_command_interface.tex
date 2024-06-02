@@ -9,15 +9,50 @@ Inheritance diagram for Command\+Interface\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_command_interface_a71faf2acaffb6fc41bc2a2a8d3b73672}\label{class_command_interface_a71faf2acaffb6fc41bc2a2a8d3b73672} 
-{\bfseries Command\+Interface} (const std\+::string \&name)
-\item 
-\Hypertarget{class_command_interface_adbe416a72044f12c8822ddd3910157ad}\label{class_command_interface_adbe416a72044f12c8822ddd3910157ad} 
-const std\+::string \& {\bfseries get\+Command\+Name} () const
-\item 
+\mbox{\hyperlink{class_command_interface_a71faf2acaffb6fc41bc2a2a8d3b73672}{Command\+Interface}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a new Command Interface\+:\+: Command Interface object. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_interface_ac2a42c5c7ea718e74bad2ca6c399fee5}\label{class_command_interface_ac2a42c5c7ea718e74bad2ca6c399fee5} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Command Interface\+:\+: Command Interface object. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_command_interface_adbe416a72044f12c8822ddd3910157ad}{get\+Command\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the command. \end{DoxyCompactList}\item 
 \Hypertarget{class_command_interface_a65e2e1e68fe132decd0d599bbf7b6c20}\label{class_command_interface_a65e2e1e68fe132decd0d599bbf7b6c20} 
 virtual void {\bfseries apply\+Command} (const std\+::string \&parameters, \mbox{\hyperlink{class_catalogue}{Catalogue}} \texorpdfstring{$\ast$}{*}\&database)=0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_command_interface_a71faf2acaffb6fc41bc2a2a8d3b73672}\label{class_command_interface_a71faf2acaffb6fc41bc2a2a8d3b73672} 
+\index{CommandInterface@{CommandInterface}!CommandInterface@{CommandInterface}}
+\index{CommandInterface@{CommandInterface}!CommandInterface@{CommandInterface}}
+\doxysubsubsection{\texorpdfstring{CommandInterface()}{CommandInterface()}}
+{\footnotesize\ttfamily Command\+Interface\+::\+Command\+Interface (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a new Command Interface\+:\+: Command Interface object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_command_interface_adbe416a72044f12c8822ddd3910157ad}\label{class_command_interface_adbe416a72044f12c8822ddd3910157ad} 
+\index{CommandInterface@{CommandInterface}!getCommandName@{getCommandName}}
+\index{getCommandName@{getCommandName}!CommandInterface@{CommandInterface}}
+\doxysubsubsection{\texorpdfstring{getCommandName()}{getCommandName()}}
+{\footnotesize\ttfamily const std\+::string \& Command\+Interface\+::get\+Command\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of the command. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

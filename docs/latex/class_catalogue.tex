@@ -3,66 +3,356 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_catalogue_ae2cf79487fb1b988169c31cd355655a4}\label{class_catalogue_ae2cf79487fb1b988169c31cd355655a4} 
-{\bfseries Catalogue} (const std\+::string \&filename)
-\item 
+\mbox{\hyperlink{class_catalogue_ae2cf79487fb1b988169c31cd355655a4}{Catalogue}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_catalogue}{Catalogue}\+:\+: \doxylink{class_catalogue}{Catalogue} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_catalogue_a023fd8d70a58f76d2bbd6ef1e3ef0e9e}\label{class_catalogue_a023fd8d70a58f76d2bbd6ef1e3ef0e9e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Catalogue} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_catalogue}{Catalogue}\+:\+: \doxylink{class_catalogue}{Catalogue} object. \end{DoxyCompactList}\item 
 \Hypertarget{class_catalogue_aba01f09ca531d80c1dc7d4fc2cbe7102}\label{class_catalogue_aba01f09ca531d80c1dc7d4fc2cbe7102} 
 {\bfseries Catalogue} (const \mbox{\hyperlink{class_catalogue}{Catalogue}} \&other)=delete
 \item 
 \Hypertarget{class_catalogue_a3c8616499a837a9b2b67d4550b2a005b}\label{class_catalogue_a3c8616499a837a9b2b67d4550b2a005b} 
 \mbox{\hyperlink{class_catalogue}{Catalogue}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_catalogue}{Catalogue}} \&other)=delete
 \item 
-\Hypertarget{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7}\label{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7} 
-int {\bfseries find\+Table\+Index\+By\+Name} (const std\+::vector$<$ \mbox{\hyperlink{class_table}{Table}} \texorpdfstring{$\ast$}{*} $>$ \&tables, const std\+::string \&search\+Name) const
-\item 
-\Hypertarget{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd}\label{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd} 
-void {\bfseries import\+Table\+From\+File} (const std\+::string \&table\+Name, const std\+::string \&filename)
-\item 
-\Hypertarget{class_catalogue_a1db263537cf0babcf67d15db4f06a0db}\label{class_catalogue_a1db263537cf0babcf67d15db4f06a0db} 
-void {\bfseries export\+Table\+To\+File} (const std\+::string \&table\+Name, const std\+::string \&filename)
-\item 
+int \mbox{\hyperlink{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7}{find\+Table\+Index\+By\+Name}} (const std\+::vector$<$ \mbox{\hyperlink{class_table}{Table}} \texorpdfstring{$\ast$}{*} $>$ \&tables, const std\+::string \&search\+Name) const
+\begin{DoxyCompactList}\small\item\em Finds a certain table\textquotesingle{}s index in the catalogue through the table\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd}{import\+Table\+From\+File}} (const std\+::string \&table\+Name, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Imports a table in the catalogue from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a1db263537cf0babcf67d15db4f06a0db}{export\+Table\+To\+File}} (const std\+::string \&table\+Name, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Exports a table from the catalogue to a specific file. \end{DoxyCompactList}\item 
 \Hypertarget{class_catalogue_aa7256a4e227763efeed4f7b9e1bfb2bb}\label{class_catalogue_aa7256a4e227763efeed4f7b9e1bfb2bb} 
 void {\bfseries save\+Catalogue\+To\+Default\+File} ()
-\item 
-\Hypertarget{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c}\label{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c} 
-void {\bfseries save\+Catalogue\+To\+Different\+File} (const std\+::string \&filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Saves all changes made to the catalogue and its tables to the default file, used to construct it in the first place. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c}{save\+Catalogue\+To\+Different\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Saves all changes made to the catalogue and its tables to a specific file. \end{DoxyCompactList}\item 
 \Hypertarget{class_catalogue_abe8968f435fb75f08efb82317e43e65f}\label{class_catalogue_abe8968f435fb75f08efb82317e43e65f} 
 void {\bfseries show\+All\+Tables} () const
-\item 
-\Hypertarget{class_catalogue_ab6483f71b258884b4f051c2154df7dd4}\label{class_catalogue_ab6483f71b258884b4f051c2154df7dd4} 
-void {\bfseries inner\+Join\+Tables} (const std\+::string \&first\+Table\+Name, const unsigned int \&first\+Column\+Index, const std\+::string \&second\+Table\+Name, const unsigned int \&second\+Column\+Index)
-\item 
-\Hypertarget{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf}\label{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf} 
-void {\bfseries describe\+Table} (const std\+::string \&name) const
-\item 
-\Hypertarget{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c}\label{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c} 
-void {\bfseries print\+Table} (const std\+::string \&name) const
-\item 
-\Hypertarget{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e}\label{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e} 
-void {\bfseries select\+From\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&value) const
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the names of all tables in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_ab6483f71b258884b4f051c2154df7dd4}{inner\+Join\+Tables}} (const std\+::string \&first\+Table\+Name, const unsigned int \&first\+Column\+Index, const std\+::string \&second\+Table\+Name, const unsigned int \&second\+Column\+Index)
+\begin{DoxyCompactList}\small\item\em Performs innerjoin to two tables in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf}{describe\+Table}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Prints the types of the columns in a specific table from the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c}{print\+Table}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Prints a specific table from the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e}{select\+From\+Table}} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&value) const
+\begin{DoxyCompactList}\small\item\em Performs select on a specific table from the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a50e26b5fc6ebbf77d145a20ae292e035}{add\+Column\+To\+Table}} (const std\+::string \&name, const std\+::string \&column\+Name, const std\+::string \&column\+Type)
+\begin{DoxyCompactList}\small\item\em Adds a new column to a specific table in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a}{update\+Table}} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&target\+Value)
+\begin{DoxyCompactList}\small\item\em Updates a specific table in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a13e09a73e69d8d70f98e980570dab770}{delete\+Func\+Table}} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value)
+\begin{DoxyCompactList}\small\item\em Deletes from a specific table in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65}{insert\+In\+Table}} (const std\+::string \&name, const std\+::vector$<$ std\+::string $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Inserts in a specific table in the catalogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73}{rename\+Table}} (const std\+::string \&tablename, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Renames a specific table in the catalogue. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_catalogue_a5f96f2395de06a3de542b7e65560a795}{count\+In\+Table}} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value)
+\begin{DoxyCompactList}\small\item\em Counts the occurrences in a column of a specific table in the catalogue. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_catalogue_a65400e2129ca32f88ab0544177eee261}{aggregate}} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&operation\+Name)
+\begin{DoxyCompactList}\small\item\em Performs aggregate to a specific table in the catalogue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_catalogue_ae2cf79487fb1b988169c31cd355655a4}\label{class_catalogue_ae2cf79487fb1b988169c31cd355655a4} 
+\index{Catalogue@{Catalogue}!Catalogue@{Catalogue}}
+\index{Catalogue@{Catalogue}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{Catalogue()}{Catalogue()}}
+{\footnotesize\ttfamily Catalogue\+::\+Catalogue (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_catalogue}{Catalogue}\+:\+: \doxylink{class_catalogue}{Catalogue} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_catalogue_a50e26b5fc6ebbf77d145a20ae292e035}\label{class_catalogue_a50e26b5fc6ebbf77d145a20ae292e035} 
-void {\bfseries add\+Column\+To\+Table} (const std\+::string \&name, const std\+::string \&column\+Name, const std\+::string \&column\+Type)
-\item 
-\Hypertarget{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a}\label{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a} 
-void {\bfseries update\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&target\+Value)
-\item 
-\Hypertarget{class_catalogue_a13e09a73e69d8d70f98e980570dab770}\label{class_catalogue_a13e09a73e69d8d70f98e980570dab770} 
-void {\bfseries delete\+Func\+Table} (const std\+::string \&name, const unsigned int \&index, const std\+::string \&search\+Value)
-\item 
-\Hypertarget{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65}\label{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65} 
-void {\bfseries insert\+In\+Table} (const std\+::string \&name, const std\+::vector$<$ std\+::string $>$ \&values)
-\item 
-\Hypertarget{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73}\label{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73} 
-void {\bfseries rename\+Table} (const std\+::string \&tablename, const std\+::string \&name)
-\item 
-\Hypertarget{class_catalogue_a5f96f2395de06a3de542b7e65560a795}\label{class_catalogue_a5f96f2395de06a3de542b7e65560a795} 
-unsigned int {\bfseries count\+In\+Table} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value)
-\item 
+\index{Catalogue@{Catalogue}!addColumnToTable@{addColumnToTable}}
+\index{addColumnToTable@{addColumnToTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{addColumnToTable()}{addColumnToTable()}}
+{\footnotesize\ttfamily void Catalogue\+::add\+Column\+To\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{column\+Name,  }\item[{const std\+::string \&}]{column\+Type }\end{DoxyParamCaption})}
+
+
+
+Adds a new column to a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em column\+Name} & \\
+\hline
+{\em column\+Type} & \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_catalogue_a65400e2129ca32f88ab0544177eee261}\label{class_catalogue_a65400e2129ca32f88ab0544177eee261} 
-double {\bfseries aggregate} (const std\+::string \&tablename, const unsigned int \&index, const std\+::string \&search\+Value, const unsigned int \&target\+Index, const std\+::string \&operation\+Name)
-\end{DoxyCompactItemize}
+\index{Catalogue@{Catalogue}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{aggregate()}{aggregate()}}
+{\footnotesize\ttfamily double Catalogue\+::aggregate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tablename,  }\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value,  }\item[{const unsigned int \&}]{target\+Index,  }\item[{const std\+::string \&}]{operation\+Name }\end{DoxyParamCaption})}
+
+
+
+Performs aggregate to a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tablename} & \\
+\hline
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+{\em target\+Index} & \\
+\hline
+{\em operation\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\Hypertarget{class_catalogue_a5f96f2395de06a3de542b7e65560a795}\label{class_catalogue_a5f96f2395de06a3de542b7e65560a795} 
+\index{Catalogue@{Catalogue}!countInTable@{countInTable}}
+\index{countInTable@{countInTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{countInTable()}{countInTable()}}
+{\footnotesize\ttfamily unsigned int Catalogue\+::count\+In\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tablename,  }\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value }\end{DoxyParamCaption})}
+
+
+
+Counts the occurrences in a column of a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tablename} & \\
+\hline
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\Hypertarget{class_catalogue_a13e09a73e69d8d70f98e980570dab770}\label{class_catalogue_a13e09a73e69d8d70f98e980570dab770} 
+\index{Catalogue@{Catalogue}!deleteFuncTable@{deleteFuncTable}}
+\index{deleteFuncTable@{deleteFuncTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{deleteFuncTable()}{deleteFuncTable()}}
+{\footnotesize\ttfamily void Catalogue\+::delete\+Func\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value }\end{DoxyParamCaption})}
+
+
+
+Deletes from a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf}\label{class_catalogue_a4d38f612967a387b1b3a42cb70a53bdf} 
+\index{Catalogue@{Catalogue}!describeTable@{describeTable}}
+\index{describeTable@{describeTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{describeTable()}{describeTable()}}
+{\footnotesize\ttfamily void Catalogue\+::describe\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Prints the types of the columns in a specific table from the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a1db263537cf0babcf67d15db4f06a0db}\label{class_catalogue_a1db263537cf0babcf67d15db4f06a0db} 
+\index{Catalogue@{Catalogue}!exportTableToFile@{exportTableToFile}}
+\index{exportTableToFile@{exportTableToFile}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{exportTableToFile()}{exportTableToFile()}}
+{\footnotesize\ttfamily void Catalogue\+::export\+Table\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+Name,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Exports a table from the catalogue to a specific file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7}\label{class_catalogue_aadfd62b5d610fa73e39a089f8037fac7} 
+\index{Catalogue@{Catalogue}!findTableIndexByName@{findTableIndexByName}}
+\index{findTableIndexByName@{findTableIndexByName}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{findTableIndexByName()}{findTableIndexByName()}}
+{\footnotesize\ttfamily int Catalogue\+::find\+Table\+Index\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_table}{Table}} \texorpdfstring{$\ast$}{*} $>$ \&}]{tables,  }\item[{const std\+::string \&}]{search\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Finds a certain table\textquotesingle{}s index in the catalogue through the table\textquotesingle{}s name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tables} & \\
+\hline
+{\em search\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd}\label{class_catalogue_acdb60f218d424b7ea7b591fc9457a1cd} 
+\index{Catalogue@{Catalogue}!importTableFromFile@{importTableFromFile}}
+\index{importTableFromFile@{importTableFromFile}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{importTableFromFile()}{importTableFromFile()}}
+{\footnotesize\ttfamily void Catalogue\+::import\+Table\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+Name,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Imports a table in the catalogue from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_ab6483f71b258884b4f051c2154df7dd4}\label{class_catalogue_ab6483f71b258884b4f051c2154df7dd4} 
+\index{Catalogue@{Catalogue}!innerJoinTables@{innerJoinTables}}
+\index{innerJoinTables@{innerJoinTables}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{innerJoinTables()}{innerJoinTables()}}
+{\footnotesize\ttfamily void Catalogue\+::inner\+Join\+Tables (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{first\+Table\+Name,  }\item[{const unsigned int \&}]{first\+Column\+Index,  }\item[{const std\+::string \&}]{second\+Table\+Name,  }\item[{const unsigned int \&}]{second\+Column\+Index }\end{DoxyParamCaption})}
+
+
+
+Performs innerjoin to two tables in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Table\+Name} & \\
+\hline
+{\em first\+Column\+Index} & \\
+\hline
+{\em second\+Table\+Name} & \\
+\hline
+{\em second\+Column\+Index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65}\label{class_catalogue_aa0f559e18136df502e8e7ad1adc7ac65} 
+\index{Catalogue@{Catalogue}!insertInTable@{insertInTable}}
+\index{insertInTable@{insertInTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{insertInTable()}{insertInTable()}}
+{\footnotesize\ttfamily void Catalogue\+::insert\+In\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Inserts in a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em values} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c}\label{class_catalogue_ad9b4193604a70c8ed34bb74e5f0f8a3c} 
+\index{Catalogue@{Catalogue}!printTable@{printTable}}
+\index{printTable@{printTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{printTable()}{printTable()}}
+{\footnotesize\ttfamily void Catalogue\+::print\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Prints a specific table from the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73}\label{class_catalogue_a49c0d996b89d3033f1fa5deb62b37d73} 
+\index{Catalogue@{Catalogue}!renameTable@{renameTable}}
+\index{renameTable@{renameTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{renameTable()}{renameTable()}}
+{\footnotesize\ttfamily void Catalogue\+::rename\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tablename,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Renames a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tablename} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c}\label{class_catalogue_a9584fa4065764a5dbdccdf1c4ce8096c} 
+\index{Catalogue@{Catalogue}!saveCatalogueToDifferentFile@{saveCatalogueToDifferentFile}}
+\index{saveCatalogueToDifferentFile@{saveCatalogueToDifferentFile}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{saveCatalogueToDifferentFile()}{saveCatalogueToDifferentFile()}}
+{\footnotesize\ttfamily void Catalogue\+::save\+Catalogue\+To\+Different\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Saves all changes made to the catalogue and its tables to a specific file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e}\label{class_catalogue_a3745fd9756a2522e0c3aebd091b8fb1e} 
+\index{Catalogue@{Catalogue}!selectFromTable@{selectFromTable}}
+\index{selectFromTable@{selectFromTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{selectFromTable()}{selectFromTable()}}
+{\footnotesize\ttfamily void Catalogue\+::select\+From\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Performs select on a specific table from the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em index} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a}\label{class_catalogue_a10fde7052b5f6ccbe6e961345d71306a} 
+\index{Catalogue@{Catalogue}!updateTable@{updateTable}}
+\index{updateTable@{updateTable}!Catalogue@{Catalogue}}
+\doxysubsubsection{\texorpdfstring{updateTable()}{updateTable()}}
+{\footnotesize\ttfamily void Catalogue\+::update\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const unsigned int \&}]{index,  }\item[{const std\+::string \&}]{search\+Value,  }\item[{const unsigned int \&}]{target\+Index,  }\item[{const std\+::string \&}]{target\+Value }\end{DoxyParamCaption})}
+
+
+
+Updates a specific table in the catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em index} & \\
+\hline
+{\em search\+Value} & \\
+\hline
+{\em target\+Index} & \\
+\hline
+{\em target\+Value} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

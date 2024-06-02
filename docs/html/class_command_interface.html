@@ -105,16 +105,68 @@ Inheritance diagram for CommandInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71faf2acaffb6fc41bc2a2a8d3b73672" id="r_a71faf2acaffb6fc41bc2a2a8d3b73672"><td class="memItemLeft" align="right" valign="top"><a id="a71faf2acaffb6fc41bc2a2a8d3b73672" name="a71faf2acaffb6fc41bc2a2a8d3b73672"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommandInterface</b> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a71faf2acaffb6fc41bc2a2a8d3b73672" id="r_a71faf2acaffb6fc41bc2a2a8d3b73672"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interface.html#a71faf2acaffb6fc41bc2a2a8d3b73672">CommandInterface</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a71faf2acaffb6fc41bc2a2a8d3b73672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Command Interface:: Command Interface object.  <br /></td></tr>
 <tr class="separator:a71faf2acaffb6fc41bc2a2a8d3b73672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbe416a72044f12c8822ddd3910157ad" id="r_adbe416a72044f12c8822ddd3910157ad"><td class="memItemLeft" align="right" valign="top"><a id="adbe416a72044f12c8822ddd3910157ad" name="adbe416a72044f12c8822ddd3910157ad"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCommandName</b> () const</td></tr>
+<tr class="memitem:ac2a42c5c7ea718e74bad2ca6c399fee5" id="r_ac2a42c5c7ea718e74bad2ca6c399fee5"><td class="memItemLeft" align="right" valign="top"><a id="ac2a42c5c7ea718e74bad2ca6c399fee5" name="ac2a42c5c7ea718e74bad2ca6c399fee5"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~CommandInterface</b> ()</td></tr>
+<tr class="memdesc:ac2a42c5c7ea718e74bad2ca6c399fee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Command Interface:: Command Interface object. <br /></td></tr>
+<tr class="separator:ac2a42c5c7ea718e74bad2ca6c399fee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe416a72044f12c8822ddd3910157ad" id="r_adbe416a72044f12c8822ddd3910157ad"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_interface.html#adbe416a72044f12c8822ddd3910157ad">getCommandName</a> () const</td></tr>
+<tr class="memdesc:adbe416a72044f12c8822ddd3910157ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the command.  <br /></td></tr>
 <tr class="separator:adbe416a72044f12c8822ddd3910157ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e2e1e68fe132decd0d599bbf7b6c20" id="r_a65e2e1e68fe132decd0d599bbf7b6c20"><td class="memItemLeft" align="right" valign="top"><a id="a65e2e1e68fe132decd0d599bbf7b6c20" name="a65e2e1e68fe132decd0d599bbf7b6c20"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>applyCommand</b> (const std::string &amp;parameters, <a class="el" href="class_catalogue.html">Catalogue</a> *&amp;database)=0</td></tr>
 <tr class="separator:a65e2e1e68fe132decd0d599bbf7b6c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a71faf2acaffb6fc41bc2a2a8d3b73672" name="a71faf2acaffb6fc41bc2a2a8d3b73672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71faf2acaffb6fc41bc2a2a8d3b73672">&#9670;&#160;</a></span>CommandInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandInterface::CommandInterface </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Command Interface:: Command Interface object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adbe416a72044f12c8822ddd3910157ad" name="adbe416a72044f12c8822ddd3910157ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe416a72044f12c8822ddd3910157ad">&#9670;&#160;</a></span>getCommandName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; CommandInterface::getCommandName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the name of the command. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::string&amp; </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_command_interface_8h_source.html">CommandInterface.h</a></li>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_command_interface_8cpp.html">CommandInterface.cpp</a></li>

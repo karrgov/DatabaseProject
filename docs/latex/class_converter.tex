@@ -3,21 +3,112 @@
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_converter_a663b5eea9623d35c6c107af0f29be5f5}\label{class_converter_a663b5eea9623d35c6c107af0f29be5f5} 
-static \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ int $>$ \texorpdfstring{$\ast$}{*} {\bfseries to\+Int} (const std\+::string \&value)
-\item 
-\Hypertarget{class_converter_ab97875cacf59666f5cc1b76f70217fcc}\label{class_converter_ab97875cacf59666f5cc1b76f70217fcc} 
-static \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ double $>$ \texorpdfstring{$\ast$}{*} {\bfseries to\+Double} (const std\+::string \&value)
-\item 
-\Hypertarget{class_converter_a11637a33178a49b04e19224ec0f799f4}\label{class_converter_a11637a33178a49b04e19224ec0f799f4} 
-static bool {\bfseries is\+String} (const std\+::string \&value)
-\item 
-\Hypertarget{class_converter_a3c7a3c4142315e9c1d6eaf51277ed733}\label{class_converter_a3c7a3c4142315e9c1d6eaf51277ed733} 
-static bool {\bfseries is\+Null} (const std\+::string \&value)
-\item 
+static \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_converter_a663b5eea9623d35c6c107af0f29be5f5}{to\+Int}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Converts a number in std\+::string to int type and returns a pointer to an int cell. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ double $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_converter_ab97875cacf59666f5cc1b76f70217fcc}{to\+Double}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Converts a number in std\+::string to double type and returns a pointer to a double cell. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_converter_a11637a33178a49b04e19224ec0f799f4}{is\+String}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Determines if the value is considered a string for the project. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_converter_a3c7a3c4142315e9c1d6eaf51277ed733}{is\+Null}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Determines if the value is NULL. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_converter_ada63a0cd16dcadff9d416799f1604eea}{convert\+Line\+To\+Parameters\+List}} (const std\+::string \&line, std\+::vector$<$ std\+::string $>$ \&parameters)
+\begin{DoxyCompactList}\small\item\em Converts a std\+::string line to separate usable std\+::string parameters in a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_converter_ada63a0cd16dcadff9d416799f1604eea}\label{class_converter_ada63a0cd16dcadff9d416799f1604eea} 
-static void {\bfseries convert\+Line\+To\+Parameters\+List} (const std\+::string \&line, std\+::vector$<$ std\+::string $>$ \&parameters)
-\end{DoxyCompactItemize}
+\index{Converter@{Converter}!convertLineToParametersList@{convertLineToParametersList}}
+\index{convertLineToParametersList@{convertLineToParametersList}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertLineToParametersList()}{convertLineToParametersList()}}
+{\footnotesize\ttfamily void Converter\+::convert\+Line\+To\+Parameters\+List (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a std\+::string line to separate usable std\+::string parameters in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+{\em parameters} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_converter_a3c7a3c4142315e9c1d6eaf51277ed733}\label{class_converter_a3c7a3c4142315e9c1d6eaf51277ed733} 
+\index{Converter@{Converter}!isNull@{isNull}}
+\index{isNull@{isNull}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily bool Converter\+::is\+Null (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines if the value is NULL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{class_converter_a11637a33178a49b04e19224ec0f799f4}\label{class_converter_a11637a33178a49b04e19224ec0f799f4} 
+\index{Converter@{Converter}!isString@{isString}}
+\index{isString@{isString}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{isString()}{isString()}}
+{\footnotesize\ttfamily bool Converter\+::is\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines if the value is considered a string for the project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{class_converter_ab97875cacf59666f5cc1b76f70217fcc}\label{class_converter_ab97875cacf59666f5cc1b76f70217fcc} 
+\index{Converter@{Converter}!toDouble@{toDouble}}
+\index{toDouble@{toDouble}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{toDouble()}{toDouble()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ double $>$ \texorpdfstring{$\ast$}{*} Converter\+::to\+Double (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a number in std\+::string to double type and returns a pointer to a double cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cell\+Interface$<$double$>$\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_converter_a663b5eea9623d35c6c107af0f29be5f5}\label{class_converter_a663b5eea9623d35c6c107af0f29be5f5} 
+\index{Converter@{Converter}!toInt@{toInt}}
+\index{toInt@{toInt}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{toInt()}{toInt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cell_interface}{Cell\+Interface}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Converter\+::to\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a number in std\+::string to int type and returns a pointer to an int cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cell\+Interface$<$int$>$\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

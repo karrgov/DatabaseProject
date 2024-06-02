@@ -9,17 +9,37 @@ Inheritance diagram for Cell\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_cell_a82288c5058f3d1d995c81755577fe8db}\label{class_cell_a82288c5058f3d1d995c81755577fe8db} 
-{\bfseries Cell} (const T \&val, bool other\+Val)
-\item 
+\mbox{\hyperlink{class_cell_a82288c5058f3d1d995c81755577fe8db}{Cell}} (const T \&val, bool other\+Val)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_cell}{Cell} object. \end{DoxyCompactList}\item 
 const T \& \mbox{\hyperlink{class_cell_acd4e4f97cd302557b8d1af40df65aebb}{first}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the value of the cell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cell_ac0b055a1b2222fa075c72988e8f77c81}{set\+First}} (const T \&value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the value of the cell. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_cell_adeb4790da1febe67d2767c48273e827e}{second}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the bool value of the cell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cell_abae88a1f3e22635057834850a95aadd2}{set\+Second}} (bool value) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the bool value of the cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cell_a82288c5058f3d1d995c81755577fe8db}\label{class_cell_a82288c5058f3d1d995c81755577fe8db} 
+\index{Cell$<$ T $>$@{Cell$<$ T $>$}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell$<$ T $>$@{Cell$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_cell}{Cell}}$<$ T $>$\mbox{\hyperlink{class_cell}{\+::\+Cell}} (\begin{DoxyParamCaption}\item[{const T \&}]{val,  }\item[{bool}]{other\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_cell}{Cell} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em other\+Val} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -30,6 +50,13 @@ void \mbox{\hyperlink{class_cell_abae88a1f3e22635057834850a95aadd2}{set\+Second}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 const T \& \mbox{\hyperlink{class_cell}{Cell}}$<$ T $>$\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Returns the value of the cell. 
+
+\begin{DoxyReturn}{Returns}
+const T\& 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{class_cell_interface}{Cell\+Interface$<$ T $>$}}.
@@ -43,6 +70,15 @@ bool \mbox{\hyperlink{class_cell}{Cell}}$<$ T $>$\+::second (\begin{DoxyParamCap
 
 
 
+Returns the bool value of the cell. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_cell_interface}{Cell\+Interface$<$ T $>$}}.
 
 \Hypertarget{class_cell_ac0b055a1b2222fa075c72988e8f77c81}\label{class_cell_ac0b055a1b2222fa075c72988e8f77c81} 
@@ -54,6 +90,15 @@ void \mbox{\hyperlink{class_cell}{Cell}}$<$ T $>$\+::set\+First (\begin{DoxyPara
 
 
 
+Sets the value of the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{class_cell_interface}{Cell\+Interface$<$ T $>$}}.
 
 \Hypertarget{class_cell_abae88a1f3e22635057834850a95aadd2}\label{class_cell_abae88a1f3e22635057834850a95aadd2} 
@@ -63,6 +108,15 @@ Implements \mbox{\hyperlink{class_cell_interface}{Cell\+Interface$<$ T $>$}}.
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void \mbox{\hyperlink{class_cell}{Cell}}$<$ T $>$\+::set\+Second (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Sets the bool value of the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_cell_interface}{Cell\+Interface$<$ T $>$}}.

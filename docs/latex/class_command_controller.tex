@@ -3,18 +3,60 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_command_controller_a8c0864633ae7a375cd5d5c1c36cd3a1d}\label{class_command_controller_a8c0864633ae7a375cd5d5c1c36cd3a1d} 
-{\bfseries Command\+Controller} (const std\+::vector$<$ \mbox{\hyperlink{class_command_interface}{Command\+Interface}} \texorpdfstring{$\ast$}{*} $>$ \&commands)
-\item 
+\mbox{\hyperlink{class_command_controller_a8c0864633ae7a375cd5d5c1c36cd3a1d}{Command\+Controller}} (const std\+::vector$<$ \mbox{\hyperlink{class_command_interface}{Command\+Interface}} \texorpdfstring{$\ast$}{*} $>$ \&commands)
+\begin{DoxyCompactList}\small\item\em Construct a new Command Controller\+:\+: Command Controller object. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_controller_acb827da2513f28be9fed0c72b517996e}\label{class_command_controller_acb827da2513f28be9fed0c72b517996e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Command\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Command Controller\+:\+: Command Controller object. \end{DoxyCompactList}\item 
 \Hypertarget{class_command_controller_a7250ebb2651b51ee2eac38c9b76eb8e1}\label{class_command_controller_a7250ebb2651b51ee2eac38c9b76eb8e1} 
 {\bfseries Command\+Controller} (const \mbox{\hyperlink{class_command_controller}{Command\+Controller}} \&other)=delete
 \item 
 \Hypertarget{class_command_controller_a598703c740d5fa816ef4fea341ea8916}\label{class_command_controller_a598703c740d5fa816ef4fea341ea8916} 
 \mbox{\hyperlink{class_command_controller}{Command\+Controller}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_command_controller}{Command\+Controller}} \&other)=delete
 \item 
+bool \mbox{\hyperlink{class_command_controller_af2a94bbcb4b7d61657f9b4a77ba968ef}{is\+Command\+Available}} (\mbox{\hyperlink{class_catalogue}{Catalogue}} \texorpdfstring{$\ast$}{*}\&database)
+\begin{DoxyCompactList}\small\item\em Waits and processes a command entered by the user, applying it to the provided database and returns false if the command is "{}exit"{}, signaling the program should terminate or returns true, indicating the command processing loop should continue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_command_controller_a8c0864633ae7a375cd5d5c1c36cd3a1d}\label{class_command_controller_a8c0864633ae7a375cd5d5c1c36cd3a1d} 
+\index{CommandController@{CommandController}!CommandController@{CommandController}}
+\index{CommandController@{CommandController}!CommandController@{CommandController}}
+\doxysubsubsection{\texorpdfstring{CommandController()}{CommandController()}}
+{\footnotesize\ttfamily Command\+Controller\+::\+Command\+Controller (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_command_interface}{Command\+Interface}} \texorpdfstring{$\ast$}{*} $>$ \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+Construct a new Command Controller\+:\+: Command Controller object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em commands} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_command_controller_af2a94bbcb4b7d61657f9b4a77ba968ef}\label{class_command_controller_af2a94bbcb4b7d61657f9b4a77ba968ef} 
-bool {\bfseries is\+Command\+Available} (\mbox{\hyperlink{class_catalogue}{Catalogue}} \texorpdfstring{$\ast$}{*}\&database)
-\end{DoxyCompactItemize}
+\index{CommandController@{CommandController}!isCommandAvailable@{isCommandAvailable}}
+\index{isCommandAvailable@{isCommandAvailable}!CommandController@{CommandController}}
+\doxysubsubsection{\texorpdfstring{isCommandAvailable()}{isCommandAvailable()}}
+{\footnotesize\ttfamily bool Command\+Controller\+::is\+Command\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catalogue}{Catalogue}} \texorpdfstring{$\ast$}{*}\&}]{database }\end{DoxyParamCaption})}
+
+
+
+Waits and processes a command entered by the user, applying it to the provided database and returns false if the command is "{}exit"{}, signaling the program should terminate or returns true, indicating the command processing loop should continue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

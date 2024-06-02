@@ -78,67 +78,710 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae2cf79487fb1b988169c31cd355655a4" id="r_ae2cf79487fb1b988169c31cd355655a4"><td class="memItemLeft" align="right" valign="top"><a id="ae2cf79487fb1b988169c31cd355655a4" name="ae2cf79487fb1b988169c31cd355655a4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Catalogue</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:ae2cf79487fb1b988169c31cd355655a4" id="r_ae2cf79487fb1b988169c31cd355655a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#ae2cf79487fb1b988169c31cd355655a4">Catalogue</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ae2cf79487fb1b988169c31cd355655a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_catalogue.html">Catalogue</a>:: <a class="el" href="class_catalogue.html">Catalogue</a> object.  <br /></td></tr>
 <tr class="separator:ae2cf79487fb1b988169c31cd355655a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023fd8d70a58f76d2bbd6ef1e3ef0e9e" id="r_a023fd8d70a58f76d2bbd6ef1e3ef0e9e"><td class="memItemLeft" align="right" valign="top"><a id="a023fd8d70a58f76d2bbd6ef1e3ef0e9e" name="a023fd8d70a58f76d2bbd6ef1e3ef0e9e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Catalogue</b> ()</td></tr>
+<tr class="memdesc:a023fd8d70a58f76d2bbd6ef1e3ef0e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_catalogue.html">Catalogue</a>:: <a class="el" href="class_catalogue.html">Catalogue</a> object. <br /></td></tr>
+<tr class="separator:a023fd8d70a58f76d2bbd6ef1e3ef0e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba01f09ca531d80c1dc7d4fc2cbe7102" id="r_aba01f09ca531d80c1dc7d4fc2cbe7102"><td class="memItemLeft" align="right" valign="top"><a id="aba01f09ca531d80c1dc7d4fc2cbe7102" name="aba01f09ca531d80c1dc7d4fc2cbe7102"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Catalogue</b> (const <a class="el" href="class_catalogue.html">Catalogue</a> &amp;other)=delete</td></tr>
 <tr class="separator:aba01f09ca531d80c1dc7d4fc2cbe7102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8616499a837a9b2b67d4550b2a005b" id="r_a3c8616499a837a9b2b67d4550b2a005b"><td class="memItemLeft" align="right" valign="top"><a id="a3c8616499a837a9b2b67d4550b2a005b" name="a3c8616499a837a9b2b67d4550b2a005b"></a>
 <a class="el" href="class_catalogue.html">Catalogue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_catalogue.html">Catalogue</a> &amp;other)=delete</td></tr>
 <tr class="separator:a3c8616499a837a9b2b67d4550b2a005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadfd62b5d610fa73e39a089f8037fac7" id="r_aadfd62b5d610fa73e39a089f8037fac7"><td class="memItemLeft" align="right" valign="top"><a id="aadfd62b5d610fa73e39a089f8037fac7" name="aadfd62b5d610fa73e39a089f8037fac7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>findTableIndexByName</b> (const std::vector&lt; <a class="el" href="class_table.html">Table</a> * &gt; &amp;tables, const std::string &amp;searchName) const</td></tr>
+<tr class="memitem:aadfd62b5d610fa73e39a089f8037fac7" id="r_aadfd62b5d610fa73e39a089f8037fac7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#aadfd62b5d610fa73e39a089f8037fac7">findTableIndexByName</a> (const std::vector&lt; <a class="el" href="class_table.html">Table</a> * &gt; &amp;tables, const std::string &amp;searchName) const</td></tr>
+<tr class="memdesc:aadfd62b5d610fa73e39a089f8037fac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a certain table's index in the catalogue through the table's name.  <br /></td></tr>
 <tr class="separator:aadfd62b5d610fa73e39a089f8037fac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdb60f218d424b7ea7b591fc9457a1cd" id="r_acdb60f218d424b7ea7b591fc9457a1cd"><td class="memItemLeft" align="right" valign="top"><a id="acdb60f218d424b7ea7b591fc9457a1cd" name="acdb60f218d424b7ea7b591fc9457a1cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>importTableFromFile</b> (const std::string &amp;tableName, const std::string &amp;filename)</td></tr>
+<tr class="memitem:acdb60f218d424b7ea7b591fc9457a1cd" id="r_acdb60f218d424b7ea7b591fc9457a1cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#acdb60f218d424b7ea7b591fc9457a1cd">importTableFromFile</a> (const std::string &amp;tableName, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:acdb60f218d424b7ea7b591fc9457a1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imports a table in the catalogue from a file.  <br /></td></tr>
 <tr class="separator:acdb60f218d424b7ea7b591fc9457a1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1db263537cf0babcf67d15db4f06a0db" id="r_a1db263537cf0babcf67d15db4f06a0db"><td class="memItemLeft" align="right" valign="top"><a id="a1db263537cf0babcf67d15db4f06a0db" name="a1db263537cf0babcf67d15db4f06a0db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exportTableToFile</b> (const std::string &amp;tableName, const std::string &amp;filename)</td></tr>
+<tr class="memitem:a1db263537cf0babcf67d15db4f06a0db" id="r_a1db263537cf0babcf67d15db4f06a0db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a1db263537cf0babcf67d15db4f06a0db">exportTableToFile</a> (const std::string &amp;tableName, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a1db263537cf0babcf67d15db4f06a0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a table from the catalogue to a specific file.  <br /></td></tr>
 <tr class="separator:a1db263537cf0babcf67d15db4f06a0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7256a4e227763efeed4f7b9e1bfb2bb" id="r_aa7256a4e227763efeed4f7b9e1bfb2bb"><td class="memItemLeft" align="right" valign="top"><a id="aa7256a4e227763efeed4f7b9e1bfb2bb" name="aa7256a4e227763efeed4f7b9e1bfb2bb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>saveCatalogueToDefaultFile</b> ()</td></tr>
+<tr class="memdesc:aa7256a4e227763efeed4f7b9e1bfb2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all changes made to the catalogue and its tables to the default file, used to construct it in the first place. <br /></td></tr>
 <tr class="separator:aa7256a4e227763efeed4f7b9e1bfb2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9584fa4065764a5dbdccdf1c4ce8096c" id="r_a9584fa4065764a5dbdccdf1c4ce8096c"><td class="memItemLeft" align="right" valign="top"><a id="a9584fa4065764a5dbdccdf1c4ce8096c" name="a9584fa4065764a5dbdccdf1c4ce8096c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>saveCatalogueToDifferentFile</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:a9584fa4065764a5dbdccdf1c4ce8096c" id="r_a9584fa4065764a5dbdccdf1c4ce8096c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a9584fa4065764a5dbdccdf1c4ce8096c">saveCatalogueToDifferentFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a9584fa4065764a5dbdccdf1c4ce8096c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all changes made to the catalogue and its tables to a specific file.  <br /></td></tr>
 <tr class="separator:a9584fa4065764a5dbdccdf1c4ce8096c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe8968f435fb75f08efb82317e43e65f" id="r_abe8968f435fb75f08efb82317e43e65f"><td class="memItemLeft" align="right" valign="top"><a id="abe8968f435fb75f08efb82317e43e65f" name="abe8968f435fb75f08efb82317e43e65f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showAllTables</b> () const</td></tr>
+<tr class="memdesc:abe8968f435fb75f08efb82317e43e65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the names of all tables in the catalogue. <br /></td></tr>
 <tr class="separator:abe8968f435fb75f08efb82317e43e65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6483f71b258884b4f051c2154df7dd4" id="r_ab6483f71b258884b4f051c2154df7dd4"><td class="memItemLeft" align="right" valign="top"><a id="ab6483f71b258884b4f051c2154df7dd4" name="ab6483f71b258884b4f051c2154df7dd4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>innerJoinTables</b> (const std::string &amp;firstTableName, const unsigned int &amp;firstColumnIndex, const std::string &amp;secondTableName, const unsigned int &amp;secondColumnIndex)</td></tr>
+<tr class="memitem:ab6483f71b258884b4f051c2154df7dd4" id="r_ab6483f71b258884b4f051c2154df7dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#ab6483f71b258884b4f051c2154df7dd4">innerJoinTables</a> (const std::string &amp;firstTableName, const unsigned int &amp;firstColumnIndex, const std::string &amp;secondTableName, const unsigned int &amp;secondColumnIndex)</td></tr>
+<tr class="memdesc:ab6483f71b258884b4f051c2154df7dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs innerjoin to two tables in the catalogue.  <br /></td></tr>
 <tr class="separator:ab6483f71b258884b4f051c2154df7dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d38f612967a387b1b3a42cb70a53bdf" id="r_a4d38f612967a387b1b3a42cb70a53bdf"><td class="memItemLeft" align="right" valign="top"><a id="a4d38f612967a387b1b3a42cb70a53bdf" name="a4d38f612967a387b1b3a42cb70a53bdf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>describeTable</b> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a4d38f612967a387b1b3a42cb70a53bdf" id="r_a4d38f612967a387b1b3a42cb70a53bdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a4d38f612967a387b1b3a42cb70a53bdf">describeTable</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a4d38f612967a387b1b3a42cb70a53bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the types of the columns in a specific table from the catalogue.  <br /></td></tr>
 <tr class="separator:a4d38f612967a387b1b3a42cb70a53bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b4193604a70c8ed34bb74e5f0f8a3c" id="r_ad9b4193604a70c8ed34bb74e5f0f8a3c"><td class="memItemLeft" align="right" valign="top"><a id="ad9b4193604a70c8ed34bb74e5f0f8a3c" name="ad9b4193604a70c8ed34bb74e5f0f8a3c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printTable</b> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:ad9b4193604a70c8ed34bb74e5f0f8a3c" id="r_ad9b4193604a70c8ed34bb74e5f0f8a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#ad9b4193604a70c8ed34bb74e5f0f8a3c">printTable</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ad9b4193604a70c8ed34bb74e5f0f8a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a specific table from the catalogue.  <br /></td></tr>
 <tr class="separator:ad9b4193604a70c8ed34bb74e5f0f8a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3745fd9756a2522e0c3aebd091b8fb1e" id="r_a3745fd9756a2522e0c3aebd091b8fb1e"><td class="memItemLeft" align="right" valign="top"><a id="a3745fd9756a2522e0c3aebd091b8fb1e" name="a3745fd9756a2522e0c3aebd091b8fb1e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>selectFromTable</b> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;value) const</td></tr>
+<tr class="memitem:a3745fd9756a2522e0c3aebd091b8fb1e" id="r_a3745fd9756a2522e0c3aebd091b8fb1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a3745fd9756a2522e0c3aebd091b8fb1e">selectFromTable</a> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;value) const</td></tr>
+<tr class="memdesc:a3745fd9756a2522e0c3aebd091b8fb1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs select on a specific table from the catalogue.  <br /></td></tr>
 <tr class="separator:a3745fd9756a2522e0c3aebd091b8fb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e26b5fc6ebbf77d145a20ae292e035" id="r_a50e26b5fc6ebbf77d145a20ae292e035"><td class="memItemLeft" align="right" valign="top"><a id="a50e26b5fc6ebbf77d145a20ae292e035" name="a50e26b5fc6ebbf77d145a20ae292e035"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addColumnToTable</b> (const std::string &amp;name, const std::string &amp;columnName, const std::string &amp;columnType)</td></tr>
+<tr class="memitem:a50e26b5fc6ebbf77d145a20ae292e035" id="r_a50e26b5fc6ebbf77d145a20ae292e035"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a50e26b5fc6ebbf77d145a20ae292e035">addColumnToTable</a> (const std::string &amp;name, const std::string &amp;columnName, const std::string &amp;columnType)</td></tr>
+<tr class="memdesc:a50e26b5fc6ebbf77d145a20ae292e035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new column to a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a50e26b5fc6ebbf77d145a20ae292e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fde7052b5f6ccbe6e961345d71306a" id="r_a10fde7052b5f6ccbe6e961345d71306a"><td class="memItemLeft" align="right" valign="top"><a id="a10fde7052b5f6ccbe6e961345d71306a" name="a10fde7052b5f6ccbe6e961345d71306a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateTable</b> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;searchValue, const unsigned int &amp;targetIndex, const std::string &amp;targetValue)</td></tr>
+<tr class="memitem:a10fde7052b5f6ccbe6e961345d71306a" id="r_a10fde7052b5f6ccbe6e961345d71306a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a10fde7052b5f6ccbe6e961345d71306a">updateTable</a> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;searchValue, const unsigned int &amp;targetIndex, const std::string &amp;targetValue)</td></tr>
+<tr class="memdesc:a10fde7052b5f6ccbe6e961345d71306a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a10fde7052b5f6ccbe6e961345d71306a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e09a73e69d8d70f98e980570dab770" id="r_a13e09a73e69d8d70f98e980570dab770"><td class="memItemLeft" align="right" valign="top"><a id="a13e09a73e69d8d70f98e980570dab770" name="a13e09a73e69d8d70f98e980570dab770"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteFuncTable</b> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;searchValue)</td></tr>
+<tr class="memitem:a13e09a73e69d8d70f98e980570dab770" id="r_a13e09a73e69d8d70f98e980570dab770"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a13e09a73e69d8d70f98e980570dab770">deleteFuncTable</a> (const std::string &amp;name, const unsigned int &amp;index, const std::string &amp;searchValue)</td></tr>
+<tr class="memdesc:a13e09a73e69d8d70f98e980570dab770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes from a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a13e09a73e69d8d70f98e980570dab770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0f559e18136df502e8e7ad1adc7ac65" id="r_aa0f559e18136df502e8e7ad1adc7ac65"><td class="memItemLeft" align="right" valign="top"><a id="aa0f559e18136df502e8e7ad1adc7ac65" name="aa0f559e18136df502e8e7ad1adc7ac65"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insertInTable</b> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;values)</td></tr>
+<tr class="memitem:aa0f559e18136df502e8e7ad1adc7ac65" id="r_aa0f559e18136df502e8e7ad1adc7ac65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#aa0f559e18136df502e8e7ad1adc7ac65">insertInTable</a> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;values)</td></tr>
+<tr class="memdesc:aa0f559e18136df502e8e7ad1adc7ac65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts in a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:aa0f559e18136df502e8e7ad1adc7ac65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49c0d996b89d3033f1fa5deb62b37d73" id="r_a49c0d996b89d3033f1fa5deb62b37d73"><td class="memItemLeft" align="right" valign="top"><a id="a49c0d996b89d3033f1fa5deb62b37d73" name="a49c0d996b89d3033f1fa5deb62b37d73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>renameTable</b> (const std::string &amp;tablename, const std::string &amp;name)</td></tr>
+<tr class="memitem:a49c0d996b89d3033f1fa5deb62b37d73" id="r_a49c0d996b89d3033f1fa5deb62b37d73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a49c0d996b89d3033f1fa5deb62b37d73">renameTable</a> (const std::string &amp;tablename, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a49c0d996b89d3033f1fa5deb62b37d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renames a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a49c0d996b89d3033f1fa5deb62b37d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f96f2395de06a3de542b7e65560a795" id="r_a5f96f2395de06a3de542b7e65560a795"><td class="memItemLeft" align="right" valign="top"><a id="a5f96f2395de06a3de542b7e65560a795" name="a5f96f2395de06a3de542b7e65560a795"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>countInTable</b> (const std::string &amp;tablename, const unsigned int &amp;index, const std::string &amp;searchValue)</td></tr>
+<tr class="memitem:a5f96f2395de06a3de542b7e65560a795" id="r_a5f96f2395de06a3de542b7e65560a795"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a5f96f2395de06a3de542b7e65560a795">countInTable</a> (const std::string &amp;tablename, const unsigned int &amp;index, const std::string &amp;searchValue)</td></tr>
+<tr class="memdesc:a5f96f2395de06a3de542b7e65560a795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the occurrences in a column of a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a5f96f2395de06a3de542b7e65560a795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65400e2129ca32f88ab0544177eee261" id="r_a65400e2129ca32f88ab0544177eee261"><td class="memItemLeft" align="right" valign="top"><a id="a65400e2129ca32f88ab0544177eee261" name="a65400e2129ca32f88ab0544177eee261"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>aggregate</b> (const std::string &amp;tablename, const unsigned int &amp;index, const std::string &amp;searchValue, const unsigned int &amp;targetIndex, const std::string &amp;operationName)</td></tr>
+<tr class="memitem:a65400e2129ca32f88ab0544177eee261" id="r_a65400e2129ca32f88ab0544177eee261"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_catalogue.html#a65400e2129ca32f88ab0544177eee261">aggregate</a> (const std::string &amp;tablename, const unsigned int &amp;index, const std::string &amp;searchValue, const unsigned int &amp;targetIndex, const std::string &amp;operationName)</td></tr>
+<tr class="memdesc:a65400e2129ca32f88ab0544177eee261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs aggregate to a specific table in the catalogue.  <br /></td></tr>
 <tr class="separator:a65400e2129ca32f88ab0544177eee261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae2cf79487fb1b988169c31cd355655a4" name="ae2cf79487fb1b988169c31cd355655a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cf79487fb1b988169c31cd355655a4">&#9670;&#160;</a></span>Catalogue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Catalogue::Catalogue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_catalogue.html">Catalogue</a>:: <a class="el" href="class_catalogue.html">Catalogue</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a50e26b5fc6ebbf77d145a20ae292e035" name="a50e26b5fc6ebbf77d145a20ae292e035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e26b5fc6ebbf77d145a20ae292e035">&#9670;&#160;</a></span>addColumnToTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::addColumnToTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>columnName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>columnType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new column to a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">columnName</td><td></td></tr>
+    <tr><td class="paramname">columnType</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65400e2129ca32f88ab0544177eee261" name="a65400e2129ca32f88ab0544177eee261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65400e2129ca32f88ab0544177eee261">&#9670;&#160;</a></span>aggregate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Catalogue::aggregate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tablename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>searchValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>targetIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>operationName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs aggregate to a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablename</td><td></td></tr>
+    <tr><td class="paramname">index</td><td></td></tr>
+    <tr><td class="paramname">searchValue</td><td></td></tr>
+    <tr><td class="paramname">targetIndex</td><td></td></tr>
+    <tr><td class="paramname">operationName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+</div>
+</div>
+<a id="a5f96f2395de06a3de542b7e65560a795" name="a5f96f2395de06a3de542b7e65560a795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f96f2395de06a3de542b7e65560a795">&#9670;&#160;</a></span>countInTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Catalogue::countInTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tablename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>searchValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts the occurrences in a column of a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablename</td><td></td></tr>
+    <tr><td class="paramname">index</td><td></td></tr>
+    <tr><td class="paramname">searchValue</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unsigned int </dd></dl>
+
+</div>
+</div>
+<a id="a13e09a73e69d8d70f98e980570dab770" name="a13e09a73e69d8d70f98e980570dab770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e09a73e69d8d70f98e980570dab770">&#9670;&#160;</a></span>deleteFuncTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::deleteFuncTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>searchValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes from a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">index</td><td></td></tr>
+    <tr><td class="paramname">searchValue</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d38f612967a387b1b3a42cb70a53bdf" name="a4d38f612967a387b1b3a42cb70a53bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d38f612967a387b1b3a42cb70a53bdf">&#9670;&#160;</a></span>describeTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::describeTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the types of the columns in a specific table from the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1db263537cf0babcf67d15db4f06a0db" name="a1db263537cf0babcf67d15db4f06a0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db263537cf0babcf67d15db4f06a0db">&#9670;&#160;</a></span>exportTableToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::exportTableToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tableName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exports a table from the catalogue to a specific file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadfd62b5d610fa73e39a089f8037fac7" name="aadfd62b5d610fa73e39a089f8037fac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadfd62b5d610fa73e39a089f8037fac7">&#9670;&#160;</a></span>findTableIndexByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Catalogue::findTableIndexByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_table.html">Table</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>searchName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds a certain table's index in the catalogue through the table's name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tables</td><td></td></tr>
+    <tr><td class="paramname">searchName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="acdb60f218d424b7ea7b591fc9457a1cd" name="acdb60f218d424b7ea7b591fc9457a1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdb60f218d424b7ea7b591fc9457a1cd">&#9670;&#160;</a></span>importTableFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::importTableFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tableName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imports a table in the catalogue from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6483f71b258884b4f051c2154df7dd4" name="ab6483f71b258884b4f051c2154df7dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6483f71b258884b4f051c2154df7dd4">&#9670;&#160;</a></span>innerJoinTables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::innerJoinTables </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>firstTableName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>firstColumnIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>secondTableName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>secondColumnIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs innerjoin to two tables in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstTableName</td><td></td></tr>
+    <tr><td class="paramname">firstColumnIndex</td><td></td></tr>
+    <tr><td class="paramname">secondTableName</td><td></td></tr>
+    <tr><td class="paramname">secondColumnIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0f559e18136df502e8e7ad1adc7ac65" name="aa0f559e18136df502e8e7ad1adc7ac65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f559e18136df502e8e7ad1adc7ac65">&#9670;&#160;</a></span>insertInTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::insertInTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inserts in a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">values</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad9b4193604a70c8ed34bb74e5f0f8a3c" name="ad9b4193604a70c8ed34bb74e5f0f8a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b4193604a70c8ed34bb74e5f0f8a3c">&#9670;&#160;</a></span>printTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::printTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints a specific table from the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49c0d996b89d3033f1fa5deb62b37d73" name="a49c0d996b89d3033f1fa5deb62b37d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c0d996b89d3033f1fa5deb62b37d73">&#9670;&#160;</a></span>renameTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::renameTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tablename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renames a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablename</td><td></td></tr>
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9584fa4065764a5dbdccdf1c4ce8096c" name="a9584fa4065764a5dbdccdf1c4ce8096c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9584fa4065764a5dbdccdf1c4ce8096c">&#9670;&#160;</a></span>saveCatalogueToDifferentFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::saveCatalogueToDifferentFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves all changes made to the catalogue and its tables to a specific file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3745fd9756a2522e0c3aebd091b8fb1e" name="a3745fd9756a2522e0c3aebd091b8fb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3745fd9756a2522e0c3aebd091b8fb1e">&#9670;&#160;</a></span>selectFromTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::selectFromTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs select on a specific table from the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">index</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10fde7052b5f6ccbe6e961345d71306a" name="a10fde7052b5f6ccbe6e961345d71306a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10fde7052b5f6ccbe6e961345d71306a">&#9670;&#160;</a></span>updateTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Catalogue::updateTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>searchValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>targetIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>targetValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates a specific table in the catalogue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">index</td><td></td></tr>
+    <tr><td class="paramname">searchValue</td><td></td></tr>
+    <tr><td class="paramname">targetIndex</td><td></td></tr>
+    <tr><td class="paramname">targetValue</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_catalogue_8h_source.html">Catalogue.h</a></li>
 <li>/Users/krasimirkargov/Documents/DatabaseProject/<a class="el" href="_catalogue_8cpp.html">Catalogue.cpp</a></li>
