@@ -15,6 +15,12 @@
 #include "ColumnFactory.h"
 #include "Converter.h"
 
+/**
+ * @brief Construct a new Table:: Table object
+ * 
+ * @param name 
+ * @param filename 
+ */
 Table::Table(const std::string& name, const std::string filename)
 {
     // std::cout << "Constructor called!" << std::endl;
@@ -68,6 +74,10 @@ Table::Table(const std::string& name, const std::string filename)
     input.close();
 }
 
+/**
+ * @brief Destroy the Table:: Table object
+ * 
+ */
 Table::~Table()
 {
     this->name.clear();
@@ -80,26 +90,52 @@ Table::~Table()
     this->columns.clear();
 }
 
+/**
+ * @brief Returns the name of the table
+ * 
+ * @return std::string 
+ */
 std::string Table::getName() const
 {
     return this->name;
 }
 
+/**
+ * @brief Returns the filename of the table
+ * 
+ * @return std::string 
+ */
 std::string Table::getFilename() const
 {
     return this->filename;
 }
 
+/**
+ * @brief Returns the count of rows
+ * 
+ * @return unsigned int 
+ */
 unsigned int Table::getCountOfRows() const
 {
     return this->countRows;
 }
 
+/**
+ * @brief Returns the count of columns
+ * 
+ * @return unsigned int 
+ */
 unsigned int Table::getNumberOfColumns() const
 {
     return this->columns.size();
 }
 
+/**
+ * @brief Returns the specific column at the given index
+ * 
+ * @param index 
+ * @return const ColumnInterface* 
+ */
 const ColumnInterface* Table::columnAt(const unsigned int& index) const
 {
     if(index >= this->columns.size())
@@ -111,6 +147,10 @@ const ColumnInterface* Table::columnAt(const unsigned int& index) const
     return this->columns[index];
 }
 
+/**
+ * @brief Prints the table
+ * 
+ */
 void Table::print() const
 {
     std::cout << "Content of table " << this->name << ":" << std::endl;
@@ -131,6 +171,10 @@ void Table::print() const
     std::cout << std::endl;
 }
 
+/**
+ * @brief Prints the types of each column in the table
+ * 
+ */
 void Table::describe() const
 {
     for(ColumnInterface* element : this->columns)
@@ -140,6 +184,11 @@ void Table::describe() const
     std::cout << std::endl;
 }
 
+/**
+ * @brief Saves the table to a specific file
+ * 
+ * @param filename 
+ */
 void Table::saveToFile(const std::string& filename) const
 {
     std::ofstream output(filename, std::ios::out | std::ios::trunc);
@@ -165,6 +214,12 @@ void Table::saveToFile(const std::string& filename) const
     output.close();
 }
 
+/**
+ * @brief Performs select operation on the table
+ * 
+ * @param index 
+ * @param value 
+ */
 void Table::select(const unsigned int& index, const std::string& value) const
 {
     if(index >= this->columns.size())
@@ -186,6 +241,12 @@ void Table::select(const unsigned int& index, const std::string& value) const
     std::cout << std::endl;
 }
 
+/**
+ * @brief Adds a new column to the table
+ * 
+ * @param columnName 
+ * @param columnType 
+ */
 void Table::addColumn(const std::string& columnName, const std::string& columnType)
 {
     ColumnInterface* newColumn = ColumnFactory::createColumn(columnName, columnType);
@@ -204,6 +265,14 @@ void Table::addColumn(const std::string& columnName, const std::string& columnTy
     }
 }
 
+/**
+ * @brief Updates the table
+ * 
+ * @param index 
+ * @param searchValue 
+ * @param targetIndex 
+ * @param targetValue 
+ */
 void Table::update(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue)
 {
     if(index >= this->columns.size() || targetIndex >= this->columns.size())
@@ -221,6 +290,12 @@ void Table::update(const unsigned int& index, const std::string& searchValue, co
     }
 }
 
+/**
+ * @brief Deletes from the table
+ * 
+ * @param index 
+ * @param searchValue 
+ */
 void Table::deleteFunc(const unsigned int& index, const std::string& searchValue)
 {
     if(index >= this->columns.size())
@@ -247,6 +322,11 @@ void Table::deleteFunc(const unsigned int& index, const std::string& searchValue
     this->countRows = this->countRows - indexes.size();
 }
 
+/**
+ * @brief Inserts into the table
+ * 
+ * @param values 
+ */
 void Table::insert(const std::vector<std::string>& values)
 {
     if(values.size() != this->columns.size())
@@ -312,11 +392,23 @@ void Table::insert(const std::vector<std::string>& values)
     }
 }
 
+/**
+ * @brief Renames the table
+ * 
+ * @param name 
+ */
 void Table::rename(const std::string& name)
 {
     this->name = name;
 }
 
+/**
+ * @brief Counts the occurrences in a column of the table
+ * 
+ * @param index 
+ * @param searchValue 
+ * @return unsigned int 
+ */
 unsigned int Table::count(const unsigned int& index, const std::string& searchValue)
 {
     if(index >= this->columns.size())
@@ -329,6 +421,15 @@ unsigned int Table::count(const unsigned int& index, const std::string& searchVa
     return indexes.size();
 }
 
+/**
+ * @brief Performs aggregate to the table
+ * 
+ * @param index 
+ * @param searchValue 
+ * @param targetIndex 
+ * @param operationName 
+ * @return double 
+ */
 double Table::aggregate(const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName)
 {
     if(index >= this->columns.size() || targetIndex >= this->columns.size())
