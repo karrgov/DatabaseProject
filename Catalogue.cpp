@@ -16,6 +16,11 @@
 #include "Table.h"
 #include "ColumnFactory.h"
 
+/**
+ * @brief Construct a new Catalogue:: Catalogue object
+ * 
+ * @param filename 
+ */
 Catalogue::Catalogue(const std::string& filename)
 {    // std::ifstream inputFile(filename, std::ios::in);
 
@@ -82,6 +87,10 @@ Catalogue::Catalogue(const std::string& filename)
     this->filename = filename;
 }
 
+/**
+ * @brief Destroy the Catalogue:: Catalogue object
+ * 
+ */
 Catalogue::~Catalogue()
 {
     for(Table* element : this->tables)
@@ -91,6 +100,13 @@ Catalogue::~Catalogue()
     this->tables.clear();
 }
 
+/**
+ * @brief Finds a certain table's index in the catalogue through the table's name
+ * 
+ * @param tables 
+ * @param searchName 
+ * @return int 
+ */
 int Catalogue::findTableIndexByName(const std::vector<Table*>& tables, const std::string& searchName) const
 {
     for(int i = 0; i < tables.size(); i++)
@@ -103,6 +119,12 @@ int Catalogue::findTableIndexByName(const std::vector<Table*>& tables, const std
     return -1;
 }
 
+/**
+ * @brief Imports a table in the catalogue from a file
+ * 
+ * @param tableName 
+ * @param filename 
+ */
 void Catalogue::importTableFromFile(const std::string& tableName, const std::string& filename)
 {
     if(findTableIndexByName(this->tables, tableName) != -1)
@@ -117,6 +139,12 @@ void Catalogue::importTableFromFile(const std::string& tableName, const std::str
     this->tables.push_back(newTable);
 }
 
+/**
+ * @brief Exports a table from the catalogue to a specific file
+ * 
+ * @param tableName 
+ * @param filename 
+ */
 void Catalogue::exportTableToFile(const std::string& tableName, const std::string& filename)
 {
     if(findTableIndexByName(this->tables, tableName) == -1)
@@ -129,6 +157,7 @@ void Catalogue::exportTableToFile(const std::string& tableName, const std::strin
     int indexOfTable = findTableIndexByName(this->tables, tableName);
     this->tables[indexOfTable]->saveToFile(filename);
 }
+
 
 void Catalogue::saveCatalogueToDefaultFile()
 {
