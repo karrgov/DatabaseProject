@@ -13,16 +13,30 @@
 #include "Catalogue.h"
 #include "CommandInterface.h"
 
+/**
+ * @brief Construct a new Command Interface:: Command Interface object
+ * 
+ * @param name 
+ */
 CommandInterface::CommandInterface(const std::string& name)
 {
     this->nameOfCommand = name;
 }
 
+/**
+ * @brief Destroy the Command Interface:: Command Interface object
+ * 
+ */
 CommandInterface::~CommandInterface()
 {
 
 }
 
+/**
+ * @brief Returns the name of the command 
+ * 
+ * @return const std::string& 
+ */
 const std::string& CommandInterface::getCommandName() const
 {
     return this->nameOfCommand;

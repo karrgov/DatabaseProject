@@ -22,27 +22,54 @@ class Cell : public CellInterface<T>
     bool flag;
 
     public:
+    /**
+     * @brief Construct a new Cell object
+     * 
+     * @param val 
+     * @param otherVal 
+     */
     Cell(const T& val, bool otherVal)
     {
         this->value = val;
         this->flag = otherVal;
     }
 
+    /**
+     * @brief Returns the value of the cell 
+     * 
+     * @return const T& 
+     */
     const T& first() const override
     {
         return value;
     }
 
+    /**
+     * @brief Sets the value of the cell
+     * 
+     * @param value 
+     */
     void setFirst(const T& value) override
     {
         this->value = value;
     }
 
+    /**
+     * @brief Returns the bool value of the cell
+     * 
+     * @return true 
+     * @return false 
+     */
     bool second() const override
     {
         return flag;
     }
 
+    /**
+     * @brief Sets the bool value of the cell 
+     * 
+     * @param value 
+     */
     void setSecond(bool value) override
     {
         this->flag = value;

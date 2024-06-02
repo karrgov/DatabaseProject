@@ -10,11 +10,20 @@
  */
 #include "CommandController.h"
 
+/**
+ * @brief Construct a new Command Controller:: Command Controller object
+ * 
+ * @param commands 
+ */
 CommandController::CommandController(const std::vector<CommandInterface*>& commands) : allCommands(commands)
 {
 
 }
 
+/**
+ * @brief Destroy the Command Controller:: Command Controller object
+ * 
+ */
 CommandController::~CommandController()
 {
     for(CommandInterface* element : this->allCommands)
@@ -24,6 +33,13 @@ CommandController::~CommandController()
     this->allCommands.clear();
 }
 
+/**
+ * @brief Waits and processes a command entered by the user, applying it to the provided database and returns false if the command is "exit", signaling the program should terminate or returns true, indicating the command processing loop should continue
+ * 
+ * @param database 
+ * @return true 
+ * @return false 
+ */
 bool CommandController::isCommandAvailable(Catalogue*& database)
 {
     std::cout << "Waiting for command:" << std::endl;
