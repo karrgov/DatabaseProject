@@ -15,6 +15,12 @@
 #include "Cell.h"
 #include "CellInterface.h"
 
+/**
+ * @brief Converts a number in std::string to int type and returns a pointer to an int cell
+ * 
+ * @param value 
+ * @return CellInterface<int>* 
+ */
 CellInterface<int>* Converter::toInt(const std::string& value)
 {
     CellInterface<int>* defaultCell = new Cell<int>(0, false);
@@ -75,6 +81,12 @@ CellInterface<int>* Converter::toInt(const std::string& value)
     return final;
 }
 
+/**
+ * @brief Converts a number in std::string to double type and returns a pointer to a double cell
+ * 
+ * @param value 
+ * @return CellInterface<double>* 
+ */
 CellInterface<double>* Converter::toDouble(const std::string& value)
 {
     CellInterface<double>* defaultCell = new Cell<double>(0, false);
@@ -160,7 +172,13 @@ CellInterface<double>* Converter::toDouble(const std::string& value)
     return final;
 }
     
-
+/**
+ * @brief Determines if the value is considered a string for the project
+ * 
+ * @param value 
+ * @return true 
+ * @return false 
+ */
 bool Converter::isString(const std::string& value)
 {
     if(value.size() >= 2 & value[0] == '"' && value[value.size() - 1] == '"')
@@ -170,6 +188,13 @@ bool Converter::isString(const std::string& value)
     return false;
 }
 
+/**
+ * @brief Determines if the value is NULL
+ * 
+ * @param value 
+ * @return true 
+ * @return false 
+ */
 bool Converter::isNull(const std::string& value)
 {
     if(value == "NULL")
@@ -179,6 +204,12 @@ bool Converter::isNull(const std::string& value)
     return false;
 }
 
+/**
+ * @brief 
+ * 
+ * @param line 
+ * @param parameters 
+ */
 void Converter::convertLineToParametersList(const std::string& line, std::vector<std::string>& parameters)
 {
     parameters.clear();
