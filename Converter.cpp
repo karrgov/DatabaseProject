@@ -205,7 +205,7 @@ bool Converter::isNull(const std::string& value)
 }
 
 /**
- * @brief 
+ * @brief Converts a std::string line to separate usable std::string parameters in a vector 
  * 
  * @param line 
  * @param parameters 

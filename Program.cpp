@@ -31,6 +31,10 @@
 
 Program* Program::singletonProgram = nullptr;
 
+/**
+ * @brief Construct a new Program:: Program object
+ * 
+ */
 Program::Program() : database(nullptr) 
 {
     this->controller = new CommandController({
@@ -56,6 +60,11 @@ Program::Program() : database(nullptr)
     });
 }
 
+/**
+ * @brief Returns the program
+ * 
+ * @return Program* 
+ */
 Program* Program::getProgram()
 {
     if(singletonProgram == nullptr)
@@ -66,6 +75,10 @@ Program* Program::getProgram()
     return singletonProgram;
 }
 
+/**
+ * @brief Destroy the Program:: Program object
+ * 
+ */
 Program::~Program()
 {
     delete this->controller;
@@ -75,6 +88,10 @@ Program::~Program()
     this->database = nullptr;
 }
 
+/**
+ * @brief Executes the program through the isCommandAvailable method
+ * 
+ */
 void Program::execute()
 {
     while(this->controller->isCommandAvailable(this->database))
