@@ -362,7 +362,7 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
 }
 
 /**
- * @brief Prints the types of the columns in a specific table in the catalogue
+ * @brief Prints the types of the columns in a specific table from the catalogue
  * 
  * @param name 
  */
@@ -379,6 +379,11 @@ void Catalogue::describeTable(const std::string& name) const
     this->tables[index]->describe();
 }
 
+/**
+ * @brief Prints a specific table from the catalogue
+ * 
+ * @param name 
+ */
 void Catalogue::printTable(const std::string& name) const
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -392,6 +397,13 @@ void Catalogue::printTable(const std::string& name) const
     this->tables[index]->print();
 }
 
+/**
+ * @brief Performs select on a specific table from the catalogue
+ * 
+ * @param name 
+ * @param index 
+ * @param value 
+ */
 void Catalogue::selectFromTable(const std::string& name, const unsigned int& index, const std::string& value) const
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -405,6 +417,13 @@ void Catalogue::selectFromTable(const std::string& name, const unsigned int& ind
     this->tables[indexFound]->select(index, value);
 }
 
+/**
+ * @brief Adds a new column to a specific table in the catalogue
+ * 
+ * @param name 
+ * @param columnName 
+ * @param columnType 
+ */
 void Catalogue::addColumnToTable(const std::string& name, const std::string& columnName, const std::string& columnType)
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -418,6 +437,15 @@ void Catalogue::addColumnToTable(const std::string& name, const std::string& col
     this->tables[indexFound]->addColumn(columnName, columnType);
 }
 
+/**
+ * @brief Updates a specific table in the catalogue
+ * 
+ * @param name 
+ * @param index 
+ * @param searchValue 
+ * @param targetIndex 
+ * @param targetValue 
+ */
 void Catalogue::updateTable(const std::string& name, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& targetValue)
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -431,6 +459,13 @@ void Catalogue::updateTable(const std::string& name, const unsigned int& index, 
     this->tables[indexFound]->update(index, searchValue, targetIndex, targetValue);
 }
 
+/**
+ * @brief Deletes from a specific table in the catalogue
+ * 
+ * @param name 
+ * @param index 
+ * @param searchValue 
+ */
 void Catalogue::deleteFuncTable(const std::string& name, const unsigned int& index, const std::string& searchValue)
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -444,6 +479,12 @@ void Catalogue::deleteFuncTable(const std::string& name, const unsigned int& ind
     this->tables[indexFound]->deleteFunc(index, searchValue);
 }
 
+/**
+ * @brief Inserts in a specific table in the catalogue
+ * 
+ * @param name 
+ * @param values 
+ */
 void Catalogue::insertInTable(const std::string& name, const std::vector<std::string>& values)
 {
     if(findTableIndexByName(this->tables, name) == -1)
@@ -457,6 +498,12 @@ void Catalogue::insertInTable(const std::string& name, const std::vector<std::st
     this->tables[indexFound]->insert(values);
 }
 
+/**
+ * @brief Renames a specific table in the catalogue
+ * 
+ * @param tablename 
+ * @param name 
+ */
 void Catalogue::renameTable(const std::string& tablename, const std::string& name)
 {
     if(findTableIndexByName(this->tables, tablename) == -1)
@@ -470,6 +517,14 @@ void Catalogue::renameTable(const std::string& tablename, const std::string& nam
     this->tables[indexFound]->rename(name);
 }
 
+/**
+ * @brief Counts the occurrences in a column of a specific table in the catalogue
+ * 
+ * @param tablename 
+ * @param index 
+ * @param searchValue 
+ * @return unsigned int 
+ */
 unsigned int Catalogue::countInTable(const std::string& tablename, const unsigned int& index, const std::string& searchValue)
 {
     if(findTableIndexByName(this->tables, tablename) == -1)
@@ -483,6 +538,16 @@ unsigned int Catalogue::countInTable(const std::string& tablename, const unsigne
     return this->tables[indexFound]->count(index, searchValue);
 }
 
+/**
+ * @brief Performs aggregate to a specific table in the catalogue
+ * 
+ * @param tablename 
+ * @param index 
+ * @param searchValue 
+ * @param targetIndex 
+ * @param operationName 
+ * @return double 
+ */
 double Catalogue::aggregate(const std::string& tablename, const unsigned int& index, const std::string& searchValue, const unsigned int& targetIndex, const std::string& operationName)
 {
     if(findTableIndexByName(this->tables, tablename) == -1)
