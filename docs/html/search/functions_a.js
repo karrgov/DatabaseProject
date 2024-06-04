@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['table_0',['Table',['../class_table.html#a8334b30da09ef974267be6bf6bccfb50',1,'Table']]],
-  ['todouble_1',['toDouble',['../class_converter.html#ab97875cacf59666f5cc1b76f70217fcc',1,'Converter']]],
-  ['toint_2',['toInt',['../class_converter.html#a663b5eea9623d35c6c107af0f29be5f5',1,'Converter']]]
+  ['savecataloguetodefaultfile_0',['saveCatalogueToDefaultFile',['../class_catalogue.html#aa7256a4e227763efeed4f7b9e1bfb2bb',1,'Catalogue']]],
+  ['savecataloguetodifferentfile_1',['saveCatalogueToDifferentFile',['../class_catalogue.html#adc68d318da4e4301160990c3965f3de2',1,'Catalogue']]],
+  ['savetofile_2',['saveToFile',['../class_table.html#ab32ebe6462f5a4e24ad1cc43a0097a9b',1,'Table']]],
+  ['second_3',['second',['../class_cell.html#adeb4790da1febe67d2767c48273e827e',1,'Cell']]],
+  ['select_4',['select',['../class_table.html#adc7bf56c14b9cf039c570bfe9953bbea',1,'Table']]],
+  ['selectfromtable_5',['selectFromTable',['../class_catalogue.html#a3745fd9756a2522e0c3aebd091b8fb1e',1,'Catalogue']]],
+  ['setfirst_6',['setFirst',['../class_cell.html#ac0b055a1b2222fa075c72988e8f77c81',1,'Cell']]],
+  ['setsecond_7',['setSecond',['../class_cell.html#abae88a1f3e22635057834850a95aadd2',1,'Cell']]],
+  ['showalltables_8',['showAllTables',['../class_catalogue.html#abe8968f435fb75f08efb82317e43e65f',1,'Catalogue']]]
 ];

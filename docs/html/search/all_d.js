@@ -1,7 +1,14 @@
 var searchData=
 [
-  ['table_0',['table',['../class_table.html',1,'Table'],['../class_table.html#a8334b30da09ef974267be6bf6bccfb50',1,'Table::Table()']]],
-  ['table_2ecpp_1',['Table.cpp',['../_table_8cpp.html',1,'']]],
-  ['todouble_2',['toDouble',['../class_converter.html#ab97875cacf59666f5cc1b76f70217fcc',1,'Converter']]],
-  ['toint_3',['toInt',['../class_converter.html#a663b5eea9623d35c6c107af0f29be5f5',1,'Converter']]]
+  ['relationalcomparator_0',['RelationalComparator',['../structdoctest_1_1detail_1_1_relational_comparator.html',1,'doctest::detail']]],
+  ['remove_5fconst_1',['remove_const',['../structdoctest_1_1detail_1_1types_1_1remove__const.html',1,'doctest::detail::types']]],
+  ['remove_5fconst_3c_20const_20t_20_3e_2',['remove_const&lt; const T &gt;',['../structdoctest_1_1detail_1_1types_1_1remove__const_3_01const_01_t_01_4.html',1,'doctest::detail::types']]],
+  ['remove_5freference_3',['remove_reference',['../structdoctest_1_1detail_1_1types_1_1remove__reference.html',1,'doctest::detail::types']]],
+  ['remove_5freference_3c_20t_20_26_20_3e_4',['remove_reference&lt; T &amp; &gt;',['../structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_01_4.html',1,'doctest::detail::types']]],
+  ['remove_5freference_3c_20t_20_26_26_20_3e_5',['remove_reference&lt; T &amp;&amp; &gt;',['../structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_6_01_4.html',1,'doctest::detail::types']]],
+  ['rename_6',['rename',['../class_table.html#a754346f20f3202704589547e8a9306ef',1,'Table']]],
+  ['renamecommand_7',['RenameCommand',['../class_rename_command.html',1,'']]],
+  ['renametable_8',['renameTable',['../class_catalogue.html#a49c0d996b89d3033f1fa5deb62b37d73',1,'Catalogue']]],
+  ['result_9',['Result',['../structdoctest_1_1detail_1_1_result.html',1,'doctest::detail']]],
+  ['resultbuilder_10',['ResultBuilder',['../structdoctest_1_1detail_1_1_result_builder.html',1,'doctest::detail']]]
 ];

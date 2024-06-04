@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['catalogue_0',['catalogue',['../class_catalogue.html',1,'Catalogue'],['../class_catalogue.html#ae2cf79487fb1b988169c31cd355655a4',1,'Catalogue::Catalogue()']]],
-  ['catalogue_2ecpp_1',['Catalogue.cpp',['../_catalogue_8cpp.html',1,'']]],
-  ['cell_2',['cell',['../class_cell.html',1,'Cell&lt; T &gt;'],['../class_cell.html#a82288c5058f3d1d995c81755577fe8db',1,'Cell::Cell()']]],
-  ['cell_2eh_3',['Cell.h',['../_cell_8h.html',1,'']]],
-  ['cellinterface_4',['CellInterface',['../class_cell_interface.html',1,'']]],
-  ['cellinterface_2eh_5',['CellInterface.h',['../_cell_interface_8h.html',1,'']]],
-  ['closecommand_6',['CloseCommand',['../class_close_command.html',1,'']]],
-  ['columnat_7',['columnAt',['../class_table.html#a749961b0dbd5d81b4e82b2500a3d7f5e',1,'Table']]],
-  ['columnfactory_8',['ColumnFactory',['../class_column_factory.html',1,'']]],
-  ['columnfactory_2ecpp_9',['ColumnFactory.cpp',['../_column_factory_8cpp.html',1,'']]],
-  ['columninterface_10',['columninterface',['../class_column_interface.html',1,'ColumnInterface'],['../class_column_interface.html#a2f9fe8bc522a881bd714fa5c0f883e9c',1,'ColumnInterface::ColumnInterface()']]],
-  ['columninterface_2ecpp_11',['ColumnInterface.cpp',['../_column_interface_8cpp.html',1,'']]],
-  ['commandcontroller_12',['commandcontroller',['../class_command_controller.html',1,'CommandController'],['../class_command_controller.html#a8c0864633ae7a375cd5d5c1c36cd3a1d',1,'CommandController::CommandController()']]],
-  ['commandcontroller_2ecpp_13',['CommandController.cpp',['../_command_controller_8cpp.html',1,'']]],
-  ['commandinterface_14',['commandinterface',['../class_command_interface.html',1,'CommandInterface'],['../class_command_interface.html#a71faf2acaffb6fc41bc2a2a8d3b73672',1,'CommandInterface::CommandInterface()']]],
-  ['commandinterface_2ecpp_15',['CommandInterface.cpp',['../_command_interface_8cpp.html',1,'']]],
-  ['converter_16',['Converter',['../class_converter.html',1,'']]],
-  ['converter_2ecpp_17',['Converter.cpp',['../_converter_8cpp.html',1,'']]],
-  ['convertlinetoparameterslist_18',['convertLineToParametersList',['../class_converter.html#ada63a0cd16dcadff9d416799f1604eea',1,'Converter']]],
-  ['count_19',['count',['../class_table.html#aeb26f9be8ef284776443bae4a2dff6e8',1,'Table']]],
-  ['countcommand_20',['CountCommand',['../class_count_command.html',1,'']]],
-  ['countintable_21',['countInTable',['../class_catalogue.html#a5f96f2395de06a3de542b7e65560a795',1,'Catalogue']]]
+  ['basic_5fistream_0',['basic_istream',['../classstd_1_1basic__istream.html',1,'std']]],
+  ['basic_5fostream_1',['basic_ostream',['../classstd_1_1basic__ostream.html',1,'std']]]
 ];

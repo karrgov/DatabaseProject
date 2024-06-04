@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rename_0',['rename',['../class_table.html#a754346f20f3202704589547e8a9306ef',1,'Table']]],
-  ['renametable_1',['renameTable',['../class_catalogue.html#a49c0d996b89d3033f1fa5deb62b37d73',1,'Catalogue']]]
+  ['print_0',['print',['../class_table.html#aa6531f07b1b9b1690ba81e6c27d7b47e',1,'Table']]],
+  ['printtable_1',['printTable',['../class_catalogue.html#ad9b4193604a70c8ed34bb74e5f0f8a3c',1,'Catalogue']]]
 ];

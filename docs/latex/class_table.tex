@@ -5,6 +5,8 @@
 \item 
 \mbox{\hyperlink{class_table_a8334b30da09ef974267be6bf6bccfb50}{Table}} (const std\+::string \&name, const std\+::string filename)
 \begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_table_a8887f6a36958beb145b193685da9256e}{Table}} (const std\+::string \&name, const std\+::vector$<$ \mbox{\hyperlink{class_column_interface}{Column\+Interface}} \texorpdfstring{$\ast$}{*} $>$ \&result\+Table, const unsigned int \&rows)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object (specifically made to be used by the innerjoin command) \end{DoxyCompactList}\item 
 \Hypertarget{class_table_a9a559f2e7beb37b511ee9f88873164f8}\label{class_table_a9a559f2e7beb37b511ee9f88873164f8} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Table} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object. \end{DoxyCompactList}\item 
@@ -54,7 +56,7 @@ double \mbox{\hyperlink{class_table_a7fc938506c3af0cf6bc3463188c50a9f}{aggregate
 \Hypertarget{class_table_a8334b30da09ef974267be6bf6bccfb50}\label{class_table_a8334b30da09ef974267be6bf6bccfb50} 
 \index{Table@{Table}!Table@{Table}}
 \index{Table@{Table}!Table@{Table}}
-\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
 
 
@@ -66,6 +68,25 @@ Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table
 {\em name} & \\
 \hline
 {\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_table_a8887f6a36958beb145b193685da9256e}\label{class_table_a8887f6a36958beb145b193685da9256e} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_column_interface}{Column\+Interface}} \texorpdfstring{$\ast$}{*} $>$ \&}]{result\+Table,  }\item[{const unsigned int \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_table}{Table}\+:\+: \doxylink{class_table}{Table} object (specifically made to be used by the innerjoin command) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em result\+Table} & \\
+\hline
+{\em rows} & \\
 \hline
 \end{DoxyParams}
 

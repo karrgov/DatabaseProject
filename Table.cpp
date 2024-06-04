@@ -74,6 +74,13 @@ Table::Table(const std::string& name, const std::string filename)
     input.close();
 }
 
+/**
+ * @brief Construct a new Table:: Table object (specifically made to be used by the innerjoin command)
+ * 
+ * @param name 
+ * @param resultTable 
+ * @param rows 
+ */
 Table::Table(const std::string& name, const std::vector<ColumnInterface*>& resultTable, const unsigned int& rows) 
 {
     this->name = name;

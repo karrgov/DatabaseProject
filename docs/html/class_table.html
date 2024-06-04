@@ -81,6 +81,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8334b30da09ef974267be6bf6bccfb50" id="r_a8334b30da09ef974267be6bf6bccfb50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#a8334b30da09ef974267be6bf6bccfb50">Table</a> (const std::string &amp;name, const std::string filename)</td></tr>
 <tr class="memdesc:a8334b30da09ef974267be6bf6bccfb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_table.html">Table</a>:: <a class="el" href="class_table.html">Table</a> object.  <br /></td></tr>
 <tr class="separator:a8334b30da09ef974267be6bf6bccfb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8887f6a36958beb145b193685da9256e" id="r_a8887f6a36958beb145b193685da9256e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#a8887f6a36958beb145b193685da9256e">Table</a> (const std::string &amp;name, const std::vector&lt; <a class="el" href="class_column_interface.html">ColumnInterface</a> * &gt; &amp;resultTable, const unsigned int &amp;rows)</td></tr>
+<tr class="memdesc:a8887f6a36958beb145b193685da9256e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_table.html">Table</a>:: <a class="el" href="class_table.html">Table</a> object (specifically made to be used by the innerjoin command)  <br /></td></tr>
+<tr class="separator:a8887f6a36958beb145b193685da9256e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a559f2e7beb37b511ee9f88873164f8" id="r_a9a559f2e7beb37b511ee9f88873164f8"><td class="memItemLeft" align="right" valign="top"><a id="a9a559f2e7beb37b511ee9f88873164f8" name="a9a559f2e7beb37b511ee9f88873164f8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Table</b> ()</td></tr>
 <tr class="memdesc:a9a559f2e7beb37b511ee9f88873164f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_table.html">Table</a>:: <a class="el" href="class_table.html">Table</a> object. <br /></td></tr>
@@ -144,7 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>describe</b> () const
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8334b30da09ef974267be6bf6bccfb50" name="a8334b30da09ef974267be6bf6bccfb50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8334b30da09ef974267be6bf6bccfb50">&#9670;&#160;</a></span>Table()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8334b30da09ef974267be6bf6bccfb50">&#9670;&#160;</a></span>Table() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,6 +177,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>describe</b> () const
   <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
     <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8887f6a36958beb145b193685da9256e" name="a8887f6a36958beb145b193685da9256e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8887f6a36958beb145b193685da9256e">&#9670;&#160;</a></span>Table() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Table::Table </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_column_interface.html">ColumnInterface</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>resultTable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_table.html">Table</a>:: <a class="el" href="class_table.html">Table</a> object (specifically made to be used by the innerjoin command) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">resultTable</td><td></td></tr>
+    <tr><td class="paramname">rows</td><td></td></tr>
   </table>
   </dd>
 </dl>
