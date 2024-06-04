@@ -25,7 +25,7 @@ void UpdateCommand::applyCommand(const std::string& parameters, Catalogue*& data
     std::vector<std::string> parametersConverted;
     Converter::convertLineToParametersList(parameters, parametersConverted);
 
-    if(parametersConverted.size() != 3)
+    if(parametersConverted.size() != 5)
     {
         std::cerr << "Invalid number of arguments for update command!" << std::endl;
         std::cout << std::endl;
