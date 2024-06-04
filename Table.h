@@ -14,6 +14,7 @@ class Table
 
     public:
     Table(const std::string& name, const std::string filename);
+    Table(const std::string& name, const std::vector<ColumnInterface*>& resultTable, const unsigned int& rows);
     ~Table();
 
     Table(const Table& other) = delete;

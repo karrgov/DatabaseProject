@@ -91,7 +91,7 @@ void DoubleColumn::updateCellByIndex(const unsigned int& index, const std::strin
 
     CellInterface<double>* converted = Converter::toDouble(value);
     this->data[index] = converted;
-    delete converted;
+    //delete converted;
 }
 
 void DoubleColumn::deleteCellByIndex(const unsigned int& index)

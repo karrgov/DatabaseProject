@@ -24,7 +24,7 @@ class Catalogue
     void exportTableToFile(const std::string& tableName, const std::string& filename);
 
     void saveCatalogueToDefaultFile();
-    void saveCatalogueToDifferentFile(const std::string& filename);
+    void saveCatalogueToDifferentFile(const std::string& newFilename);
 
     void showAllTables() const;
 

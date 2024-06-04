@@ -74,6 +74,25 @@ Table::Table(const std::string& name, const std::string filename)
     input.close();
 }
 
+Table::Table(const std::string& name, const std::vector<ColumnInterface*>& resultTable, const unsigned int& rows) 
+{
+    this->name = name;
+    this->columns = resultTable;
+
+    if(!resultTable.empty()) 
+    {
+        this->countRows = rows;
+    } 
+    else 
+    {
+        this->countRows = 0;
+    }
+
+    std::cout << "Please enter the filename: ";
+    std::cin >> this->filename;
+    this->saveToFile(this->filename);
+}
+
 /**
  * @brief Destroy the Table:: Table object
  * 
@@ -485,7 +504,7 @@ double Table::aggregate(const unsigned int& index, const std::string& searchValu
     {
         for(double element : temporary)
         {
-            result = std::max(element, result);
+            result = std::min(element, result);
         }
     }
     else

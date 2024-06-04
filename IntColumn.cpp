@@ -88,7 +88,7 @@ void IntColumn::updateCellByIndex(const unsigned int& index, const std::string& 
 
     CellInterface<int>* converted = Converter::toInt(value);
     this->data[index] = converted;
-    delete converted;
+    //delete converted;
 }
 
 void IntColumn::deleteCellByIndex(const unsigned int& index)

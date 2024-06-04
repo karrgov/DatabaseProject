@@ -187,9 +187,9 @@ void Catalogue::saveCatalogueToDefaultFile()
  * 
  * @param filename 
  */
-void Catalogue::saveCatalogueToDifferentFile(const std::string& filename)
+void Catalogue::saveCatalogueToDifferentFile(const std::string& newFilename)
 {
-    std::ofstream outputFile(this->filename, std::ios::out | std::ios::trunc);
+    std::ofstream outputFile(newFilename, std::ios::out | std::ios::trunc);
 
     if(!outputFile)
     {
@@ -354,11 +354,28 @@ void Catalogue::innerJoinTables(const std::string& firstTableName, const unsigne
         }
     }
 
-    for(ColumnInterface* element : resultTable) 
+    std::cout << "Do you want to save the result table or not to save it? y/n?" << std::endl;
+    std::string ans;
+    std::cin >> ans;
+    if(ans == "y")
     {
-        delete element;
+        Table* newTable = new Table("innerjoinTable", resultTable, resultTableRows);
+        this->tables.push_back(newTable);
     }
-    resultTable.clear();
+    else
+    {
+        for(ColumnInterface* element : resultTable) 
+        {
+            delete element;
+        }
+        resultTable.clear();
+    }
+
+    // for(ColumnInterface* element : resultTable) 
+    // {
+    //     delete element;
+    // }
+    // resultTable.clear();
 }
 
 /**
